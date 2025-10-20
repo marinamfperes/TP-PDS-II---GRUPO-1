@@ -1,4 +1,4 @@
-# TP PDS II-GRUPO-1
+# TP PDS II - GRUPO 1
 GERENCIADOR DE TAREFAS PARA ESTUDANTES
 
 Integrantes: Daniel Sales, Luísa Gouthier, Marina Fonseca e Miguel Del Corsi
