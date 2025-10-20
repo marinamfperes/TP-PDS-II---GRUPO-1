@@ -11,10 +11,11 @@ Tendo em vista as problemáticas evidenciadas, o sistema tem como objetivo macro
 
 Enquanto isso, os micro objetivos do projeto consistem em:
 
-Implementar as funcionalidades de cadastro, edição e exclusão de tarefas;
-Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de vencimento (prazo), importância, duração, disciplina ou outras categorias personalizadas;
-Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito";
-Inserir alertas de tarefas não concluídas no prazo;
-Exibir um contador de tarefas com a quantidade de tarefas pendentes;
-Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil.
+- Implementar as funcionalidades de cadastro, edição e exclusão de tarefas;
+- Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de vencimento (prazo), importância, duração, disciplina ou outras categorias personalizadas;
+- Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito";
+- Inserir alertas de tarefas não concluídas no prazo;
+- Exibir um contador de tarefas com a quantidade de tarefas pendentes;
+- Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil.
+
 Como resultado, espera-se que o projeto desenvolvido seja capaz de proporcionar aos estudantes uma gestão mais eficiente e organizada de suas tarefas acadêmicas, melhorando sua produtividade e redução do estresse relacionado ao cumprimento de prazos. A utilização do Kanban facilitará a visualização do progresso das atividades, contribuindo para o controle de compromissos e evitando atrasos. Além disso, o sistema proporcionará a personalização das tarefas conforme a necessidade individual de cada aluno, criando uma ferramenta flexível e adaptada ao perfil universitário.
