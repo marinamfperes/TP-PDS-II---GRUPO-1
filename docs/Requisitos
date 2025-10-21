@@ -1,0 +1,37 @@
+MAPEAMENTO DOS REQUISITOS FUNCIONAIS:
+
+1 - Login na plataforma que permitirá registro das atividades na plataforma que serão salvas em arquivo local;
+2 - Cadastro de tarefas (podendo adicionar título, descrição, horário de realização, prioridade e status de realização);
+3 - Edição das tarefas, após sua criação;
+4 - Exclusão de tarefas, após conclusão ou caso seja de desejo do usuário;
+5 - Exibição visual de um quadro Kanban, organizado nas categorias: "A fazer", "Fazendo" e "Feito";
+6 - Alertas emitidos quando o vencimento do prazo da tarefa está se aproximando e quando no prazo foi ultrapassado;
+7 - Sistema deve permitir a organização por prioridadde, prazo ou outras categorias;
+8 - Movimentação de cartões que permitirá troca do status da tarefa.
+
+MAPEAMENTO DOS REQUISITOS NÃO FUNCIONAIS:
+
+1 - Código de porte médio com, aproximadamente, 1000 linhas;
+2 - Linguagem C++ com versionamento a partir do 14;
+3 - O sistema deve ter interface visual , que ser intuitiva e de uso claro;
+4 - O código deve ser modularizado, de acordo com o descrito nas instruções.
+
+USER STORIES:
+
+1 - Como ESTUDANTE, quero CADASTRAR UMA TAREFA para que EU ME ORGANIZE MELHOR.
+-> Critérios de aceitação: ao criar, a tarefa aparece na coluna "A Fazer" (ou coluna padrão configurada)/; Título obrigatório; Campos opcionais não precisam ser preenchidos.
+
+2 - Como ESTUDANTE, quero TER LIBERDADE DE ALTERAR MINHAS TAREFAS A QUALQUER MOMENTO para que A ORGANIZAÇÃO POSSA ESTAR SEMPRE COERENTE.
+-> Alterações devem ser salvas após salvamento das informações.
+
+3 - Como ESTUDANTE, quero EXCLUIR E ADICIONAR TAREFAS para que MEU QUADRO ESTEJA SEMPRE ATUALIZADO.
+-> Exclusão e adição devem ser confirmadas com o usuário e poderão ser desfeitas.
+
+4 - Como ESTUDANTE, quero VISUALIZAR TODAS MINHAS TAREFAS EM UM QUADRO KANBAN para que ESTEJA SEMPRE EM DIA COM O QUE DEVO FAZER.
+-> A movimentação do cartão entre as colunas deve modificar seu estado de feitura.
+
+5 - Como ESTUDANTE, quero RECEBER ALERTAS DAS ATIVIDADES, CUJOS PRAZOS ESTÃO SE APROXIMANDO para que EU NÃO PERCA OS DEADLINES DE MINHA TAREFA.
+-> Usuário deverá receber alertas a respeito de suas atividades.
+
+6 - Como ESTUDANTE, quero ORDENAR MINHAS TAREFAS para que EU VEJA OS ITENS DE MAIOR PRIORIDADE.
+-> Organização e filtragem das tarefas, de acordo com as informações fornecidas pelo usuário.
