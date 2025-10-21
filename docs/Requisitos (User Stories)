@@ -3,11 +3,11 @@ MAPEAMENTO DOS REQUISITOS FUNCIONAIS:
 1 - Login na plataforma que permitirá registro das atividades na plataforma que serão salvas em arquivo local;
 2 - Cadastro de tarefas (podendo adicionar título, descrição, horário de realização, prioridade e status de realização);
 3 - Edição das tarefas, após sua criação;
-4 - Exclusão de tarefas, após conclusão ou caso seja de desejo do usuário;
+4 - Exclusão de tarefas, após conclusão da tarefa ou caso seja de desejo do usuário;
 5 - Exibição visual de um quadro Kanban, organizado nas categorias: "A fazer", "Fazendo" e "Feito";
-6 - Alertas emitidos quando o vencimento do prazo da tarefa está se aproximando e quando no prazo foi ultrapassado;
-7 - Sistema deve permitir a organização por prioridadde, prazo ou outras categorias;
-8 - Movimentação de cartões que permitirá troca do status da tarefa.
+6 - Alertas emitidos quando o vencimento do prazo da tarefa está se aproximando;
+7 - Sistema deve permitir a organização por prioridade, prazo ou outras categorias;
+8 - Movimentação de cartões que permitirá troca do status da tarefa entre as colunas do quadro Kanban.
 
 MAPEAMENTO DOS REQUISITOS NÃO FUNCIONAIS:
 
