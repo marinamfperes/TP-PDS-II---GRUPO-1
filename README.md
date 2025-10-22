@@ -14,7 +14,7 @@ Enquanto isso, os micro objetivos do projeto consistem em:
 - Implementar as funcionalidades de cadastro, edição e exclusão de tarefas;
 - Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de vencimento (prazo), importância, duração, disciplina ou outras categorias personalizadas;
 - Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito";
-- Inserir alertas de tarefas não concluídas no prazo;
+- Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento;
 - Exibir um contador de tarefas com a quantidade de tarefas pendentes;
 - Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil.
 
