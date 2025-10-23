@@ -4,7 +4,7 @@ RF01 - Usuário:
 Manter metadados do “dono” local (nome), sem autenticação, na plataforma que permitirá registro das atividades;
 
 RF02 - Cadastro de tarefas:
-Criar tarefas que podem incluir título, descrição, categoria, data e horário de realização, data e horário de vencimento (prazo), importância e status de realização inicial "A fazer";
+Criar tarefas que podem incluir título, descrição, categoria, data e horário de realização, data e horário de vencimento (prazo), prioridade ("Baixa", "Média", "Alta" ou "Crítica") e status de realização inicial "A fazer";
 
 RF03 - Edição de tarefas:
 Atualizar qualquer campo da tarefa, após sua criação;
@@ -27,8 +27,9 @@ Exibir quantidade de tarefas pendentes (soma de "A Fazer" e "Fazendo");
 RF09 - Categorias (tags) personalizadas:
 Criar tags livres (exemplos: "Faculdade", "Trabalho", etc);
 
-RF10 - Priorização:
-Marcar prioridade ("Baixa", "Média", "Alta" ou "Crítica") e reordenar listas de tarefas (colunas do Kanban) conforme critério;
+RF10 - Ordenação:
+(Re)ordenar listas de tarefas (colunas do Kanban) conforme critério de prioridade e, dentro das tarefas com a mesma prioridade, 
+ordenar pela data de vencimento, de forma que as tarefas mais próximas do vencimento apareçam antes;
 
 RF11 - Filtrar:
 Filtrar tarefas por: tag, prioridade ou termo de busca (título/descrição);
