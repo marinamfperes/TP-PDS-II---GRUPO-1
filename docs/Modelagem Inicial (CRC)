@@ -1,6 +1,4 @@
-MODELAGEM INICIAL:
-
-CARTÕES CRC (CLASSES PRINCIPAIS):
+MODELAGEM INICIAL - CARTÕES CRC (CLASSES PRINCIPAIS):
 
 Classe Tarefa:
 A classe Tarefa é responsável por representar as tarefas individuais no sistema. Ela deve lidar com os dados e o estado da tarefa, incluindo a validação de campos e a lógica de status e prazos.
@@ -17,42 +15,107 @@ A classe Tarefa é responsável por representar as tarefas individuais no sistem
     - Quadro: Para armazenar a tarefa em uma coluna específica de acordo com seu status.
     - GerenciadorTarefas: Para orquestrar a criação, edição e movimentação da tarefa, além de validar dados e aplicar regras de negócio.
 
+
 Classe GerenciadorTarefas:
--> Responsabilidades:
-  -
-  -
+O GerenciadorTarefas é responsável por orquestrar as operações relacionadas às tarefas. Ele aplica validações e regras de negócios, garantindo que as tarefas sejam corretamente configuradas e organizadas no sistema.
+  -> Responsabilidades:
+    - Orquestrar operações de negócio (criar, editar, mover e excluir);
+    - Aplicar filtros e ordenação das tarefas;
+    - Notificar o usuário sobre tarefas em atraso ou próximas do vencimento;
+    - Aplicar validações de título obrigatório, confirmação antes de excluir e data e horário de realização e de vencimento no futuro;
+    - Expor o contador de tarefas pendentes.
 
--> Colaboradores:
-  -
-  -
+  -> Colaboradores:
+    - Tarefa: Para representar e manipular as tarefas.
+    - Quadro: Para fornecer a visualização Kanban das tarefas.
+    - Notificador: Para notificar sobre tarefas vencidas ou próximas do vencimento.
+    - Relogio: Para fornecer a hora atual, importante para verificações de vencimento.
 
-
--> Colaboradores:
-  -
-  -
 
 Classe Quadro:
 O Quadro é uma estrutura que agrupa as colunas. Ele tem como objetivo exibir as tarefas organizadas por status e fornecer uma visão geral do progresso das tarefas. Ele deve permitir movimentação de tarefas entre as colunas.
 
--> Responsabilidades:
-  -
-  -
--> Colaboradores:
-  -
-  -
+  -> Responsabilidades:
+    - Agrupar colunas, fornecendo visualização das tarefas por status; 
+    - Permitir movimentação de tarefa entre colunas (via status);
+    - Exibir tarefas de cada coluna ordenadas por prioridade e prazo;
+    - Mostrar contadores de tarefas de cada coluna.
+  
+  -> Colaboradores:
+    - Coluna: Cada coluna contém uma lista de tarefas associadas ao seu status;
+    - GerenciadorTarefas: Para realizar a movimentação de tarefas entre as colunas e orquestrar as ações;
+    - Tarefa: Para exibir e organizar as tarefas nas colunas.
+
 
 Classe Coluna:
--> Responsabilidades:
-  -
-  -
--> Colaboradores:
-  -
-  -
+Cada Coluna representa uma categoria de status das tarefas, como "A Fazer", "Fazendo" e "Feito". A responsabilidade da Coluna é armazenar as tarefas e ordená-las conforme critérios de prioridade e prazo.
+  -> Responsabilidades:
+    - Armazenar uma coleção de tarefas do mesmo status, atualizando as tarefas caso sejam excluídas ou caso novas tarefas sejam adicionadas;
+    - Ordenar as tarefas dentro da coluna por prioridade e prazo;
+    - Calcular e exibir quantidade de tarefas na coluna.
+
+  -> Colaboradores:
+    - Tarefa: Para fornecer as tarefas da coluna;
+    - Quadro: Para ser exibida no Quadro Kanban;
+    - GerenciadorTarefas: Para adicionar ou remover tarefas da coluna.
+
 
 Classe Notificador:
--> Responsabilidades:
-  -
-  -
--> Colaboradores:
-  -
-  -
+O Notificador é responsável por monitorar o estado das tarefas e sinalizar quando alguma tarefa estiver vencida ou próxima do vencimento.
+
+  -> Responsabilidades:
+    - Identificar tarefas vencidas ou próximas do vencimento;
+    - Gerar sinalização quando a plataforma é iniciada ou sob comando;
+    - Manter uma lógica de verificação de prazos, que pode ser configurável (exemplo: notificar quando faltar 24 horas para o vencimento).
+
+  -> Colaboradores:
+    - GerenciadorTarefas: Para obter as tarefas.
+    - Tarefa: Para verificar se a tarefa está vencida ou próxima do vencimento.
+
+
+Classe Relógio:
+Fornece uma forma de acessar a hora atual de maneira centralizada e testável.
+
+  -> Responsabilidades:
+    - Fornecer a hora e data atual do sistema;
+    - Permitir a configuração do tempo para testes.
+
+  -> Colaboradores:
+    - GerenciadorTarefas: Para acessar a hora atual durante validações de vencimento.
+
+
+Classe RepositorioTarefas:
+O RepositorioTarefas persiste as tarefas em arquivos, garantindo que as tarefas sejam salvas entre as execuções do programa.
+  
+  -> Responsabilidades:
+    - Persistir as tarefas no banco em arquivo local;
+    - Fornecer acesso às tarefas para leitura e escrita.
+  
+  -> Colaboradores:
+    - GerenciadorTarefas: Para criar, editar e excluir tarefas;
+    - Tarefa: Para persistir os dados das tarefas.
+
+
+Classe Usuario:
+A classe Usuario representa o dono local do quadro. Ela armazena informações básicas de identificação.
+  
+  -> Responsabilidades:
+    - Armazenar dados do usuário (nome) e preferência de notificação (quantas horas antes de vencer);
+    - Permitir edição de suas preferências.
+  
+  -> Colaboradores:
+    - Quadro: O quadro pertence a um usuário;
+    - GerenciadorTarefas: Usa as preferências de notificação do usuário (exemplo: 24h, 48h);
+    - Notificador: Consulta preferências do usuário ao detectar tarefas próximas do vencimento;
+    - RepositorioTarefas: Pode associar tarefas ao usuário, se no futuro alguém quiser multiusuário.
+
+
+Classe EstrategiaFiltro:
+A EstrategiaFiltro representa o contrato para aplicação de diferentes filtros sobre coleções de tarefas.
+
+  -> Responsabilidades:
+    - Receber coleção de tarefas e retornar uma versão filtrada, sem alterar a original.
+  
+  -> Colaboradores:
+    - Tarefa: Para acessar atributos relevantes na filtragem, como tags, prioridade, título e descrição e avaliar se uma tarefa atende ao critério estabelecido.
+    - GerenciadorTarefas: Para selecionar e aplicar uma estratégia de filtragem específica.
