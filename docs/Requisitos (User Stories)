@@ -1,37 +1,108 @@
 MAPEAMENTO DOS REQUISITOS FUNCIONAIS:
 
-1 - Login na plataforma que permitirá registro das atividades na plataforma que serão salvas em arquivo local;
-2 - Cadastro de tarefas (podendo adicionar título, descrição, horário de realização, prioridade e status de realização);
-3 - Edição das tarefas, após sua criação;
-4 - Exclusão de tarefas, após conclusão da tarefa ou caso seja de desejo do usuário;
-5 - Exibição visual de um quadro Kanban, organizado nas categorias: "A fazer", "Fazendo" e "Feito";
-6 - Alertas emitidos quando o vencimento do prazo da tarefa está se aproximando;
-7 - Sistema deve permitir a organização por prioridade, prazo ou outras categorias;
-8 - Movimentação de cartões que permitirá troca do status da tarefa entre as colunas do quadro Kanban.
+RF01 - Usuário:
+Manter metadados do “dono” local (nome), sem autenticação, na plataforma que permitirá registro das atividades;
+
+RF02 - Cadastro de tarefas:
+Criar tarefas que podem incluir título, descrição, categoria, data e horário de realização, data e horário de vencimento (prazo), importância e status de realização inicial "A fazer";
+
+RF03 - Edição de tarefas:
+Atualizar qualquer campo da tarefa, após sua criação;
+
+RF04 - Exclusão de tarefas:
+Excluir qualquer tarefa criada, tanto após a conclusão da tarefa quanto caso seja de desejo do usuário;
+
+RF05 - Visualização Kanban:
+Exibição visual de um quadro Kanban, que lista as tarefas criadas organizando-as nas categorias "A fazer", "Fazendo" e "Feito";
+
+RF06 - Movimentação de cartões entre as colunas do Kanban:
+Alterar status da tarefa entre "A Fazer", "Fazendo" e "Feito";
+
+RF07 - Destaque de atrasos e prazos próximos:
+Sinalizar tarefas vencidas e tarefas que vencem nas próximas N horas (configurável, padrão 24h);
+
+RF08 - Contador de pendências:
+Exibir quantidade de tarefas pendentes (soma de "A Fazer" e "Fazendo");
+
+RF09 - Categorias (tags) personalizadas:
+Criar tags livres (exemplos: "Faculdade", "Trabalho", etc);
+
+RF10 - Priorização:
+Marcar prioridade ("Baixa", "Média", "Alta" ou "Crítica") e reordenar listas de tarefas (colunas do Kanban) conforme critério;
+
+RF11 - Filtrar:
+Filtrar tarefas por: tag, prioridade ou termo de busca (título/descrição);
+
+RF12 - Notificações locais (não assíncronas):
+Mostrar tarefas vencidas ou em risco (próximas do prazo) ao iniciar a plataforma ou quando solicitado;
+
+RF13 - Armazenamento dos dados(persistência):
+Salvar e carregar as tarefas e quadros em arquivo local;
+
 
 MAPEAMENTO DOS REQUISITOS NÃO FUNCIONAIS:
 
-1 - Código de porte médio com, aproximadamente, 1000 linhas;
-2 - Linguagem C++ com versionamento a partir do 14;
-3 - O sistema deve ter interface visual , que ser intuitiva e de uso claro;
-4 - O código deve ser modularizado, de acordo com o descrito nas instruções.
+RNF01 - Código de porte médio com, aproximadamente, 1000 linhas;
+
+RNF02 - Linguagem C++ com versionamento a partir do 14;
+
+RNF03 - O sistema deve ter interface visual intuitia e de uso claro;
+
+RNF04 - O código deve ser modularizado, de acordo com o descrito nas instruções, conter comentários e seguir boas práticas de Programação Orientada a Objetos.
+
 
 USER STORIES:
 
-1 - Como ESTUDANTE, quero CADASTRAR UMA TAREFA para que EU ME ORGANIZE MELHOR.
--> Critérios de aceitação: ao criar, a tarefa aparece na coluna "A Fazer" (ou coluna padrão configurada)/; Título obrigatório; Campos opcionais não precisam ser preenchidos.
+US01 - Criar tarefa:
+Como ESTUDANTE, quero CADASTRAR UMA TAREFA para que EU ME ORGANIZE MELHOR.
+-> Critérios de aceitação: 
+  - Ao criar, a tarefa aparece na coluna "A Fazer" do Kanban;
+  - Título obrigatório;
+  - Campos opcionais não precisam ser preenchidos;
+  - Ao atribuir uma data de vencimento (opcional) preenchida no passado, deve ser avisado e não salvar até corrigir.
 
-2 - Como ESTUDANTE, quero TER LIBERDADE DE ALTERAR MINHAS TAREFAS A QUALQUER MOMENTO para que A ORGANIZAÇÃO POSSA ESTAR SEMPRE COERENTE.
--> Alterações devem ser salvas após salvamento das informações.
+US02 - Editar tarefa:
+Como ESTUDANTE, quero TER LIBERDADE DE ALTERAR MINHAS TAREFAS A QUALQUER MOMENTO para que A ORGANIZAÇÃO POSSA ESTAR SEMPRE COERENTE.
+-> Critérios de aceitação: 
+  - Alterações devem ser salvas após salvamento das informações;
+  - Não pode remover título (campo obrigatório).
 
-3 - Como ESTUDANTE, quero EXCLUIR E ADICIONAR TAREFAS para que MEU QUADRO ESTEJA SEMPRE ATUALIZADO.
--> Exclusão e adição devem ser confirmadas com o usuário e poderão ser desfeitas.
+US03 - Excluir e adicionar tarefas:
+Como ESTUDANTE, quero EXCLUIR E ADICIONAR TAREFAS para que MEU QUADRO ESTEJA SEMPRE ATUALIZADO.
+-> Critérios de aceitação: 
+  - Exclusão e adição devem ser confirmadas com o usuário.
 
-4 - Como ESTUDANTE, quero VISUALIZAR TODAS MINHAS TAREFAS EM UM QUADRO KANBAN para que ESTEJA SEMPRE EM DIA COM O QUE DEVO FAZER.
--> A movimentação do cartão entre as colunas deve modificar seu estado de feitura.
+US04 - Visualizar quadro em colunas (Kanban):
+Como ESTUDANTE, quero VISUALIZAR TODAS MINHAS TAREFAS EM UM QUADRO KANBAN para que ESTEJA SEMPRE EM DIA COM O QUE DEVO FAZER.
+-> Critérios de aceitação:
+  - Cada coluna mostra contagem.
 
-5 - Como ESTUDANTE, quero RECEBER ALERTAS DAS ATIVIDADES, CUJOS PRAZOS ESTÃO SE APROXIMANDO para que EU NÃO PERCA OS DEADLINES DE MINHA TAREFA.
--> Usuário deverá receber alertas a respeito de suas atividades.
+US05 - Mover tarefa no Kanban:
+Como ESTUDANTE, quero MOVER TAREFAS entre colunas no quadro Kanban para refletir o PROGRESSO DELAS.
+-> Critérios de aceitação:
+  - A movimentação do cartão entre as colunas deve modificar seu estado de feitura;
+  - Contador de cada coluna é atualizado;
+  - Ordem das tarefas exibidas é atualizado conforme prioridade. 
 
-6 - Como ESTUDANTE, quero ORDENAR MINHAS TAREFAS para que EU VEJA OS ITENS DE MAIOR PRIORIDADE.
--> Organização e filtragem das tarefas, de acordo com as informações fornecidas pelo usuário.
+US06 - Filtrar tarefas:
+Como ESTUDANTE, quero FILTRAR AS TAREFAS criadas para ENCONTRAR O QUE EU PRECISO RÁPIDO.
+-> Critérios de aceitação:
+  - Filtros por categoria (tag), prioridade ou termo de busca (título/descrição).
+
+US07 - Receber sinalizações de prazo:
+Como ESTUDANTE, quero RECEBER SINALIZAÇÕES DAS ATIVIDADES CUJOS PRAZOS ESTÃO SE APROXIMANDO OU ACABARAM para que EU NÃO PERCA OS DEADLINES DE MINHAS TAREFAS e IDENTIFIQUE OS QUE JÁ PASSARAM.
+-> Critérios de aceitação:
+  - Listar tarefas atrasadas e próximas de vencimento ao iniciar plataforma ou quando solicitado pelo usuário por meio de um comando;
+
+US08 - Visualizar quantidade de tarefas pendentes:
+ Como ESTUDANTE, quero VER QUANTAS TAREFAS PENDENTES TENHO para que eu possa ACOMPANHAR O PROGRESSO DA MINHA ROTINA.
+-> Critérios de aceitação:
+  - Contador deve somar as colunas "A Fazer" e "Fazendo";
+  - O contador deve ser atualizado sempre que houver alteração do número de tarefas nas colunas.
+
+US09 - Ver tarefas ordenadas por prioridade no Kanban:
+Como ESTUDANTE, quero VER AS TAREFAS ORDENADAS POR PRIORIDADE dentro de cada coluna do quadro Kanban para que eu possa IDENTIFICAR FACILMENTE ITENS DE MAIOR PRIORIDADE.
+-> Critérios de aceitação:
+  - As tarefas com prioridade mais alta (Crítica ou Alta) devem aparecer no topo da coluna, seguidas pelas tarefas com prioridade média e baixa;
+  - Quando a prioridade de uma tarefa for alterada, a ordem das tarefas na coluna deve ser atualizada automaticamente para refletir a nova prioridade;
+  - Se o estudante mover uma tarefa entre colunas, a ordem por prioridade deve ser mantida dentro da nova coluna.
