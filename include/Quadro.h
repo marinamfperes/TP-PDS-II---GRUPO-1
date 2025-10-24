@@ -7,16 +7,16 @@
 
 using namespace std;
 
-class Quadro{
+class Quadro {
   public:
     Quadro();
       void adicionarColuna(const Coluna& coluna); //adicao de colunas
       void exibirQuadro() const; //exibicao das colunas
-      void moverTarefaParaColuna(int idTarefa, string novoStatus);
+      void moverTarefaParaColuna(int id, string novoStatus);
 
   private:
     vector<Coluna> colunas;
-}
+};
 
 #endif
   
