@@ -4,7 +4,7 @@ RF01 - Usuário:
 Manter metadados do “dono” local (nome), sem autenticação, na plataforma que permitirá registro das atividades;
 
 RF02 - Cadastro de tarefas:
-Criar tarefas que podem incluir título, descrição, categoria, data e horário de realização, data e horário de vencimento (prazo), prioridade ("Baixa", "Média", "Alta" ou "Crítica") e status de realização inicial "A fazer";
+Criar tarefas que podem incluir título, descrição, categoria, data e horário de realização agendados, data e horário de vencimento (prazo), prioridade ("Baixa", "Média", "Alta" ou "Crítica") e status de realização inicial "A fazer";
 
 RF03 - Edição de tarefas:
 Atualizar qualquer campo da tarefa, após sua criação;
