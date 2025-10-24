@@ -11,6 +11,7 @@ public:
            std::time_t agendada, std::time_t vencimento, int prioridade);
 
     //métodos de acesso
+    int getId() const; //acessa o id único que diferencia as tarefas
     std::string getTitulo() const; //acessa o título
     std::string getDescricao() const; //acessa a descrição
     std::string getCategoria() const; //acessa a categoria
@@ -25,9 +26,10 @@ public:
     bool estaProximaDoVencimento(std::time_t agora, int janelaHoras) const; //verifica se está próxima do vencimento
     void addTag(std::string tag); //adiciona tag (categoria)
     bool validarCampos() const; //verifica se título está preenchido
-    bool validarDatas() const; //verifica se data e horário são válidos
+    bool validarDatas(std::time_t agora) const; //verifica se data e horário são válidos
 
 private:
+    int id;
     std::string titulo;
     std::string descricao;
     std::string categoria;
