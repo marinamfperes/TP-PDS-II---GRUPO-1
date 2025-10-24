@@ -2,8 +2,9 @@
 #define NOTIFICADOR_H
 
 #include "Tarefa.h"
+#include <ctime>
 #include <vector>
-//sem isso ele abriria o gerenciador, e o arquvo do gerenciador pediria para abrir esse, criando um loop
+// sem isso ele abriria o gerenciador, e o arquivo do gerenciador pediria para abrir esse, criando um loop
 class GerenciadorTarefas; // impede uma redundancia ao executar funcoes do gerenciador.h e do notificacao.h
 
 class Notificador {
@@ -21,8 +22,10 @@ public:
 
     void setAntecedenciaNotificacao(long segundos); // define periodo considerado prox do vencimento
 
-    // identifica quais vao vencer e sinaliza
-    // retorna a lista de quais nao venceram mass estao dentro da funcao de antecedencia(periodo prox de vencer)
-    std::vector<Tarefa> getTarefasVencidas() const;
+    // identifica quais venceram e sinaliza
+    std::vector<Tarefa> getTarefasVencidas();
+
+    // retorna a lista de quais nao venceram mass estao dentro da funcao de antecedencia(periodo prox de vencer) 
+    std::vector<Tarefa> getTarefasProximasDoVencimento();
 };
 #endif
