@@ -6,11 +6,9 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class Coluna {
   public: 
-    Coluna(string status
+    Coluna(const std::string& status);
     void adicionarTarefa(const Tarefa& tarefa);
     void removerTarefa(int id);
     void ordenarTarefas();
@@ -18,8 +16,8 @@ class Coluna {
     void exibirTarefas() const;
 
   private:
-    string status;
-    vector<Tarefa> tarefas;
+    std::string status;
+    std::vector<Tarefa> tarefas;
 }
 
 #endif
