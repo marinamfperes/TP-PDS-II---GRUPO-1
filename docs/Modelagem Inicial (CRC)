@@ -4,7 +4,7 @@ Classe Tarefa:
 A classe Tarefa é responsável por representar as tarefas individuais no sistema. Ela deve lidar com os dados e o estado da tarefa, incluindo a validação de campos e a lógica de status e prazos.
 
   -> Responsabilidades:
-    - Armazenar dados de uma tarefa, como título, descrição, categoria, data e horário de realização e de vencimento, prioridade, status;
+    - Armazenar dados de uma tarefa, como título, descrição, categoria, data e horário de realização agendados e de vencimento, prioridade, status;
     - Registrar tags associadas à tarefa;
     - Validar campos obrigatórios (título não vazio);
     - Validar coerência de datas (data e horário de realização e de vencimento devem ser no futuro, e a data de vencimento não pode ser anterior à de realização);
