@@ -8,8 +8,7 @@ class EstrategiaFiltro {
 public:
     virtual ~EstrategiaFiltro() = default;
 
-    // Aplica o filtro sobre uma lista de tarefas e retorna as que atendem ao critério
     virtual std::vector<Tarefa> aplicar(const std::vector<Tarefa>& tarefas) const = 0;
 };
 
-#endif // ESTRATEGIA_FILTRO_H
+#endif 
