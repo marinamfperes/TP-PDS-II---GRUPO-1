@@ -14,7 +14,7 @@ public:
 
 private:
     std::string nome;
-    int horasPreferenciaNotificacao; 
+    int horasPreferenciaNotificacao;  
 };
 
 #endif 
