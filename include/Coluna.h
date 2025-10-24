@@ -18,7 +18,7 @@ class Coluna {
   private:
     std::string status;
     std::vector<Tarefa> tarefas;
-}
+};
 
 #endif
 
