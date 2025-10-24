@@ -119,3 +119,36 @@ A EstrategiaFiltro representa o contrato para aplicação de diferentes filtros 
   -> Colaboradores:
     - Tarefa: Para acessar atributos relevantes na filtragem, como tags, prioridade, título e descrição e avaliar se uma tarefa atende ao critério estabelecido.
     - GerenciadorTarefas: Para selecionar e aplicar uma estratégia de filtragem específica.
+
+
+Classe FiltroPrioridade
+
+  -> Responsabilidades:
+    - Filtrar tarefas de acordo com o nível de prioridade definido;
+    - Retornar uma nova coleção de tarefas filtradas, sem alterar o vetor original.
+  
+  -> Colaboradores:
+    - Tarefa: fornece o valor da prioridade de cada tarefa para verificação;
+    - GerenciadorTarefas: fornece a coleção de tarefas a ser filtrada.
+
+
+Classe FiltroTag:
+
+  -> Responsabilidades:
+    - Filtrar tarefas de acordo com uma tag específica;
+    - Retornar um vetor de tarefas que contêm a tag desejada, sem alterar o vetor original.
+  
+  -> Colaboradores:
+    - Tarefa: Fornece a lista de tags da tarefa;
+    - GerenciadorTarefas: passa a coleção de tarefas a ser filtrada.
+
+
+Classe FiltroCombinado:
+
+  -> Responsabilidades:
+    - Combinar múltiplos filtros aplicando-os sequencialmente;
+    - Retornar apenas tarefas que passam em todos os filtros.
+  
+  -> Colaboradores:
+    - EstrategiaFiltro: herança/interface base;
+    - GerenciadorTarefas: fornece a coleção inicial de tarefas.
