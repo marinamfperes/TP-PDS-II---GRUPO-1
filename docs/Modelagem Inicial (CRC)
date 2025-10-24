@@ -121,7 +121,8 @@ A EstrategiaFiltro representa o contrato para aplicação de diferentes filtros 
     - GerenciadorTarefas: Para selecionar e aplicar uma estratégia de filtragem específica.
 
 
-Classe FiltroPrioridade
+Classe FiltroPrioridade:
+Filtra uma coleção de tarefas retornando apenas aquelas que correspondem à prioridade definida. Não altera a coleção original.
 
   -> Responsabilidades:
     - Filtrar tarefas de acordo com o nível de prioridade definido;
@@ -133,6 +134,7 @@ Classe FiltroPrioridade
 
 
 Classe FiltroTag:
+Filtra uma coleção de tarefas retornando apenas aquelas que contêm a tag desejada. Não altera a coleção original.
 
   -> Responsabilidades:
     - Filtrar tarefas de acordo com uma tag específica;
@@ -144,6 +146,7 @@ Classe FiltroTag:
 
 
 Classe FiltroCombinado:
+Combina múltiplos filtros plicando-os sequencialmente a uma coleção de tarefas, retornando apenas as tarefas que passam por todos os filtros.
 
   -> Responsabilidades:
     - Combinar múltiplos filtros aplicando-os sequencialmente;
