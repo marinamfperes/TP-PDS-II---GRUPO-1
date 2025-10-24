@@ -1,1 +1,15 @@
+#ifndef RELOGIO_H
+#define RELOGIO_H
 
+#include <ctime>
+
+class Relogio {
+public:
+    Relogio();
+
+    // Retornar a hora atual do sistema
+    virtual std::time_t agora() const; // a variavel VIRTUAL deixa o programador criar dados de mentira para testar codigos
+};
+
+#endif       
+  
