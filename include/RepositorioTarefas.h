@@ -8,16 +8,19 @@
 class RepositorioTarefas {
 private:
     // repositorio sabera em qual arquivo deve salvar
-    std::string Arquivo;
+    std::string arquivo;
 
 public:
 
+    // Construtor para definir o arquivo de persistência
+    RepositorioTarefas(const std::string& nomeArquivo);
+
     // Salvar tarefas em arquivo
-    void salvarTarefa(const std::vector<Tarefa>& tarefas);
+    void salvarTarefa(const std::vector<Tarefa>& tarefas) const;
 
-    // Carrega a lista Rde tarefas do banco de dados ou arquivo
-    std::vector<Tarefa> carregarTarefas();
+    // Carrega a lista de tarefas do banco de dados ou arquivo
+    std::vector<Tarefa> carregarTarefas() const;
 
-}
+};
 
 #endif
