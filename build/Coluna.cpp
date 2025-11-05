@@ -59,3 +59,7 @@ void Coluna::exibirTarefas() const {
     }
     std::cout << std::endl;
 }
+
+std::string getStatus() const; //status da coluna
+
+ bool extrairTarefaPorId(int id, Tarefa& outTarefa);
