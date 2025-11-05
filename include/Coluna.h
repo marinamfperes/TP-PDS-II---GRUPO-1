@@ -14,6 +14,8 @@ class Coluna {
     void ordenarTarefas();
     int contarTarefas() const;
     void exibirTarefas() const;
+    std::string getStatus() const;
+    bool extrairTarefaPorId(int id, Tarefa& outTarefa);
 
   private:
     std::string status;
