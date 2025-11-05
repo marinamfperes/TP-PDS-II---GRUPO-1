@@ -60,6 +60,25 @@ void Coluna::exibirTarefas() const {
     std::cout << std::endl;
 }
 
-std::string getStatus() const; //status da coluna
+std::string Coluna::getStatus() const {
+    return status;
+}
 
- bool extrairTarefaPorId(int id, Tarefa& outTarefa);
+bool Coluna::extrairTarefaPorId(int id, Tarefa& outTarefa) {
+    int idx = -1;
+    for (size_t i = 0; i < tarefas.size(); ++i) {
+        if (tarefas[i].getId() == id) {
+            idx = static_cast<int>(i);
+            break;
+        }
+    }
+    if (idx == -1) {
+        return false;
+    }
+    outTarefa = tarefas[idx];  //copia a tarefa encontrada para outTarefa
+    for (size_t j = idx; j + 1 < tarefas.size(); ++j) {
+        tarefas[j] = std::move(tarefas[j + 1]);
+    }
+    tarefas.pop_back();
+    return true;
+}
