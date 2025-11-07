@@ -32,7 +32,7 @@ void Coluna::ordenarTarefas() {
           if (a.getPrioridade() != b.getPrioridade()) {
                 if (a.getPrioridade() > b.getPrioridade()) best = j; //maior prioridade primeiro
             } else {
-                if (a.getVencimento() < b.getVencimento()) best = j; //se mesma prioridade, vencimento menor (mais próximo) primeiro
+                if (a.getVencimento() < b.getVencimento()) best = j; //se for a mesma prioridade, mais próximo primeiro
             }
         }
         if (best != i) {
