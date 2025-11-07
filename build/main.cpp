@@ -1,4 +1,6 @@
 #include <iostream>
+#include <map>
+#include <string>
 #include "Coluna.h"
 #include "EstrategiaFiltro.h"
 #include "FiltroCombinado.h"
