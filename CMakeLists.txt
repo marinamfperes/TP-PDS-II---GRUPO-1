@@ -1,20 +1,16 @@
 cmake_minimum_required(VERSION 3.16)
-project(GerenciadorTarefas)
+project(GerenciadorTarefas LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#caminho do Qt
+# Caminho para o Qt
 set(CMAKE_PREFIX_PATH "C:/Qt/6.10.0/mingw_64/lib/cmake")
 
-#encontrar o módulo de widgets do Qt
-find_package(Qt6 COMPONENTS Widgets REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-#definir os arquivos do executável
 add_executable(GerenciadorTarefas
     src/main.cpp
 )
 
-#ligar o executável às bibliotecas do Qt
-target_link_libraries(GerenciadorTarefas
-    Qt6::Widgets
-)
+target_link_libraries(GerenciadorTarefas PRIVATE Qt6::Widgets)

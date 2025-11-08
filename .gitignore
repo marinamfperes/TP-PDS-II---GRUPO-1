@@ -1,0 +1,26 @@
+#ignorar arquivos de build e cache
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+
+#ignorar executáveis
+*.exe
+*.obj
+*.dll
+*.o
+*.a
+
+#ignorar arquivos temporários do VSCode e do Qt
+.vscode/
+.qt/
+*.user
+*.user.*
+*.pro.user
+
+#ignorar logs e backups
+*.log
+*.tmp
+*~
