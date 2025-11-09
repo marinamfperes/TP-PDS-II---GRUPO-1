@@ -20,28 +20,30 @@ Enquanto isso, os micro objetivos do projeto consistem em:
 
 Como resultado, espera-se que o projeto desenvolvido seja capaz de proporcionar aos estudantes uma gestão mais eficiente e organizada de suas tarefas acadêmicas, melhorando sua produtividade e redução do estresse relacionado ao cumprimento de prazos. A utilização do Kanban facilitará a visualização do progresso das atividades, contribuindo para o controle de compromissos e evitando atrasos. Além disso, o sistema proporcionará a personalização das tarefas conforme a necessidade individual de cada aluno, criando uma ferramenta flexível e adaptada ao perfil universitário.
 
+==============================================================================================================================
+
 INFORMAÇÕES ESSENCIAIS 
 
-Compilação e execução:
+- Compilação e execução:
 
-Arquitetura do projeto:
+- Arquitetura do projeto:
 
-Funcionalidades entregues:
+- Funcionalidades entregues:
 
-Instruções de uso:
+- Instruções de uso:
 
-Tratamento de exceções e programação defensiva:
+- Tratamento de exceções e programação defensiva:
 
-Doxygen:
+- Doxygen:
 
-Vídeo de compilação e execução:
+- Vídeo de compilação e execução:
 
-Sobre a equipe:
+- Sobre a equipe:
 
-Ciclo de desenvolvimento:
+- Ciclo de desenvolvimento:
 
-Linha do tempo das sprints:
+- Linha do tempo das sprints:
 
-Planejado x Executado:
+- Planejado x Executado:
 
-Evidências no Github:
+- Evidências no Github:
