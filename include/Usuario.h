@@ -13,8 +13,8 @@ public:
     void definirHorasPreferenciaNotificacao(int horas);
 
 private:
-    std::string nome;
-    int horasPreferenciaNotificacao;  
+    std::string nome_;
+    int horasPreferenciaNotificacao_;  
 };
 
 #endif 

@@ -1,9 +1,12 @@
 #ifndef QUADRO_H
 #define QUADRO_H
 
+
 #include "Coluna.h"
 #include <vector>
 #include <string>
+
+
 
 
 class Quadro {
@@ -13,9 +16,10 @@ class Quadro {
       void exibirQuadro() const; //exibicao das colunas
       void moverTarefaParaColuna(int id,  std::string& novoStatus);
 
+
   private:
      std::vector<Coluna> colunas;
 };
 
+
 #endif
-  

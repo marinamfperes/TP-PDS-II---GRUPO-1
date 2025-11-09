@@ -7,23 +7,14 @@
 
 class FiltroPrioridade : public EstrategiaFiltro {
 private:
-    int prioridadeDesejada; //prioridade a ser filtrada
+    int prioridadeDesejada_; //prioridade a ser filtrada
 
 public:
-    FiltroPrioridade(int prioridade) : prioridadeDesejada(prioridade) {}
+    FiltroPrioridade(int prioridade);
 
     //implementa o método aplicar da interface
-    std::vector<Tarefa> aplicar(const std::vector<Tarefa>& tarefas) const override {
-        std::vector<Tarefa> resultado;
+    std::vector<Tarefa> aplicar(const std::vector<Tarefa>& tarefas) const override;
 
-        for (const auto& t : tarefas) {
-            if (t.getPrioridade() == prioridadeDesejada) {
-                resultado.push_back(t);
-            }
-        }
-
-        return resultado; //retorna só as tarefas que possuem esse filtro
-    }
 };
 
 #endif

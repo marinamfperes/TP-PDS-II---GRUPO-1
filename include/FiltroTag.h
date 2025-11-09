@@ -7,23 +7,11 @@
 
 class FiltroTag : public EstrategiaFiltro {
   private:
-    std::string tagDesejada;
+    std::string tagDesejada_;
 
   public:
-    FiltroTag(const std::string& tag) : tagDesejada(tag) {}
-    std::vector<Tarefa> aplicar(const std::vector<Tarefa>& tarefas) const override {
-        std::vector<Tarefa> resultado;
-         for (const auto& t : tarefas) {
-            for (const auto& tag : t.getTags()) { //supondo que Tarefa tenha getTags()
-                if (tag == tagDesejada) {
-                    resultado.push_back(t);
-                    break; //evita de adicionar a mesma tarefa mais de uma vez
-                }
-            }
-        }
-
-        return resultado;
-    }
+    FiltroTag(const std::string& tag);
+    std::vector<Tarefa> aplicar(const std::vector<Tarefa>& tarefas) const override;
 };
 
 #endif

@@ -3,13 +3,16 @@
 #include <iostream>
 #include <string>
 
+
 Quadro::Quadro() {
-    
+   
 }
 
-void Quadro::adicionarColuna(const Coluna& coluna) { //add coluna 
+
+void Quadro::adicionarColuna(const Coluna& coluna) { //add coluna
     colunas.push_back(coluna);
 }
+
 
 void Quadro::exibirQuadro() const { //exibição do quadro reutilizando o exibirTarefas de cada uma
     std::cout << "Quadro\n";
@@ -17,6 +20,7 @@ void Quadro::exibirQuadro() const { //exibição do quadro reutilizando o exibir
         colunas[i].exibirTarefas();
     }
 }
+
 
 void Quadro::moverTarefaParaColuna(int id, std::string& novoStatus) {
     Tarefa tarefaExtraida;
@@ -28,11 +32,12 @@ void Quadro::moverTarefaParaColuna(int id, std::string& novoStatus) {
         }
     }
 
+
         if (!encontrada) {
         std::cout << "Aviso: tarefa com ID " << id << " não encontrada.\n";
         return;
     }
-    tarefaExtraida.atualizarStatus(novoStatus) //atualizar status da tarefa extraída
+    tarefaExtraida.atualizarStatus(novoStatus); //atualizar status da tarefa extraída
     for (size_t i = 0; i < colunas.size(); ++i) {
         if (colunas[i].getStatus() == novoStatus) {
             colunas[i].adicionarTarefa(tarefaExtraida);
@@ -45,3 +50,5 @@ void Quadro::moverTarefaParaColuna(int id, std::string& novoStatus) {
     colunas.push_back(nova);
     std::cout << "Coluna '" << novoStatus << "' criada e tarefa " << id << " adicionada.\n";
 }
+
+

@@ -8,7 +8,7 @@
 class RepositorioTarefas {
 private:
     // repositorio sabera em qual arquivo deve salvar
-    std::string arquivo;
+    std::string arquivo_;
 
 public:
 

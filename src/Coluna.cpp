@@ -1,11 +1,13 @@
 #include "Coluna.h"
-#include <iostream> 
-#include <string> 
+#include <iostream>
+#include <string>
+
 
 Coluna::Coluna(const std::string& status) : status(status) {}
 void Coluna::adicionarTarefa(const Tarefa& tarefa) {
     tarefas.push_back(tarefa);
 } //add tarefa no final do vetor
+
 
 void Coluna::removerTarefa(int id) {
     int idx = -1;
@@ -21,6 +23,7 @@ void Coluna::removerTarefa(int id) {
         tarefas.pop_back();
     }
 }
+
 
 void Coluna::ordenarTarefas() {
   const size_t n = tarefas.size();
@@ -43,9 +46,11 @@ void Coluna::ordenarTarefas() {
     }
 }
 
+
 int Coluna::contarTarefas() const {
     return static_cast<int>(tarefas.size());
 }
+
 
 void Coluna::exibirTarefas() const {
     std::cout << "=== Coluna: " << status << " (" << tarefas.size() << " tarefas) ===\n";
@@ -60,9 +65,11 @@ void Coluna::exibirTarefas() const {
     std::cout << std::endl;
 }
 
+
 std::string Coluna::getStatus() const {
     return status;
 }
+
 
 bool Coluna::extrairTarefaPorId(int id, Tarefa& outTarefa) {
     int idx = -1;
@@ -82,3 +89,5 @@ bool Coluna::extrairTarefaPorId(int id, Tarefa& outTarefa) {
     tarefas.pop_back();
     return true;
 }
+
+

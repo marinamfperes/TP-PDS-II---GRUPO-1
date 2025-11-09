@@ -9,9 +9,9 @@ class GerenciadorTarefas; // impede uma redundancia ao executar funcoes do geren
 
 class Notificador {
 private:
-    GerenciadorTarefas& gerenciador; // guarda um atalho para o gerenciador original
+    GerenciadorTarefas& gerenciador_; // guarda um atalho para o gerenciador original
 
-    long segundosAntecedencia; // guarda em segundos o tempo de antecedencia (24h = 86400 seg)
+    long segundosAntecedencia_; // guarda em segundos o tempo de antecedencia (24h = 86400 seg)
 
     // Verificar tarefas vencidas ou próximas do vencimento
     void verificarTarefas(std::vector<Tarefa>& tarefas, std::time_t agora);

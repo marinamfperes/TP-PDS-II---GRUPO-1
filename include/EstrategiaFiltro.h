@@ -6,7 +6,7 @@
 
 class EstrategiaFiltro {
 public:
-    virtual ~EstrategiaFiltro() = default;
+    virtual ~EstrategiaFiltro();
 
     virtual std::vector<Tarefa> aplicar(const std::vector<Tarefa>& tarefas) const = 0;
 };
