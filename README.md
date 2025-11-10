@@ -26,6 +26,7 @@ INFORMAÇÕES ESSENCIAIS
 
 - COMPILAÇÃO E EXECUÇÃO:
 
+
 - ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests. 
     - BUILD: arquivos gerados durante a compilação, como o executável final main.exe;
     - DOCS: documentos do projeto, como README.md, além dos arquivos gerados pelo Doxygen;
@@ -35,19 +36,25 @@ INFORMAÇÕES ESSENCIAIS
 
 <img width="447" height="253" alt="image" src="https://github.com/user-attachments/assets/49e2e83b-2620-4f0a-aeeb-d539cfc74bbf" />
 
+
 - FUNCIONALIDADES ENTREGUES: Nosso projeto possui, como objetivo principal, melhorar a experiência dos estudantes na Universidade, sendo assim, projetamos um quadro Kanban para organização. Com esse intuito, as principais funcionalidades entregues foram:
     - Adição de atividades no escopo e classificação por prioridade;
     - Cadastro, edição e exclusão de tarefas;
     - Notificações quando a atividade programada está chegando ao prazo de vencimento;
     - Organização das atividades entre colunas de "A fazer", "Fazendo", "Feito".
 
+
 - INSTRUÇÕES DE USO:
+
 
 - TRATAMENTO DE EXCEÇÕES E PROGRAMAÇÃO DEFENSIVA:
 
+
 - DOXYGEN:
+  
 
 - VÍDEO DA COMPILAÇÃO E DA EXECUÇÃO:
+  
 
 - SOBRE A EQUIPE: Nosso projeto foi extremamente dividido, objetivando que todos tivessem contribuído, ao menos um pouco, com cada etapa de desenvolvimento do código. A baixo estão as principais atividades que cada membro do grupo executou:
     - Daniel Sales: Notificador.h, Relogio.h, RepositorioTarefas.h, FiltroCombinado.cpp, FiltroPrioridade.cpp, FiltroTag.cpp,  adições no README;
@@ -57,9 +64,11 @@ INFORMAÇÕES ESSENCIAIS
     - Marina Fonseca: escopo inicial do projeto, requisitos (User Stories), FiltroaTag.cpp, Coluna.h/Coluna.cpp, EstrategiaFiltro.h/EstrategiaFiltro.cpp, Quadro.h/Quadro.cpp, adições no README;
       
     - Miguel Del Corsi: Usuario.h, Relogio.cpp, RepositorioTarefas.cpp, Usuario.h/Usuario.cpp,  adições no README;
+ 
 
 - CICLO DE DESENVOLVIMENTO E LINHA DO TEMPO DAS SPRINTS:
   ![TimelineCycle](https://github.com/user-attachments/assets/03b2edba-5cc3-49e4-ad31-68ea456fc3cc)
+
 
 - PLANEJADO x EXECUTADO:
   - Implementar as funcionalidades de cadastro, edição e exclusão de tarefas; ✔️
@@ -73,5 +82,6 @@ INFORMAÇÕES ESSENCIAIS
   - Exibir um contador de tarefas com a quantidade de tarefas pendentes; ✔️
     
   - Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil. ✖️ -> Percebemos que a montagem de interface gráfica, a partir do programa Qt, seria muito complexa e despendiria muito tempo. Ajustar o Github, bem como VsCode, e alinhar tudo seria mais do que conseguiríamos fazer.
+
 
 - EVIDÊNCIAS NO GITHUB:
