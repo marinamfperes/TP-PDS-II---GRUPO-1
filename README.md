@@ -26,7 +26,8 @@ INFORMAÇÕES ESSENCIAIS
 
 - Compilação e execução:
 
-- Arquitetura do projeto:
+- Arquitetura do projeto:<img width="447" height="253" alt="image" src="https://github.com/user-attachments/assets/49e2e83b-2620-4f0a-aeeb-d539cfc74bbf" />
+
 
 - Funcionalidades entregues:
 
