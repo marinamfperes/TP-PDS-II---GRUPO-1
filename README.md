@@ -75,7 +75,7 @@ INFORMAÇÕES ESSENCIAIS
  
   - Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de realização e de vencimento (prazo), importância, categorias personalizadas; ✔️
     
-  - Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito"; ✔️
+  - Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito"; ️✖️ -> As categorias de "A Fazer", "Fazendo" e "Feito" foram feitas, mas a visualização no Kanban não foi feita, tendo em vista que não adotamos interface gráfica.
     
   - Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento; ️️✔️
     
