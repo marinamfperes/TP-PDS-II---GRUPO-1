@@ -63,7 +63,7 @@ INFORMAÇÕES ESSENCIAIS
  
     - Marina Fonseca: escopo inicial do projeto, requisitos (User Stories), FiltroaTag.cpp, Coluna.h/Coluna.cpp, EstrategiaFiltro.h/EstrategiaFiltro.cpp, Quadro.h/Quadro.cpp, adições no README;
       
-    - Miguel Del Corsi: Usuario.h, Relogio.cpp, RepositorioTarefas.cpp, Usuario.h/Usuario.cpp,  adições no README;
+    - Miguel Del Corsi: Usuario.h, Relogio.cpp, RepositorioTarefas.cpp, Usuario.h/Usuario.cpp,  adições no README, Doxygen;
  
 
 - CICLO DE DESENVOLVIMENTO E LINHA DO TEMPO DAS SPRINTS:
