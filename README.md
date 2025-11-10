@@ -27,11 +27,11 @@ INFORMAÇÕES ESSENCIAIS
 - COMPILAÇÃO E EXECUÇÃO:
 
 - ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests. 
-    BUILD: arquivos gerados durante a compilação, como o executável final main.exe;
-    DOCS: documentos do projeto, como README.md, além dos arquivos gerados pelo Doxygen;
-    INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
-    SRC: onde está localizado o código principal, alocando as implementações das funções declaradas em "include", como Coluna.cpp;
-    TESTS: arquivos de teste que comprovam a funcionalidade do código.
+    - BUILD: arquivos gerados durante a compilação, como o executável final main.exe;
+    - DOCS: documentos do projeto, como README.md, além dos arquivos gerados pelo Doxygen;
+    - INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
+    - SRC: onde está localizado o código principal, alocando as implementações das funções declaradas em "include", como Coluna.cpp;
+    - TESTS: arquivos de teste que comprovam a funcionalidade do código.
 
 <img width="447" height="253" alt="image" src="https://github.com/user-attachments/assets/49e2e83b-2620-4f0a-aeeb-d539cfc74bbf" />
 
@@ -68,7 +68,7 @@ INFORMAÇÕES ESSENCIAIS
     
   - Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito"; ✔️
     
-  - Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento; ✖️ -> Essa funcionalidade estava relacionada ao desenvolvimento da interface gráfica.
+  - Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento; ️️✔️
     
   - Exibir um contador de tarefas com a quantidade de tarefas pendentes; ✔️
     
