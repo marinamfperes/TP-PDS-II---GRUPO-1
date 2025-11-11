@@ -163,7 +163,7 @@ Sempre que alguma modificação for feita no código , é importante atualizar a
   O GitHub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
   
 
-- VÍDEO DA COMPILAÇÃO E DA EXECUÇÃO: https://youtu.be/tj06qsQpPJU
+- VÍDEO DA COMPILAÇÃO E DA EXECUÇÃO: (https://youtu.be/Az-n_MC-tcI)
   
 
 - SOBRE A EQUIPE: Nosso projeto foi extremamente dividido, objetivando que todos tivessem contribuído, ao menos um pouco, com cada etapa de desenvolvimento do código. A baixo estão as principais atividades que cada membro do grupo executou:
