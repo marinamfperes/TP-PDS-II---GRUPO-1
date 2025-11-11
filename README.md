@@ -24,7 +24,7 @@ Como resultado, espera-se que o projeto desenvolvido seja capaz de proporcionar 
 
 INFORMAÇÕES ESSENCIAIS 
 
-* Existem divergências entre o escopo inicial (que não fora editado para fins de correção) e a entrega final do projeto, isso fica mais claro ao longo dos tópicos subsequentes.
+-> Obs.: Existem divergências entre o escopo inicial (que não fora editado para fins de correção) e a entrega final do projeto, isso fica mais claro ao longo dos tópicos subsequentes.
   
 - COMPILAÇÃO E EXECUÇÃO:
 
