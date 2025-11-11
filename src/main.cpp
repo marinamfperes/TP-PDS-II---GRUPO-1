@@ -12,6 +12,7 @@
 #include "Relogio.h"
 #include "RepositorioTarefas.h"
 #include "GerenciadorTarefas.h"
+#include "DataUtil.h"
 #include "Notificador.h"
 #include "FiltroCombinado.h"
 #include "FiltroPrioridade.h"
@@ -51,7 +52,6 @@ static int perguntarInt(const std::string& prompt, int def = 0) { //igual ao ant
 
 
 int main() {
-
 
     //serviços
     Relogio rel;
@@ -118,10 +118,10 @@ int main() {
             int prio = perguntarInt("Prioridade (1=Baixa,2=Media,3=Alta,4=Critica) [2]: ", 2);
             std::cout << "Agendada (dd/MM/yyyy HH:mm) [vazio=sem]: ";
             const std::string sag = perguntarLinha("");
-            std::time_t ag = Notificador::converteDataHora(sag);
+            std::time_t ag = converteDataHora(sag);
             std::cout << "Vencimento (dd/MM/yyyy HH:mm) [vazio=sem]: ";
             const std::string sven = perguntarLinha("");
-            std::time_t ve = Notificador::converteDataHora(sven);
+            std::time_t ve = converteDataHora(sven);
 
 
             Tarefa t(titulo, desc, ag, ve, prio);
@@ -162,8 +162,8 @@ int main() {
             if (!titulo.empty()) edit.setTitulo(titulo);
             if (!desc.empty())   edit.setDescricao(desc);
             if (prio != 0)       edit.setPrioridade(prio);
-            if (!sag.empty())    edit.setAgendada(Notificador::converteDataHora(sag));
-            if (!sven.empty())   edit.setVencimento(Notificador::converteDataHora(sven));
+            if (!sag.empty())    edit.setAgendada(converteDataHora(sag));
+            if (!sven.empty())   edit.setVencimento(converteDataHora(sven));
 
 
             try {

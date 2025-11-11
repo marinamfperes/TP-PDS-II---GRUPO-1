@@ -6,25 +6,7 @@
 //gerador simples de ids únicos
 //"static" garante um contador único para todas as Tarefas
 //cada nova Tarefa recebe id = GERADOR_ID_TAREFA++
-static int GERADOR_ID_TAREFA = 1;
-
-//função para carregar o id do arquivo
-void carregarIdGerador() {
-    std::ifstream arquivo("ultimo_id.txt");  //arquivo onde o último id será salvo
-    if (arquivo.is_open()) {
-        arquivo >> GERADOR_ID_TAREFA;  //lê o último id salvo
-    }
-    arquivo.close();
-}
-
-//função para salvar o id no arquivo
-void salvarIdGerador() {
-    std::ofstream arquivo("ultimo_id.txt");  //arquivo onde o último id será salvo
-    if (arquivo.is_open()) {
-        arquivo << GERADOR_ID_TAREFA;  //salva o valor atual do id
-    }
-    arquivo.close();
-}
+int GERADOR_ID_TAREFA = 1;
 
 //construtor que inicializa todos os campos
 Tarefa::Tarefa(std::string titulo,

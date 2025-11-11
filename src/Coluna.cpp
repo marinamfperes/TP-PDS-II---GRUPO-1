@@ -31,7 +31,7 @@ void Coluna::exibirTarefas() const {
         std::cout << "ID:" << t.getId()
                   << " | Titulo:" << t.getTitulo()
                   << " | Pri:" << t.getPrioridade()
-                  << " | Venc:" << Notificador::formataDataHora(t.getVencimento())
+                  << " | Venc:" << formataDataHora(t.getVencimento())
                    << " | Tags: ";
                   for (const auto& tag : t.getTags()) {
                       std::cout << tag << " "; //exibe as tags de cada tarefa

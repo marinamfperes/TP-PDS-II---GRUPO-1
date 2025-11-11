@@ -3,6 +3,7 @@
 
 #include "Tarefa.h"
 #include "Notificador.h"
+#include "DataUtil.h"
 #include <vector>
 #include <string>
 

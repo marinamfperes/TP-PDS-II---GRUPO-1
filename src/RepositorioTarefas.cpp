@@ -8,9 +8,7 @@
 
 
 RepositorioTarefas::RepositorioTarefas(const std::string& nomeArquivo)
-    : arquivo_(nomeArquivo) {
-            Tarefa::carregarIdGerador();
-}
+    : arquivo_(nomeArquivo) {}
 
 
 // Salva todas as tarefas em um arquivo de texto simples

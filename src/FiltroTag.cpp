@@ -6,8 +6,7 @@ FiltroTag::FiltroTag(const std::string& tag)
     : tagDesejada_(tag) {}
 
 //retorna apenas às tarefas que CONTÉM a tag exata na sua lista de tags
-//se a tag desejada estiver vazia, retorna a coleção original (sem
-filtrar)
+//se a tag desejada estiver vazia, retorna a coleção original (sem filtrar)
 std::vector<Tarefa> FiltroTag::aplicar(const std::vector<Tarefa>&
 tarefas) const {
 

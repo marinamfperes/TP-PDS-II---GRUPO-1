@@ -4,6 +4,7 @@
 #include "Tarefa.h"
 #include "Usuario.h"
 #include "GerenciadorTarefas.h"
+#include "DataUtil.h"
 #include <ctime>
 #include <vector>
 // sem isso ele abriria o gerenciador, e o arquivo do gerenciador pediria para abrir esse, criando um loop
@@ -30,8 +31,5 @@ public:
     // exibe os avisos na tela
     void exibirAvisos() const;
 
-    //Helpers de data e hora
-    static std::time_t converteDataHora(const std::string& s);
-    static std::string formataDataHora(std::time_t ts);
 };
 #endif

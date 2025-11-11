@@ -9,9 +9,6 @@ class Tarefa {
 public:
     Tarefa(std::string titulo, std::string descricao, std::time_t agendada, std::time_t vencimento, int prioridade);
 
-    static void carregarIdGerador();  
-    static void salvarIdGerador();
-
     //métodos de acesso
     int getId() const; //acessa o id único que diferencia as tarefas
 

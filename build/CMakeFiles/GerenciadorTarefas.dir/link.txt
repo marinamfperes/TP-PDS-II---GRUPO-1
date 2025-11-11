@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\GerenciadorTarefas.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\GerenciadorTarefas.dir/objects.a @CMakeFiles\GerenciadorTarefas.dir\objects1.rsp
+c:\Qt\Tools\mingw1310_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\GerenciadorTarefas.dir/objects.a -Wl,--no-whole-archive -o GerenciadorTarefas.exe -Wl,--out-implib,libGerenciadorTarefas.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\GerenciadorTarefas.dir\linkLibs.rsp

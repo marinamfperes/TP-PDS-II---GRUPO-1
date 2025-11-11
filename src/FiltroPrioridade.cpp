@@ -1,10 +1,9 @@
-#include "Tarefa.h"  //garante que a Tarefa e getPrioridade() são
-conhecidos
+#include "FiltroPrioridade.h"
+#include "Tarefa.h"  //garante que a Tarefa e getPrioridade() são conhecidos
 #include <vector>
 
 //construtor
 //apenas captura o valor da prioridade alvo. Mantemos 'int' porque seu
-Tarefa.h
 FiltroPrioridade::FiltroPrioridade(int prioridade)
     : prioridadeDesejada_(prioridade) {}
 
@@ -16,8 +15,7 @@ FiltroPrioridade::FiltroPrioridade(int prioridade)
 //anterior.
 //exemplo: primeiro filtra por tag("Faculdade"), depois por prioridade
 //(Alta)
-std::vector<Tarefa> FiltroPrioridade::aplicar(const
-std::vector<Tarefa>& tarefas) const {
+std::vector<Tarefa> FiltroPrioridade::aplicar(const std::vector<Tarefa>& tarefas) const {
     std::vector<Tarefa> resultado;
     resultado.reserve(tarefas.size());//evita realocações
 

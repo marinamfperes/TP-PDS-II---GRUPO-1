@@ -1,0 +1,92 @@
+[
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\GerenciadorTarefas_autogen\\mocs_compilation.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\build\\GerenciadorTarefas_autogen\\mocs_compilation.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/build/GerenciadorTarefas_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/GerenciadorTarefas_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\Coluna.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\Coluna.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/Coluna.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/Coluna.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\DataUtil.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\DataUtil.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/DataUtil.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/DataUtil.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\EstrategiaFiltro.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\EstrategiaFiltro.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/EstrategiaFiltro.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/EstrategiaFiltro.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\FiltroCombinado.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\FiltroCombinado.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/FiltroCombinado.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/FiltroCombinado.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\FiltroPrioridade.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\FiltroPrioridade.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/FiltroPrioridade.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/FiltroPrioridade.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\FiltroTag.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\FiltroTag.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/FiltroTag.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/FiltroTag.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\GerenciadorTarefas.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\GerenciadorTarefas.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/GerenciadorTarefas.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/GerenciadorTarefas.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\Notificador.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\Notificador.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/Notificador.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/Notificador.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\Quadro.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\Quadro.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/Quadro.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/Quadro.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\Relogio.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\Relogio.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/Relogio.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/Relogio.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\RepositorioTarefas.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\RepositorioTarefas.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/RepositorioTarefas.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/RepositorioTarefas.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\Tarefa.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\Tarefa.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/Tarefa.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/Tarefa.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\Usuario.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\Usuario.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/Usuario.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/Usuario.cpp.obj"
+},
+{
+  "directory": "C:/TP/TP-PDS-II---GRUPO-1/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/GerenciadorTarefas.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GerenciadorTarefas.dir\\src\\main.cpp.obj -c C:\\TP\\TP-PDS-II---GRUPO-1\\src\\main.cpp",
+  "file": "C:/TP/TP-PDS-II---GRUPO-1/src/main.cpp",
+  "output": "CMakeFiles/GerenciadorTarefas.dir/src/main.cpp.obj"
+}
+]
