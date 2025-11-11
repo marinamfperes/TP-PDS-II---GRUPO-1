@@ -81,27 +81,33 @@ INFORMAÇÕES ESSENCIAIS
 
 
 - DOXYGEN:
-O Doxygen foi utilizado para gerar a documentação automática do código-fonte do projeto, permitindo visualizar de forma organizada todas as classes, métodos e relacionamentos do sistema. Ele é uma ferramenta que analisa os arquivos do projeto e gera automaticamente uma documentação completa, em formato HTML, a partir dos comentários inseridos no código. Essa documentação facilita a compreensão da estrutura e funcionamento do sistema, tanto para os desenvolvedores do grupo quanto para futuras manutenções.
-Como o Doxygen foi gerado:
-O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída.
-Com o terminal aberto na pasta principal do projeto, foi executado o comando:
+
+  O Doxygen foi utilizado para gerar a documentação automática do código-fonte do projeto, permitindo visualizar de forma organizada todas as classes, métodos e relacionamentos do sistema. Ele é uma ferramenta que analisa os arquivos do projeto e gera automaticamente uma documentação completa, em formato HTML, a partir dos comentários inseridos no código. Essa documentação facilita a compreensão da estrutura e funcionamento do sistema, tanto para os desenvolvedores do grupo quanto para futuras manutenções.
+
+  Como o Doxygen foi gerado:O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída. Com o terminal aberto na pasta principal do projeto, foi executado o comando:
+
   doxygen Doxyfile
-Após a execução, a documentação foi gerada automaticamente dentro da pasta /docs, na subpasta /html, com o arquivo principal index.html.
 
-Como acessar a documentação online:
+
+  Após a execução, a documentação foi gerada automaticamente dentro da pasta /docs, na subpasta /html, com o arquivo principal index.html.
+
+  Como acessar a documentação online:
 A documentação foi publicada através do GitHub Pages, para permitir acesso direto pelo navegador.
-https://marinamfperes.github.io/TP-PDS-II---GRUPO-1/ 
+Link: https://marinamfperes.github.io/TP-PDS-II---GRUPO-1/  
 
-Como atualizar o Doxygen:
+  Como atualizar o Doxygen:
 Sempre que alguma modificação for feita no código , é importante atualizar a documentação gerada pelo Doxygen para manter o site sincronizado com o projeto. Para isso, basta garantir que o arquivo de configuração Doxyfile esteja na pasta principal do repositório e executar o seguinte comando no terminal:
   doxygen Doxyfile
 
-Esse comando vai gerar novamente a pasta docs/html, que contém todos os arquivos da documentação atualizada. Depois disso, é só subir essas alterações para o GitHub com:
-  git add Doxyfile docs
-  git commit -m "Atualiza documentação Doxygen"
-  git push
+   Esse comando vai gerar novamente a pasta docs/html, que contém todos os arquivos da documentação atualizada. Depois disso, é só subir essas alterações para o  GitHub com:
+  
+    git add Doxyfile docs
+ 
+     git commit -m "Atualiza documentação Doxygen"
+ 
+     git push
 
-O GitHub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
+   O GitHub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
 
   
 
