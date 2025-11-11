@@ -45,10 +45,11 @@ INFORMAÇÕES ESSENCIAIS
     - Adição de atividades no escopo e classificação por prioridade;
     - Cadastro, edição e exclusão de tarefas;
     - Notificações quando a atividade programada está chegando ao prazo de vencimento;
-    - Organização das atividades entre colunas de "A fazer", "Fazendo", "Feito".
+    - Organização das atividades entre "A fazer", "Fazendo", "Feito";
+    - Contagem de tarefas pendentes.
 
 
-- INSTRUÇÕES DE USO:
+- INSTRUÇÕES DE USO: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir a data do dia. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa).
 
 
 - TRATAMENTO DE EXCEÇÕES E PROGRAMAÇÃO DEFENSIVA:
@@ -79,7 +80,7 @@ INFORMAÇÕES ESSENCIAIS
  
   - Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de realização e de vencimento (prazo), importância, categorias personalizadas; ✔️
     
-  - Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito"; ️✖️ -> As categorias de "A Fazer", "Fazendo" e "Feito" foram feitas, mas a visualização no Kanban não foi feita, tendo em vista que não adotamos interface gráfica.
+  - Incluir quadro Kanban para visualização das tarefas com colunas como "A Fazer", "Fazendo" e "Feito"; ️✖️✔️ -> As categorias de "A Fazer", "Fazendo" e "Feito" foram feitas, mas a visualização no Kanban não foi feita, tendo em vista que não adotamos interface gráfica.
     
   - Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento; ️️✔️
     
@@ -88,7 +89,11 @@ INFORMAÇÕES ESSENCIAIS
   - Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil. ✖️ -> Percebemos que a montagem de interface gráfica, a partir do programa Qt, seria muito complexa e despendiria muito tempo. Ajustar o Github, bem como VsCode, e alinhar tudo seria mais do que conseguiríamos fazer.
 
 
-- EVIDÊNCIAS NO GITHUB:
+- EVIDÊNCIAS NO GITHUB: (obs.: constam cinco autores, mas dois são da mesma autora, Luisa Gouthier)
+  <img width="1347" height="763" alt="image" src="https://github.com/user-attachments/assets/d2e8ef8a-f10e-4da8-84d5-40d7983c7a4a" />
+  <img width="1836" height="389" alt="image" src="https://github.com/user-attachments/assets/21b02849-4655-44c7-b89f-fde3383bd8cf" />
+
+
 
 
 - AGRADECIMENTOS: Gostaríamos de expressar nossos agradecimentos a todas as ferramentas, plataformas e pessoas que contribuíram, direta ou indiretamente, para o desenvolvimento deste trabalho.
