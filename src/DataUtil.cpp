@@ -1,3 +1,8 @@
+/**
+ * @file DataUtil.cpp
+ * @brief Implementações das funções utilitárias de data e hora.
+ */
+
 #include "DataUtil.h"
 #include <algorithm>
 #include <ctime>
