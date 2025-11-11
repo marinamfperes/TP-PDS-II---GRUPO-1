@@ -85,3 +85,15 @@ INFORMAÇÕES ESSENCIAIS
 
 
 - EVIDÊNCIAS NO GITHUB:
+
+
+- AGRADECIMENTOS: Gostaríamos de expressar nossos agradecimentos a todas as ferramentas, plataformas e pessoas que contribuíram, direta ou indiretamente, para o desenvolvimento deste trabalho.
+    - Agradecemos ao professor Thiago Noronha, pela orientação, disponibilidade e pelos ensinamentos transmitidos ao longo da disciplina, que foram fundamentais para a construção e consolidação dos conhecimentos aplicados neste projeto;
+      
+    - Agradecemos também ao GitHub, por oferecer uma plataforma robusta de versionamento, colaboração e hospedagem de código, essencial para o gerenciamento do projeto e para a publicação da documentação gerada;
+      
+    - Ao Visual Studio Code (VS Code), pela praticidade, integração com Git e suporte a múltiplas linguagens, que facilitaram significativamente o processo de desenvolvimento e depuração do código;
+      
+    - Ao Doxygen, pela geração automatizada da documentação do código-fonte, garantindo organização, rastreabilidade e clareza na estrutura do projeto;
+      
+    - Aos colegas de equipe, pela dedicação, comprometimento e colaboração em todas as etapas do desenvolvimento, desde o planejamento até a entrega final.
