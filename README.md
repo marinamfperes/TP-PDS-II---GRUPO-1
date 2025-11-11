@@ -81,38 +81,56 @@ INFORMAÇÕES ESSENCIAIS
 
 - TRATAMENTO DE EXCEÇÕES E PROGRAMAÇÃO DEFENSIVA:
   <img width="1577" height="149" alt="image" src="https://github.com/user-attachments/assets/be607a71-a158-4ebb-83b3-2bae98bb9658" />
+
+  
   1) Restaura o estado do std::cin se ocorrer um erro de leitura (por exemplo, o usuário digitou texto quando se esperava um número) e descarta tudo que restou na linha de entrada, evitando que dados inválidos “vazem” para a próxima leitura.
      -> Protege contra: loops infinitos, leituras erradas e efeitos colaterais de entradas inválidas.
 
  <img width="1598" height="523" alt="image" src="https://github.com/user-attachments/assets/9ffe5729-e031-4ebc-90c3-88d065949b8f" />
+
+ 
   2) Ambos garantem que o fluxo de entrada seja limpo após a operação.
      -> Protege contra: entradas inválidas (texto onde se esperava número), e preserva estado previsível do programa (valores default).
 
   <img width="396" height="173" alt="image" src="https://github.com/user-attachments/assets/dd421121-dec4-4f20-8eb3-6d3ac395c7b5" />
+
+  
   3) Garante que a pasta exista antes de tentar salvar arquivos, evitando erros de I/O.
      -> Protege contra: falhas de escrita/abertura de arquivo por diretório inexistente.
 
 <img width="599" height="151" alt="image" src="https://github.com/user-attachments/assets/9d030b42-d342-4173-9095-a7982a0a2b87" />
+
+
   4) Tenta criar cada tarefa carregada, mas ignora tarefas que causam exceção (não deixa um erro em uma tarefa abortar todo o carregamento).
      -> Protege contra: arquivo corrompido ou tarefa inválida quebrando a inicialização do programa.
 
 <img width="823" height="267" alt="image" src="https://github.com/user-attachments/assets/5743238b-08a0-4dbb-aace-59f8f7b63092" />
+
+
   5) Chama a função validar antes de inserir a tarefa no gerenciador. Se a tarefa for inválida, avisa o usuário e não persiste a tarefa.
      -> Protege contra: criação de tarefas com dados inconsistentes (datas inválidas, prioridades fora do intervalo, etc).
 
 <img width="693" height="234" alt="image" src="https://github.com/user-attachments/assets/037cfef9-018a-41bd-8b51-15a0a969f71e" />
+
+
   6) Checa a validade do ID lido e confirma que a tarefa existe antes de tentar editar/excluir/mover.
      -> Protege contra: operações sobre IDs inválidos ou inexistentes que causariam exceções/estado inconsistente.
 
 <img width="721" height="140" alt="image" src="https://github.com/user-attachments/assets/e6e84cc5-d2c8-4b6a-a9ad-3bdf36e8ecf8" />
+
+
   7) Evita exclusões acidentais solicitando confirmação explícita.
      -> Protege contra: perda de dados por clique/tecla errada.
      
 <img width="634" height="182" alt="image" src="https://github.com/user-attachments/assets/0811c0a3-67eb-4fb6-a7ae-32d4d253c521" />
+
+
   8) Captura exceções que possam ocorrer durante a edição e informa o usuário ao invés de crashar.
      -> Protege contra: exceções inesperadas durante a atualização.
 
 <img width="1101" height="529" alt="image" src="https://github.com/user-attachments/assets/f2c45565-cf50-4326-8c71-ef47069e5994" />
+
+
   9) Gera um backup (tarefas.csv.bak) antes de sobrescrever o arquivo principal, reduzindo risco de perda de dados. No encerramento, tenta salvar e ignora falhas para não impedir o fechamento do app.  
      -> Protege contra: corrupção/erro durante escrita do arquivo e perda total de dados.
 
