@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gerenciador de Tarefas: include/Quadro.h Source File</title>
+<title>My Project: include/Quadro.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gerenciador de Tarefas
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -96,30 +96,30 @@ $(function(){initNavTree('_quadro_8h_source.html','',''); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_coluna_8h.html">Coluna.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_quadro.html">    8</a></span><span class="keyword">class </span><a class="code hl_function" href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_quadro.html#a751c81797b3809680e57be184e7d4740">   10</a></span>    <a class="code hl_function" href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="class_quadro.html#a14cb595117906215a23a9f393b73f271">adicionarColuna</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_coluna.html">Coluna</a>&amp; coluna); <span class="comment">//adicao de colunas</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="class_quadro.html#a93fae84465261f762654d34566757a1b">exibirQuadro</a>() <span class="keyword">const</span>; <span class="comment">//exibicao das colunas</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="class_quadro.html#a7df0632023b9ecc67098bcfff22f4d3c">moverTarefaParaColuna</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string&amp; novoStatus);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="class_quadro.html#ad33c0125b7ae7da483120de67af096a5">removerTarefaPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>); <span class="comment">//para exclusão sincronizada com Kanban</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_quadro.html">    7</a></span><span class="keyword">class </span><a class="code hl_function" href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_function" href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Constrói um quadro a partir do vetor de tarefas atual</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">static</span> <a class="code hl_function" href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro</a> <a class="code hl_function" href="class_quadro.html#adc4990fd1ebf7bdb6b5111ee2fa1e34e">construirDe</a>(<span class="keyword">const</span> std::vector&lt;Tarefa&gt;&amp; tarefas);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_quadro.html#a93fae84465261f762654d34566757a1b">exibirQuadro</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>     std::vector&lt;Coluna&gt; colunas;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_coluna.html">Coluna</a> aFazer_;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_coluna.html">Coluna</a> fazendo_;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_coluna.html">Coluna</a> feito_;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_coluna_8h_html"><div class="ttname"><a href="_coluna_8h.html">Coluna.h</a></div></div>
-<div class="ttc" id="aclass_coluna_html"><div class="ttname"><a href="class_coluna.html">Coluna</a></div><div class="ttdef"><b>Definition</b> Coluna.h:9</div></div>
-<div class="ttc" id="aclass_quadro_html_a14cb595117906215a23a9f393b73f271"><div class="ttname"><a href="class_quadro.html#a14cb595117906215a23a9f393b73f271">Quadro::adicionarColuna</a></div><div class="ttdeci">void adicionarColuna(const Coluna &amp;coluna)</div><div class="ttdef"><b>Definition</b> Quadro.cpp:18</div></div>
-<div class="ttc" id="aclass_quadro_html_a751c81797b3809680e57be184e7d4740"><div class="ttname"><a href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro::Quadro</a></div><div class="ttdeci">Quadro()</div></div>
-<div class="ttc" id="aclass_quadro_html_a7df0632023b9ecc67098bcfff22f4d3c"><div class="ttname"><a href="class_quadro.html#a7df0632023b9ecc67098bcfff22f4d3c">Quadro::moverTarefaParaColuna</a></div><div class="ttdeci">void moverTarefaParaColuna(int id, const std::string &amp;novoStatus)</div><div class="ttdef"><b>Definition</b> Quadro.cpp:33</div></div>
-<div class="ttc" id="aclass_quadro_html_a93fae84465261f762654d34566757a1b"><div class="ttname"><a href="class_quadro.html#a93fae84465261f762654d34566757a1b">Quadro::exibirQuadro</a></div><div class="ttdeci">void exibirQuadro() const</div><div class="ttdef"><b>Definition</b> Quadro.cpp:25</div></div>
-<div class="ttc" id="aclass_quadro_html_ad33c0125b7ae7da483120de67af096a5"><div class="ttname"><a href="class_quadro.html#ad33c0125b7ae7da483120de67af096a5">Quadro::removerTarefaPorId</a></div><div class="ttdeci">bool removerTarefaPorId(int id)</div><div class="ttdef"><b>Definition</b> Quadro.cpp:61</div></div>
+<div class="ttc" id="aclass_coluna_html"><div class="ttname"><a href="class_coluna.html">Coluna</a></div><div class="ttdef"><b>Definition</b> Coluna.h:10</div></div>
+<div class="ttc" id="aclass_quadro_html_a751c81797b3809680e57be184e7d4740"><div class="ttname"><a href="class_quadro.html#a751c81797b3809680e57be184e7d4740">Quadro::Quadro</a></div><div class="ttdeci">Quadro()</div><div class="ttdef"><b>Definition</b> Quadro.cpp:4</div></div>
+<div class="ttc" id="aclass_quadro_html_a93fae84465261f762654d34566757a1b"><div class="ttname"><a href="class_quadro.html#a93fae84465261f762654d34566757a1b">Quadro::exibirQuadro</a></div><div class="ttdeci">void exibirQuadro() const</div><div class="ttdef"><b>Definition</b> Quadro.cpp:21</div></div>
+<div class="ttc" id="aclass_quadro_html_adc4990fd1ebf7bdb6b5111ee2fa1e34e"><div class="ttname"><a href="class_quadro.html#adc4990fd1ebf7bdb6b5111ee2fa1e34e">Quadro::construirDe</a></div><div class="ttdeci">static Quadro construirDe(const std::vector&lt; Tarefa &gt; &amp;tarefas)</div><div class="ttdef"><b>Definition</b> Quadro.cpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gerenciador de Tarefas: Quadro Class Reference</title>
+<title>My Project: Quadro Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gerenciador de Tarefas
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -97,10 +97,11 @@ $(function(){initNavTree('class_quadro.html','','class_quadro-members'); });
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a751c81797b3809680e57be184e7d4740" id="r_a751c81797b3809680e57be184e7d4740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a751c81797b3809680e57be184e7d4740">Quadro</a> ()</td></tr>
-<tr class="memitem:a14cb595117906215a23a9f393b73f271" id="r_a14cb595117906215a23a9f393b73f271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14cb595117906215a23a9f393b73f271">adicionarColuna</a> (const <a class="el" href="class_coluna.html">Coluna</a> &amp;coluna)</td></tr>
 <tr class="memitem:a93fae84465261f762654d34566757a1b" id="r_a93fae84465261f762654d34566757a1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93fae84465261f762654d34566757a1b">exibirQuadro</a> () const</td></tr>
-<tr class="memitem:a7df0632023b9ecc67098bcfff22f4d3c" id="r_a7df0632023b9ecc67098bcfff22f4d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7df0632023b9ecc67098bcfff22f4d3c">moverTarefaParaColuna</a> (int id, const std::string &amp;novoStatus)</td></tr>
-<tr class="memitem:ad33c0125b7ae7da483120de67af096a5" id="r_ad33c0125b7ae7da483120de67af096a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad33c0125b7ae7da483120de67af096a5">removerTarefaPorId</a> (int id)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adc4990fd1ebf7bdb6b5111ee2fa1e34e" id="r_adc4990fd1ebf7bdb6b5111ee2fa1e34e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_quadro.html">Quadro</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc4990fd1ebf7bdb6b5111ee2fa1e34e">construirDe</a> (const std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt; &amp;tarefas)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a751c81797b3809680e57be184e7d4740" name="a751c81797b3809680e57be184e7d4740"></a>
@@ -108,9 +109,6 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Quadro::Quadro </td>
@@ -119,29 +117,32 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a14cb595117906215a23a9f393b73f271" name="a14cb595117906215a23a9f393b73f271"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14cb595117906215a23a9f393b73f271">&#9670;&#160;</a></span>adicionarColuna()</h2>
+<a id="adc4990fd1ebf7bdb6b5111ee2fa1e34e" name="adc4990fd1ebf7bdb6b5111ee2fa1e34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4990fd1ebf7bdb6b5111ee2fa1e34e">&#9670;&#160;</a></span>construirDe()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Quadro::adicionarColuna </td>
+          <td class="memname"><a class="el" href="class_quadro.html">Quadro</a> Quadro::construirDe </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_coluna.html">Coluna</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>coluna</em></span></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tarefas</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -157,44 +158,6 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7df0632023b9ecc67098bcfff22f4d3c" name="a7df0632023b9ecc67098bcfff22f4d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7df0632023b9ecc67098bcfff22f4d3c">&#9670;&#160;</a></span>moverTarefaParaColuna()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Quadro::moverTarefaParaColuna </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>novoStatus</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad33c0125b7ae7da483120de67af096a5" name="ad33c0125b7ae7da483120de67af096a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad33c0125b7ae7da483120de67af096a5">&#9670;&#160;</a></span>removerTarefaPorId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Quadro::removerTarefaPorId </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

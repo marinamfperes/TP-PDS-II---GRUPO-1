@@ -1,0 +1,84 @@
+\doxysection{Repositorio\+Tarefas Class Reference}
+\hypertarget{class_repositorio_tarefas}{}\label{class_repositorio_tarefas}\index{RepositorioTarefas@{RepositorioTarefas}}
+
+
+{\ttfamily \#include $<$Repositorio\+Tarefas.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_repositorio_tarefas_a20755e9c9868a122525799e7079b1457}{Repositorio\+Tarefas}} (const std\+::string \&nome\+Arquivo)
+\item 
+void \mbox{\hyperlink{class_repositorio_tarefas_a8ce52adfdc5d449a1d1dc6be1d634e9d}{salvar\+Tarefa}} (const std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \&tarefas) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \mbox{\hyperlink{class_repositorio_tarefas_a6d021888133f778493bcd7d83af4e780}{carregar\+Tarefas}} () const
+\item 
+void \mbox{\hyperlink{class_repositorio_tarefas_ac7a0ce423b6e1020a14b9714fb5a1471}{arquivo\+Backup}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_repositorio_tarefas_a9354398d3b613fbb44c1521f392c4cdb}{salvar\+Proximo\+Id}} (int proximo\+Id)
+\item 
+static int \mbox{\hyperlink{class_repositorio_tarefas_a346091ede218839df88cb729dc0cc1fe}{carregar\+Proximo\+Id}} ()
+\item 
+static int \mbox{\hyperlink{class_repositorio_tarefas_a2d767fbfc82afb86d9c600cbf41ea1e8}{obter\+EIncrementar\+Proximo\+Id}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_repositorio_tarefas_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_repositorio_tarefas_a20755e9c9868a122525799e7079b1457}\index{RepositorioTarefas@{RepositorioTarefas}!RepositorioTarefas@{RepositorioTarefas}}
+\index{RepositorioTarefas@{RepositorioTarefas}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{RepositorioTarefas()}{RepositorioTarefas()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_a20755e9c9868a122525799e7079b1457} 
+Repositorio\+Tarefas\+::\+Repositorio\+Tarefas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+Arquivo}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_repositorio_tarefas_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_repositorio_tarefas_ac7a0ce423b6e1020a14b9714fb5a1471}\index{RepositorioTarefas@{RepositorioTarefas}!arquivoBackup@{arquivoBackup}}
+\index{arquivoBackup@{arquivoBackup}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{arquivoBackup()}{arquivoBackup()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_ac7a0ce423b6e1020a14b9714fb5a1471} 
+void Repositorio\+Tarefas\+::arquivo\+Backup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_repositorio_tarefas_a346091ede218839df88cb729dc0cc1fe}\index{RepositorioTarefas@{RepositorioTarefas}!carregarProximoId@{carregarProximoId}}
+\index{carregarProximoId@{carregarProximoId}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{carregarProximoId()}{carregarProximoId()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_a346091ede218839df88cb729dc0cc1fe} 
+int Repositorio\+Tarefas\+::carregar\+Proximo\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_repositorio_tarefas_a6d021888133f778493bcd7d83af4e780}\index{RepositorioTarefas@{RepositorioTarefas}!carregarTarefas@{carregarTarefas}}
+\index{carregarTarefas@{carregarTarefas}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{carregarTarefas()}{carregarTarefas()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_a6d021888133f778493bcd7d83af4e780} 
+std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ Repositorio\+Tarefas\+::carregar\+Tarefas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_repositorio_tarefas_a2d767fbfc82afb86d9c600cbf41ea1e8}\index{RepositorioTarefas@{RepositorioTarefas}!obterEIncrementarProximoId@{obterEIncrementarProximoId}}
+\index{obterEIncrementarProximoId@{obterEIncrementarProximoId}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{obterEIncrementarProximoId()}{obterEIncrementarProximoId()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_a2d767fbfc82afb86d9c600cbf41ea1e8} 
+int Repositorio\+Tarefas\+::obter\+EIncrementar\+Proximo\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_repositorio_tarefas_a9354398d3b613fbb44c1521f392c4cdb}\index{RepositorioTarefas@{RepositorioTarefas}!salvarProximoId@{salvarProximoId}}
+\index{salvarProximoId@{salvarProximoId}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{salvarProximoId()}{salvarProximoId()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_a9354398d3b613fbb44c1521f392c4cdb} 
+void Repositorio\+Tarefas\+::salvar\+Proximo\+Id (\begin{DoxyParamCaption}\item[{int}]{proximo\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_repositorio_tarefas_a8ce52adfdc5d449a1d1dc6be1d634e9d}\index{RepositorioTarefas@{RepositorioTarefas}!salvarTarefa@{salvarTarefa}}
+\index{salvarTarefa@{salvarTarefa}!RepositorioTarefas@{RepositorioTarefas}}
+\doxysubsubsection{\texorpdfstring{salvarTarefa()}{salvarTarefa()}}
+{\footnotesize\ttfamily \label{class_repositorio_tarefas_a8ce52adfdc5d449a1d1dc6be1d634e9d} 
+void Repositorio\+Tarefas\+::salvar\+Tarefa (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \&}]{tarefas}{}\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_repositorio_tarefas_8h}{Repositorio\+Tarefas.\+h}}\item 
+src/\mbox{\hyperlink{_repositorio_tarefas_8cpp}{Repositorio\+Tarefas.\+cpp}}\end{DoxyCompactItemize}

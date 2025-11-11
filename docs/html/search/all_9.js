@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['movertarefa_2',['moverTarefa',['../class_gerenciador_tarefas.html#ab41a8062a9f00352b21942cdfd274586',1,'GerenciadorTarefas']]],
-  ['movertarefaparacoluna_3',['moverTarefaParaColuna',['../class_quadro.html#a7df0632023b9ecc67098bcfff22f4d3c',1,'Quadro']]]
+  ['notificador_0',['Notificador',['../class_notificador.html',1,'Notificador'],['../class_notificador.html#a2ba61f521abd3a2cc68b2fa41e175e6a',1,'Notificador::Notificador()']]],
+  ['notificador_2ecpp_1',['Notificador.cpp',['../_notificador_8cpp.html',1,'']]],
+  ['notificador_2eh_2',['Notificador.h',['../_notificador_8h.html',1,'']]]
 ];

@@ -1,6 +1,7 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "Coluna.cpp", "_coluna_8cpp.html", null ],
+    [ "DataUtil.cpp", "_data_util_8cpp.html", "_data_util_8cpp" ],
     [ "EstrategiaFiltro.cpp", "_estrategia_filtro_8cpp.html", null ],
     [ "FiltroCombinado.cpp", "_filtro_combinado_8cpp.html", null ],
     [ "FiltroPrioridade.cpp", "_filtro_prioridade_8cpp.html", null ],
@@ -11,6 +12,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Quadro.cpp", "_quadro_8cpp.html", null ],
     [ "Relogio.cpp", "_relogio_8cpp.html", null ],
     [ "RepositorioTarefas.cpp", "_repositorio_tarefas_8cpp.html", null ],
-    [ "Tarefa.cpp", "_tarefa_8cpp.html", null ],
+    [ "Tarefa.cpp", "_tarefa_8cpp.html", "_tarefa_8cpp" ],
     [ "Usuario.cpp", "_usuario_8cpp.html", null ]
 ];

@@ -1,0 +1,41 @@
+\doxysection{Notificador.\+h}
+\hypertarget{_notificador_8h_source}{}\label{_notificador_8h_source}\index{include/Notificador.h@{include/Notificador.h}}
+\mbox{\hyperlink{_notificador_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NOTIFICADOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NOTIFICADOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tarefa_8h}{Tarefa.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_usuario_8h}{Usuario.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gerenciador_tarefas_8h}{GerenciadorTarefas.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_util_8h}{DataUtil.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ sem\ isso\ ele\ abriria\ o\ gerenciador,\ e\ o\ arquivo\ do\ gerenciador\ pediria\ para\ abrir\ esse,\ criando\ um\ loop}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gerenciador_tarefas}{GerenciadorTarefas}};\ \textcolor{comment}{//\ impede\ uma\ redundancia\ ao\ executar\ funcoes\ do\ gerenciador.h\ e\ do\ notificacao.h}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_notificador_a2ba61f521abd3a2cc68b2fa41e175e6a}{Notificador}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_gerenciador_tarefas}{GerenciadorTarefas}}\&\ gerenciador\_;\ \textcolor{comment}{//\ guarda\ um\ atalho\ para\ o\ gerenciador\ original}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_usuario}{Usuario}}\&\ usuario\_;\ \textcolor{comment}{//\ guarda\ um\ atalho\ para\ \ usuario,\ para\ acessar\ a\ preferencia\ de\ notificacao}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{long}\ segundosAntecedencia\_;\ \textcolor{comment}{//\ guarda\ em\ segundos\ o\ tempo\ de\ antecedencia\ (24h\ =\ 86400\ seg)}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_relogio}{Relogio}}*\ relogio\_;\ \textcolor{comment}{//guarda\ um\ atalho\ para\ relogio,\ para\ pegar\ o\ tempo\ atual}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_notificador_a2ba61f521abd3a2cc68b2fa41e175e6a}{Notificador}}(\mbox{\hyperlink{class_gerenciador_tarefas}{GerenciadorTarefas}}\&\ mgr,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_usuario}{Usuario}}\&\ usuario,\ \ \mbox{\hyperlink{class_relogio}{Relogio}}*\ relogio);\ \textcolor{comment}{//\ constroi\ o\ notificador\ (usa\ o\ GerenciadorTarefas,\ colaborador)}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_notificador_a7b6ef7470bf8a05bddbc673c1d360df4}{setAntecedenciaNotificacao}}(\textcolor{keywordtype}{long}\ segundos);\ \textcolor{comment}{//\ define\ periodo\ considerado\ prox\ do\ vencimento}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ identifica\ quais\ venceram\ e\ sinaliza}}
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<Tarefa>\ \mbox{\hyperlink{class_notificador_aa9eb07a239ae8e5bb8f983e04b7a2fa7}{getTarefasVencidas}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ retorna\ a\ lista\ de\ quais\ nao\ venceram\ mas\ estao\ dentro\ da\ funcao\ de\ antecedencia(periodo\ prox\ de\ vencer)\ }}
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<Tarefa>\ \mbox{\hyperlink{class_notificador_a152a0ad883163278f2f563dbf9e0fc0a}{getTarefasProximasDoVencimento}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ exibe\ os\ avisos\ na\ tela}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_notificador_ad41feebd8b95ce006203c875e9942e89}{exibirAvisos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

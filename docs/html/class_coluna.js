@@ -1,11 +1,9 @@
 var class_coluna =
 [
-    [ "Coluna", "class_coluna.html#a0cbe2c5e48a99bfb224e9bfedf9e160f", null ],
+    [ "Coluna", "class_coluna.html#aea5e6efca7a84bcb99144ea77fbd05e2", null ],
     [ "adicionarTarefa", "class_coluna.html#a84782fc56aca19bb1f0aa51fe39370fb", null ],
-    [ "contarTarefas", "class_coluna.html#abae05a6875020f22493a274c0b4e8404", null ],
     [ "exibirTarefas", "class_coluna.html#adb308b1f16e56020eafd777c764e63d9", null ],
-    [ "extrairTarefaPorId", "class_coluna.html#a8ee70a161fc9f4af579fe89d69840bfc", null ],
-    [ "getStatus", "class_coluna.html#a52695b5a585fde7916da77a0cebeb16a", null ],
-    [ "ordenarTarefas", "class_coluna.html#a6abb72317c6b440b2a60e13523ae05bf", null ],
-    [ "removerTarefa", "class_coluna.html#a0074014f3daa2aea7127b58811fc77b0", null ]
+    [ "getStatus", "class_coluna.html#ae78995ec4d466e2c90634a8c7a94cd3e", null ],
+    [ "getTarefas", "class_coluna.html#a158ec108248341508ee8e40ae6e45e21", null ],
+    [ "ordenarTarefas", "class_coluna.html#a6abb72317c6b440b2a60e13523ae05bf", null ]
 ];

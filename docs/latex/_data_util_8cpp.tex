@@ -1,0 +1,66 @@
+\doxysection{src/\+Data\+Util.cpp File Reference}
+\hypertarget{_data_util_8cpp}{}\label{_data_util_8cpp}\index{src/DataUtil.cpp@{src/DataUtil.cpp}}
+
+
+Implementações das funções utilitárias de data e hora.  
+
+
+{\ttfamily \#include "{}Data\+Util.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::time\+\_\+t \mbox{\hyperlink{_data_util_8cpp_a85e4f06914d9160d2f770fef50a90d01}{converte\+Data\+Hora}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Converte uma string no formato "{}dd/\+MM/yyyy HH\+:mm"{} para um valor {\ttfamily time\+\_\+t}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_data_util_8cpp_a91154195e2b83a1ce296fdeea9283725}{formata\+Data\+Hora}} (std\+::time\+\_\+t ts)
+\begin{DoxyCompactList}\small\item\em Converte um valor {\ttfamily time\+\_\+t} para string no formato "{}dd/\+MM/yyyy HH\+:mm"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementações das funções utilitárias de data e hora. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_data_util_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_data_util_8cpp_a85e4f06914d9160d2f770fef50a90d01}\index{DataUtil.cpp@{DataUtil.cpp}!converteDataHora@{converteDataHora}}
+\index{converteDataHora@{converteDataHora}!DataUtil.cpp@{DataUtil.cpp}}
+\doxysubsubsection{\texorpdfstring{converteDataHora()}{converteDataHora()}}
+{\footnotesize\ttfamily \label{_data_util_8cpp_a85e4f06914d9160d2f770fef50a90d01} 
+std\+::time\+\_\+t converte\+Data\+Hora (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Converte uma string no formato "{}dd/\+MM/yyyy HH\+:mm"{} para um valor {\ttfamily time\+\_\+t}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String representando data e hora. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor {\ttfamily time\+\_\+t} correspondente, ou 0 se a string estiver vazia ou inválida. 
+\end{DoxyReturn}
+\Hypertarget{_data_util_8cpp_a91154195e2b83a1ce296fdeea9283725}\index{DataUtil.cpp@{DataUtil.cpp}!formataDataHora@{formataDataHora}}
+\index{formataDataHora@{formataDataHora}!DataUtil.cpp@{DataUtil.cpp}}
+\doxysubsubsection{\texorpdfstring{formataDataHora()}{formataDataHora()}}
+{\footnotesize\ttfamily \label{_data_util_8cpp_a91154195e2b83a1ce296fdeea9283725} 
+std\+::string formata\+Data\+Hora (\begin{DoxyParamCaption}\item[{std\+::time\+\_\+t}]{ts}{}\end{DoxyParamCaption})}
+
+
+
+Converte um valor {\ttfamily time\+\_\+t} para string no formato "{}dd/\+MM/yyyy HH\+:mm"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & Valor {\ttfamily time\+\_\+t} a ser convertido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String formatada com a data e hora, ou "{}—"{} se o valor for 0. 
+\end{DoxyReturn}

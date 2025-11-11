@@ -1,0 +1,97 @@
+\doxysection{Gerenciador\+Tarefas Class Reference}
+\hypertarget{class_gerenciador_tarefas}{}\label{class_gerenciador_tarefas}\index{GerenciadorTarefas@{GerenciadorTarefas}}
+
+
+{\ttfamily \#include $<$Gerenciador\+Tarefas.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73}{Gerenciador\+Tarefas}} (\mbox{\hyperlink{class_relogio}{Relogio}} \texorpdfstring{$\ast$}{*}relogio)
+\item 
+void \mbox{\hyperlink{class_gerenciador_tarefas_a38f8b560c407a94882577b1d74e5f345}{criar\+Tarefa}} (\mbox{\hyperlink{class_tarefa}{Tarefa}} tarefa)
+\item 
+void \mbox{\hyperlink{class_gerenciador_tarefas_ac56638bcdee63a8d9f19349aaad7551a}{editar\+Tarefa}} (int id, \mbox{\hyperlink{class_tarefa}{Tarefa}} tarefa\+Atualizada)
+\item 
+void \mbox{\hyperlink{class_gerenciador_tarefas_a32af13922b775c3d347d46590c51f206}{excluir\+Tarefa}} (int id)
+\item 
+void \mbox{\hyperlink{class_gerenciador_tarefas_ab41a8062a9f00352b21942cdfd274586}{mover\+Tarefa}} (int id, const std\+::string \&novo\+Status)
+\item 
+bool \mbox{\hyperlink{class_gerenciador_tarefas_aeef41c34cdf2a7ed7ddc4cf36017c749}{obter\+Tarefa\+Por\+Id}} (int id, \mbox{\hyperlink{class_tarefa}{Tarefa}} \&out) const
+\item 
+int \mbox{\hyperlink{class_gerenciador_tarefas_ac4c4f30d665a73188bb0e1da9c9f2e16}{contar\+Tarefas\+Pendentes}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \& \mbox{\hyperlink{class_gerenciador_tarefas_a3e48f5cf9a82fa490d27c15ac432b0a9}{get\+Todas\+Tarefas}} () const
+\item 
+void \mbox{\hyperlink{class_gerenciador_tarefas_a8b1652de9dcf639be61f2b4ffa68e38c}{aplicar\+Filtros}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}} $>$ $>$ \&filtros)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_gerenciador_tarefas_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73}\index{GerenciadorTarefas@{GerenciadorTarefas}!GerenciadorTarefas@{GerenciadorTarefas}}
+\index{GerenciadorTarefas@{GerenciadorTarefas}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{GerenciadorTarefas()}{GerenciadorTarefas()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73} 
+Gerenciador\+Tarefas\+::\+Gerenciador\+Tarefas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_relogio}{Relogio}} \texorpdfstring{$\ast$}{*}}]{relogio}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_gerenciador_tarefas_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gerenciador_tarefas_a8b1652de9dcf639be61f2b4ffa68e38c}\index{GerenciadorTarefas@{GerenciadorTarefas}!aplicarFiltros@{aplicarFiltros}}
+\index{aplicarFiltros@{aplicarFiltros}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{aplicarFiltros()}{aplicarFiltros()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_a8b1652de9dcf639be61f2b4ffa68e38c} 
+void Gerenciador\+Tarefas\+::aplicar\+Filtros (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}} $>$ $>$ \&}]{filtros}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gerenciador_tarefas_ac4c4f30d665a73188bb0e1da9c9f2e16}\index{GerenciadorTarefas@{GerenciadorTarefas}!contarTarefasPendentes@{contarTarefasPendentes}}
+\index{contarTarefasPendentes@{contarTarefasPendentes}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{contarTarefasPendentes()}{contarTarefasPendentes()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_ac4c4f30d665a73188bb0e1da9c9f2e16} 
+int Gerenciador\+Tarefas\+::contar\+Tarefas\+Pendentes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gerenciador_tarefas_a38f8b560c407a94882577b1d74e5f345}\index{GerenciadorTarefas@{GerenciadorTarefas}!criarTarefa@{criarTarefa}}
+\index{criarTarefa@{criarTarefa}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{criarTarefa()}{criarTarefa()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_a38f8b560c407a94882577b1d74e5f345} 
+void Gerenciador\+Tarefas\+::criar\+Tarefa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tarefa}{Tarefa}}}]{tarefa}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gerenciador_tarefas_ac56638bcdee63a8d9f19349aaad7551a}\index{GerenciadorTarefas@{GerenciadorTarefas}!editarTarefa@{editarTarefa}}
+\index{editarTarefa@{editarTarefa}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{editarTarefa()}{editarTarefa()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_ac56638bcdee63a8d9f19349aaad7551a} 
+void Gerenciador\+Tarefas\+::editar\+Tarefa (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_tarefa}{Tarefa}}}]{tarefa\+Atualizada}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gerenciador_tarefas_a32af13922b775c3d347d46590c51f206}\index{GerenciadorTarefas@{GerenciadorTarefas}!excluirTarefa@{excluirTarefa}}
+\index{excluirTarefa@{excluirTarefa}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{excluirTarefa()}{excluirTarefa()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_a32af13922b775c3d347d46590c51f206} 
+void Gerenciador\+Tarefas\+::excluir\+Tarefa (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gerenciador_tarefas_a3e48f5cf9a82fa490d27c15ac432b0a9}\index{GerenciadorTarefas@{GerenciadorTarefas}!getTodasTarefas@{getTodasTarefas}}
+\index{getTodasTarefas@{getTodasTarefas}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{getTodasTarefas()}{getTodasTarefas()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_a3e48f5cf9a82fa490d27c15ac432b0a9} 
+const std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \& Gerenciador\+Tarefas\+::get\+Todas\+Tarefas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_gerenciador_tarefas_ab41a8062a9f00352b21942cdfd274586}\index{GerenciadorTarefas@{GerenciadorTarefas}!moverTarefa@{moverTarefa}}
+\index{moverTarefa@{moverTarefa}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{moverTarefa()}{moverTarefa()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_ab41a8062a9f00352b21942cdfd274586} 
+void Gerenciador\+Tarefas\+::mover\+Tarefa (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{const std\+::string \&}]{novo\+Status}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_gerenciador_tarefas_aeef41c34cdf2a7ed7ddc4cf36017c749}\index{GerenciadorTarefas@{GerenciadorTarefas}!obterTarefaPorId@{obterTarefaPorId}}
+\index{obterTarefaPorId@{obterTarefaPorId}!GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection{\texorpdfstring{obterTarefaPorId()}{obterTarefaPorId()}}
+{\footnotesize\ttfamily \label{class_gerenciador_tarefas_aeef41c34cdf2a7ed7ddc4cf36017c749} 
+bool Gerenciador\+Tarefas\+::obter\+Tarefa\+Por\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_tarefa}{Tarefa}} \&}]{out}{}\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_gerenciador_tarefas_8h}{Gerenciador\+Tarefas.\+h}}\item 
+src/\mbox{\hyperlink{_gerenciador_tarefas_8cpp}{Gerenciador\+Tarefas.\+cpp}}\end{DoxyCompactItemize}

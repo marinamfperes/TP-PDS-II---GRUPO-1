@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ordenartarefas_0',['ordenarTarefas',['../class_coluna.html#a6abb72317c6b440b2a60e13523ae05bf',1,'Coluna']]]
+  ['quadro_0',['Quadro',['../class_quadro.html#a751c81797b3809680e57be184e7d4740',1,'Quadro']]]
 ];

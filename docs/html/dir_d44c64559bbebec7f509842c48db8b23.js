@@ -1,6 +1,7 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "Coluna.h", "_coluna_8h.html", "_coluna_8h" ],
+    [ "DataUtil.h", "_data_util_8h.html", "_data_util_8h" ],
     [ "EstrategiaFiltro.h", "_estrategia_filtro_8h.html", "_estrategia_filtro_8h" ],
     [ "FiltroCombinado.h", "_filtro_combinado_8h.html", "_filtro_combinado_8h" ],
     [ "FiltroPrioridade.h", "_filtro_prioridade_8h.html", "_filtro_prioridade_8h" ],
