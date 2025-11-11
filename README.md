@@ -79,34 +79,38 @@ INFORMAÇÕES ESSENCIAIS
 <img width="1154" height="727" alt="image" src="https://github.com/user-attachments/assets/10970648-6ac9-47ca-b130-45bf15fdca99" />
 
 - TRATAMENTO DE EXCEÇÕES E PROGRAMAÇÃO DEFENSIVA:
-
+  - Tratamento de exceções: Várias partes do código usam blocos try, catch e throw para capturar e tratar erros sem travar a execução. Por exemplo, em RepositorioTarefas.cpp, o sistema lança exceções caso o arquivo de tarefas não possa ser aberto (“Erro ao abrir o arquivo para salvar”). Já no GerenciadorTarefas.cpp, exceções são lançadas quando uma tarefa é inválida ou não é encontrada, e no main.cpp esses erros são tratados com mensagens explicativas.
+  - Validação de dados: O projeto impede que tarefas inconsistentes sejam criadas ou editadas. Funções como validarCampos() e validarDatas() conferem se o título está preenchido e se as datas fazem sentido (por exemplo, o prazo não pode ser anterior à data de início).
+  - Prevenção contra ponteiros nulos: Antes de acessar os ponteiros, o sistema verifica se eles estão válidos, evitando falhas de memória. Isso ocorre, por exemplo, no GerenciadorTarefas.cpp, ao usar o relógio interno apenas se ele estiver definido.
+  - Retornos seguros e valores padrão: Quando alguma operação falha, o programa utiliza valores padrão em vez de encerrar. Em DataUtil.cpp, por exemplo, se uma data for inválida, a função retorna 0. No Usuario.cpp, se o horário de notificação for incorreto, o valor padrão é ajustado para 24h.
+  - Mensagens preventivas e backups: Se um arquivo não for encontrado, o sistema apenas avisa o usuário (“Aviso: arquivo não encontrado”) e segue a execução. Além disso, antes de sobrescrever tarefas, o programa cria uma cópia de segurança para evitar perda de dados.
+  - Fail-safe em operações críticas: Em alguns trechos, erros não interrompem a execução, garantindo que o sistema continue funcionando mesmo que uma ação específica falhe (exemplo: “try { ... } catch (...) { }”).
 
 - DOXYGEN:
 
   O Doxygen foi utilizado para gerar a documentação automática do código-fonte do projeto, permitindo visualizar de forma organizada todas as classes, métodos e relacionamentos do sistema. Ele é uma ferramenta que analisa os arquivos do projeto e gera automaticamente uma documentação completa, em formato HTML, a partir dos comentários inseridos no código. Essa documentação facilita a compreensão da estrutura e funcionamento do sistema, tanto para os desenvolvedores do grupo quanto para futuras manutenções.
 
-  Como o Doxygen foi gerado:O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída. Com o terminal aberto na pasta principal do projeto, foi executado o comando:
+  - Como o Doxygen foi gerado:O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída. Com o terminal aberto na pasta principal do projeto, foi executado o comando:
 
   doxygen Doxyfile
 
 
   Após a execução, a documentação foi gerada automaticamente dentro da pasta /docs, na subpasta /html, com o arquivo principal index.html.
 
-  Como acessar a documentação online:
-A documentação foi publicada através do GitHub Pages, para permitir acesso direto pelo navegador.
-Link: https://marinamfperes.github.io/TP-PDS-II---GRUPO-1/  
-
-  Como atualizar o Doxygen:
+  - Como acessar a documentação online:
+    
+  A documentação foi publicada através do GitHub Pages, para permitir acesso direto pelo navegador. Link: https://marinamfperes.github.io/TP-PDS-II---GRUPO-1/  
+  - Como atualizar o Doxygen:
 Sempre que alguma modificação for feita no código , é importante atualizar a documentação gerada pelo Doxygen para manter o site sincronizado com o projeto. Para isso, basta garantir que o arquivo de configuração Doxyfile esteja na pasta principal do repositório e executar o seguinte comando no terminal:
   doxygen Doxyfile
 
    Esse comando vai gerar novamente a pasta docs/html, que contém todos os arquivos da documentação atualizada. Depois disso, é só subir essas alterações para o  GitHub com:
   
-    git add Doxyfile docs
+  git add Doxyfile docs
  
-     git commit -m "Atualiza documentação Doxygen"
+  git commit -m "Atualiza documentação Doxygen"
  
-     git push
+  git push
 
    O GitHub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
 
