@@ -211,23 +211,39 @@ int main() {
         } else if (op == 7) {
             std::cout << "\n--- Filtrar tarefas ---\n";
     
-            //pergunta ao usuário o que ele quer filtrar
-            std::cout << "Escolha um criterio de filtro:\n";
+            // Pergunta ao usuário o que ele quer filtrar
+            std::cout << "Escolha um ou mais criterios de filtro:\n";
             std::cout << "1) Filtrar por tag\n";
             std::cout << "2) Filtrar por prioridade\n";
-            int filtroEscolhido = perguntarInt("Escolha: ", 0);
+            int filtroEscolhido1 = perguntarInt("Escolha o primeiro criterio: ", 0);
+
             
             std::vector<std::shared_ptr<EstrategiaFiltro>> filtros;
             
-            if (filtroEscolhido == 1) {
+            if (filtroEscolhido1 == 1) {
                 std::string tag = perguntarLinha("Digite a tag para filtrar: ");
                 filtros.push_back(std::make_shared<FiltroTag>(tag));  // Filtro por tag
-            } else if (filtroEscolhido == 2) {
+            } else if (filtroEscolhido1 == 2) {
                 int prioridade = perguntarInt("Digite a prioridade para filtrar (1-4): ");
                 filtros.push_back(std::make_shared<FiltroPrioridade>(prioridade));  // Filtro por prioridade
-            } else {
-                std::cout << "Opcao de filtro invalida.\n";
-                continue;
+            }
+
+             //pergunta ao usuário se ele quer adicionar um segundo filtro
+            std::cout << "Deseja adicionar um segundo filtro? (1) Sim (2) Não: ";
+            int adicionarFiltro = perguntarInt("", 0);
+            if (adicionarFiltro == 1) {
+                std::cout << "Escolha o segundo criterio de filtro:\n";
+                std::cout << "1) Filtrar por tag\n";
+                std::cout << "2) Filtrar por prioridade\n";
+                int filtroEscolhido2 = perguntarInt("Escolha o segundo criterio: ", 0);
+
+                if (filtroEscolhido2 == 1) {
+                    std::string tag = perguntarLinha("Digite a tag para filtrar: ");
+                    filtros.push_back(std::make_shared<FiltroTag>(tag));  // Filtro por tag
+                } else if (filtroEscolhido2 == 2) {
+                    int prioridade = perguntarInt("Digite a prioridade para filtrar (1-4): ");
+                    filtros.push_back(std::make_shared<FiltroPrioridade>(prioridade));  // Filtro por prioridade
+                }
             }
             
             //aplica os filtros
