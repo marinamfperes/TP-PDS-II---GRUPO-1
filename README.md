@@ -90,7 +90,7 @@ INFORMAÇÕES ESSENCIAIS
 
  
   2) Ambos garantem que o fluxo de entrada seja limpo após a operação.
-     -> Protege contra: entradas inválidas (texto onde se esperava número), e preserva estado previsível do programa (valores default). Ex: Na opção 2 (criar tarefa), a data agendada so aceita datas após o dia e horario em que o programa esta sendo realizado.
+     -> Protege contra: entradas inválidas (texto onde se esperava número e datas invalidas), e preserva estado previsível do programa (valores default). Ex: Na opção 2 (criar tarefa), a data agendada so aceita datas após o dia e horario em que o programa esta sendo realizado.
 
   <img width="396" height="173" alt="image" src="https://github.com/user-attachments/assets/dd421121-dec4-4f20-8eb3-6d3ac395c7b5" />
 
