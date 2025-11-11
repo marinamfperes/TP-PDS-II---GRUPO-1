@@ -3,18 +3,20 @@
 
 #include "Coluna.h"
 #include <vector>
-#include <string>
 
 class Quadro {
-  public:
+public:
     Quadro();
-      void adicionarColuna(const Coluna& coluna); //adicao de colunas
-      void exibirQuadro() const; //exibicao das colunas
-      void moverTarefaParaColuna(int id, const std::string& novoStatus);
-      bool removerTarefaPorId(int id); //para exclusão sincronizada com Kanban
 
-  private:
-     std::vector<Coluna> colunas_;
+    // Constrói um quadro a partir do vetor de tarefas atual
+    static Quadro construirDe(const std::vector<Tarefa>& tarefas);
+
+    void exibirQuadro() const;
+
+private:
+    Coluna aFazer_;
+    Coluna fazendo_;
+    Coluna feito_;
 };
 
 #endif
