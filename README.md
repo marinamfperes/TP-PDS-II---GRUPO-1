@@ -78,42 +78,71 @@ INFORMAÇÕES ESSENCIAIS
 <img width="856" height="810" alt="image" src="https://github.com/user-attachments/assets/9fe494a3-fc24-45c7-b88e-844e39cbff19" />
 <img width="1154" height="727" alt="image" src="https://github.com/user-attachments/assets/10970648-6ac9-47ca-b130-45bf15fdca99" />
 
+
 - TRATAMENTO DE EXCEÇÕES E PROGRAMAÇÃO DEFENSIVA:
-  - Tratamento de exceções: Várias partes do código usam blocos try, catch e throw para capturar e tratar erros sem travar a execução. Por exemplo, em RepositorioTarefas.cpp, o sistema lança exceções caso o arquivo de tarefas não possa ser aberto (“Erro ao abrir o arquivo para salvar”). Já no GerenciadorTarefas.cpp, exceções são lançadas quando uma tarefa é inválida ou não é encontrada, e no main.cpp esses erros são tratados com mensagens explicativas.
-  - Validação de dados: O projeto impede que tarefas inconsistentes sejam criadas ou editadas. Funções como validarCampos() e validarDatas() conferem se o título está preenchido e se as datas fazem sentido (por exemplo, o prazo não pode ser anterior à data de início).
-  - Prevenção contra ponteiros nulos: Antes de acessar os ponteiros, o sistema verifica se eles estão válidos, evitando falhas de memória. Isso ocorre, por exemplo, no GerenciadorTarefas.cpp, ao usar o relógio interno apenas se ele estiver definido.
-  - Retornos seguros e valores padrão: Quando alguma operação falha, o programa utiliza valores padrão em vez de encerrar. Em DataUtil.cpp, por exemplo, se uma data for inválida, a função retorna 0. No Usuario.cpp, se o horário de notificação for incorreto, o valor padrão é ajustado para 24h.
-  - Mensagens preventivas e backups: Se um arquivo não for encontrado, o sistema apenas avisa o usuário (“Aviso: arquivo não encontrado”) e segue a execução. Além disso, antes de sobrescrever tarefas, o programa cria uma cópia de segurança para evitar perda de dados.
-  - Fail-safe em operações críticas: Em alguns trechos, erros não interrompem a execução, garantindo que o sistema continue funcionando mesmo que uma ação específica falhe (exemplo: “try { ... } catch (...) { }”).
+  <img width="1577" height="149" alt="image" src="https://github.com/user-attachments/assets/be607a71-a158-4ebb-83b3-2bae98bb9658" />
+  1) Restaura o estado do std::cin se ocorrer um erro de leitura (por exemplo, o usuário digitou texto quando se esperava um número) e descarta tudo que restou na linha de entrada, evitando que dados inválidos “vazem” para a próxima leitura.
+     -> Protege contra: loops infinitos, leituras erradas e efeitos colaterais de entradas inválidas.
 
-- DOXYGEN:
+ <img width="1598" height="523" alt="image" src="https://github.com/user-attachments/assets/9ffe5729-e031-4ebc-90c3-88d065949b8f" />
+  2) Ambos garantem que o fluxo de entrada seja limpo após a operação.
+     -> Protege contra: entradas inválidas (texto onde se esperava número), e preserva estado previsível do programa (valores default).
 
-  O Doxygen foi utilizado para gerar a documentação automática do código-fonte do projeto, permitindo visualizar de forma organizada todas as classes, métodos e relacionamentos do sistema. Ele é uma ferramenta que analisa os arquivos do projeto e gera automaticamente uma documentação completa, em formato HTML, a partir dos comentários inseridos no código. Essa documentação facilita a compreensão da estrutura e funcionamento do sistema, tanto para os desenvolvedores do grupo quanto para futuras manutenções.
+  <img width="396" height="173" alt="image" src="https://github.com/user-attachments/assets/dd421121-dec4-4f20-8eb3-6d3ac395c7b5" />
+  3) Garante que a pasta exista antes de tentar salvar arquivos, evitando erros de I/O.
+     -> Protege contra: falhas de escrita/abertura de arquivo por diretório inexistente.
 
-  - Como o Doxygen foi gerado:O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída. Com o terminal aberto na pasta principal do projeto, foi executado o comando:
+<img width="599" height="151" alt="image" src="https://github.com/user-attachments/assets/9d030b42-d342-4173-9095-a7982a0a2b87" />
+  4) Tenta criar cada tarefa carregada, mas ignora tarefas que causam exceção (não deixa um erro em uma tarefa abortar todo o carregamento).
+     -> Protege contra: arquivo corrompido ou tarefa inválida quebrando a inicialização do programa.
+
+<img width="823" height="267" alt="image" src="https://github.com/user-attachments/assets/5743238b-08a0-4dbb-aace-59f8f7b63092" />
+  5) Chama a função validar antes de inserir a tarefa no gerenciador. Se a tarefa for inválida, avisa o usuário e não persiste a tarefa.
+     -> Protege contra: criação de tarefas com dados inconsistentes (datas inválidas, prioridades fora do intervalo, etc).
+
+<img width="693" height="234" alt="image" src="https://github.com/user-attachments/assets/037cfef9-018a-41bd-8b51-15a0a969f71e" />
+  6) Checa a validade do ID lido e confirma que a tarefa existe antes de tentar editar/excluir/mover.
+     -> Protege contra: operações sobre IDs inválidos ou inexistentes que causariam exceções/estado inconsistente.
+
+<img width="721" height="140" alt="image" src="https://github.com/user-attachments/assets/e6e84cc5-d2c8-4b6a-a9ad-3bdf36e8ecf8" />
+  7) Evita exclusões acidentais solicitando confirmação explícita.
+     -> Protege contra: perda de dados por clique/tecla errada.
+     
+<img width="634" height="182" alt="image" src="https://github.com/user-attachments/assets/0811c0a3-67eb-4fb6-a7ae-32d4d253c521" />
+  8) Captura exceções que possam ocorrer durante a edição e informa o usuário ao invés de crashar.
+     -> Protege contra: exceções inesperadas durante a atualização.
+
+<img width="1101" height="529" alt="image" src="https://github.com/user-attachments/assets/f2c45565-cf50-4326-8c71-ef47069e5994" />
+  9) Gera um backup (tarefas.csv.bak) antes de sobrescrever o arquivo principal, reduzindo risco de perda de dados. No encerramento, tenta salvar e ignora falhas para não impedir o fechamento do app.  
+     -> Protege contra: corrupção/erro durante escrita do arquivo e perda total de dados.
+
+
+- DOXYGEN: O Doxygen foi utilizado para gerar a documentação automática do código-fonte do projeto, permitindo visualizar de forma organizada todas as classes, métodos e relacionamentos do sistema. Ele é uma ferramenta que analisa os arquivos do projeto e gera automaticamente uma documentação completa, em formato HTML, a partir dos comentários inseridos no código. Essa documentação facilita a compreensão da estrutura e funcionamento do sistema, tanto para os desenvolvedores do grupo quanto para futuras manutenções.
+  
+  -> Como o Doxygen foi gerado:O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída. Com o terminal aberto na pasta principal do projeto, foi executado o comando:
 
   doxygen Doxyfile
-
 
   Após a execução, a documentação foi gerada automaticamente dentro da pasta /docs, na subpasta /html, com o arquivo principal index.html.
 
-  - Como acessar a documentação online:
-    
-  A documentação foi publicada através do GitHub Pages, para permitir acesso direto pelo navegador. Link: https://marinamfperes.github.io/TP-PDS-II---GRUPO-1/  
-  - Como atualizar o Doxygen:
+  -> Como acessar a documentação online:
+A documentação foi publicada através do GitHub Pages, para permitir acesso direto pelo navegador.
+Link: https://marinamfperes.github.io/TP-PDS-II---GRUPO-1/  
+
+  -> Como atualizar o Doxygen:
 Sempre que alguma modificação for feita no código , é importante atualizar a documentação gerada pelo Doxygen para manter o site sincronizado com o projeto. Para isso, basta garantir que o arquivo de configuração Doxyfile esteja na pasta principal do repositório e executar o seguinte comando no terminal:
+
   doxygen Doxyfile
 
-   Esse comando vai gerar novamente a pasta docs/html, que contém todos os arquivos da documentação atualizada. Depois disso, é só subir essas alterações para o  GitHub com:
+  Esse comando vai gerar novamente a pasta docs/html, que contém todos os arquivos da documentação atualizada. Depois disso, é só subir essas alterações para o  GitHub com:
   
-  git add Doxyfile docs
+    git add Doxyfile docs
  
-  git commit -m "Atualiza documentação Doxygen"
+    git commit -m "Atualiza documentação Doxygen"
  
-  git push
+    git push
 
-   O GitHub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
-
+  O GitHub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
   
 
 - VÍDEO DA COMPILAÇÃO E DA EXECUÇÃO:
