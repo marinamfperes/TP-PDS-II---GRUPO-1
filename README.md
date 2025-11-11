@@ -49,13 +49,14 @@ INFORMAÇÕES ESSENCIAIS
 
 - ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests.
     - VSCODE: configurações do .json para compilação e execução do projeto;
-    - BUILD: arquivos gerados durante a compilação, como o executável final main.exe;
+    - BUILD: arquivos gerados durante a compilação (.o), como o executável final main.o;
+    - DADOS: armazena os arquivos de persistência do sistema de tarefas, como tarefas.csv;
     - DOCS: documentos do projeto, como os Cartões CRC e os User Stories, além dos arquivos gerados pelo Doxygen;
     - INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
-    - SRC: onde está localizado o código principal, alocando as implementações das funções declaradas em "include", como Coluna.cpp;
+    - SRC: onde está localizado o código principal, main.cpp, além de alocar as implementações das funções declaradas em "include", como Coluna.cpp;
     - TESTS: arquivos de teste que comprovam a funcionalidade do código.
 
-<img width="345" height="365" alt="image" src="https://github.com/user-attachments/assets/a9726a5e-e525-4d0c-8b5f-89a46dbdeb93" />
+<img width="399" height="427" alt="image" src="https://github.com/user-attachments/assets/ddfb2dc2-e75a-447a-8f99-634c5729bd43" />
 
 
 
