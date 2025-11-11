@@ -1,0 +1,165 @@
+\chapter{TP PDS II -\/ GRUPO 1 }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{TP PDS II -\/ GRUPO 1@{TP PDS II -\/ GRUPO 1}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+GERENCIADOR DE TAREFAS PARA ESTUDANTES
+
+Integrantes\+: Daniel Sales, Luísa Gouthier, Marina Fonseca e Miguel Del Corsi
+
+O projeto do Trabalho Prático da disciplina de Programação e Desenvolvimento de Software II, desenvolvido pelo Grupo 1, tem como finalidade o desenvolvimento de um gerenciador de tarefas voltado para estudantes, visando otimizar a rotina universitária a partir de uma ferramenta organizacional prática e eficiente. O comando do projeto propõe a criação de um sistema de porte médio (aproximadamente 1000 linhas), com o propósito de consolidar os conhecimentos adquiridos sobre a linguagem C++ ao longo do segundo semestre de 2025.
+
+A proposta busca minimizar problemas comuns entre alunos, como a má administração do tempo e dos compromissos, fatores que frequentemente resultam em conflitos de horário, atrasos na entrega de trabalhos e ausências em aulas.
+
+Tendo em vista as problemáticas evidenciadas, o sistema tem como objetivo macro otimizar o gerenciamento das tarefas diárias, permitindo que o usuário as organize e priorize de maneira intuitiva, personalizada e dinâmica. Para isso, o projeto será baseado na metodologia Kanban, um modelo visual de gerenciamento de tarefas que facilita a organização e o controle do progresso das atividades. Na metodologia Kanban, as tarefas são representadas por cartões que são movidos entre diferentes colunas de acordo com o estágio em que se encontram. Essa abordagem permitirá ao estudante visualizar de forma clara o que precisa ser feito, o que está em andamento e o que já foi concluído.
+
+Enquanto isso, os micro objetivos do projeto consistem em\+:
+
+
+\begin{DoxyItemize}
+\item Implementar as funcionalidades de cadastro, edição e exclusão de tarefas;
+\item Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de realização e de vencimento (prazo), importância, categorias personalizadas;
+\item Incluir quadro Kanban para visualização das tarefas com colunas como "{}\+A Fazer"{}, "{}\+Fazendo"{} e "{}\+Feito"{};
+\item Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento;
+\item Exibir um contador de tarefas com a quantidade de tarefas pendentes;
+\item Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil.
+\end{DoxyItemize}
+
+Como resultado, espera-\/se que o projeto desenvolvido seja capaz de proporcionar aos estudantes uma gestão mais eficiente e organizada de suas tarefas acadêmicas, melhorando sua produtividade e redução do estresse relacionado ao cumprimento de prazos. A utilização do Kanban facilitará a visualização do progresso das atividades, contribuindo para o controle de compromissos e evitando atrasos. Além disso, o sistema proporcionará a personalização das tarefas conforme a necessidade individual de cada aluno, criando uma ferramenta flexível e adaptada ao perfil universitário.
+
+\DoxyHorRuler{0}
+
+
+INFORMAÇÕ\+ES ESSENCIAIS
+
+-\/\texorpdfstring{$>$}{>} Obs.\+: Existem divergências entre o escopo inicial (que não fora editado para fins de correção) e a entrega final do projeto, isso fica mais claro ao longo dos tópicos subsequentes.
+
+
+\begin{DoxyItemize}
+\item COMPILAÇÃO E EXECUÇÃO\+: Este projeto utiliza um Makefile para facilitar o processo de compilação. É necessário ter\+:
+\begin{DoxyItemize}
+\item g++ (compilador C++).
+\item COMO COMPILAR? Dentro da pasta raiz do projeto, no terminal, execute\+: 1) make -\/\texorpdfstring{$>$}{>} Esse comando irá\+: Criar a pasta build/; Compilar todos os arquivos .cpp contidos em src/; Gerar o executável Gerenciador\+Tarefas.\+exe. Obs.\+: Outra forma de compilação, em Windows, é a partir do comando\+: g++ -\/std=c++17 -\/Wall -\/I include src/\texorpdfstring{$\ast$}{*}.cpp -\/o
+\item COMO EXECUTAR? Após a compilação, execute\+: 1) make run -\/\texorpdfstring{$>$}{>} Esse comando executa automaticamente o programa compilado. Obs.\+: Outra forma de execução, em Windows, é a partir do comando\+: Gerenciador\+Tarefas.\+exe
+\item COMO LIMPAR OS ARQUIVOS GERADOS? Para remover arquivos compilados e o executável (isso é útil caso queira recompilar tudo do zero)\+: 1) make clean
+\end{DoxyItemize}
+\item ARQUITETURA DO PROJETO\+: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais\+: build, docs, include, src, tests.
+\begin{DoxyItemize}
+\item VSCODE\+: configurações do .json para compilação e execução do projeto;
+\item BUILD\+: arquivos gerados durante a compilação (.o), como o executável final main.\+o;
+\item DADOS\+: armazena os arquivos de persistência do sistema de tarefas, como tarefas.\+csv;
+\item DOCS\+: documentos do projeto, como os Cartões CRC e os User Stories, além dos arquivos gerados pelo Doxygen;
+\item INCLUDE\+: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.\+h;
+\item SRC\+: onde está localizado o código principal, main.\+cpp, além de alocar as implementações das funções declaradas em "{}include"{}, como Coluna.\+cpp;
+\item TESTS\+: arquivos de teste que comprovam a funcionalidade do código.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item FUNCIONALIDADES ENTREGUES\+: Nosso projeto possui, como objetivo principal, melhorar a experiência dos estudantes na Universidade, sendo assim, projetamos um quadro Kanban para organização. Com esse intuito, as principais funcionalidades entregues foram\+:
+\begin{DoxyItemize}
+\item Adição de atividades no escopo e classificação por prioridade;
+\item Cadastro, edição e exclusão de tarefas;
+\item Notificações quando a atividade programada está chegando ao prazo de vencimento;
+\item Organização das atividades entre "{}\+A fazer"{}, "{}\+Fazendo"{}, "{}\+Feito"{};
+\item Contagem de tarefas pendentes.
+\end{DoxyItemize}
+\item INSTRUÇÕ\+ES DE USO\+: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir as horas de antecedência para receber as notificações. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa). Ao finalizar as mudanças, é essencial digitar 8 para salvar as alterações feitas.
+
+EXEMPLOS DE ENTRADA E SAÍ\+DA\+:      
+\item TRATAMENTO DE EXCEÇÕ\+ES E PROGRAMAÇÃO DEFENSIVA\+: 
+
+1) Restaura o estado do std\+::cin se ocorrer um erro de leitura (por exemplo, o usuário digitou texto quando se esperava um número. ) e descarta tudo que restou na linha de entrada, evitando que dados inválidos “vazem” para a próxima leitura. -\/\texorpdfstring{$>$}{>} Protege contra\+: loops infinitos, leituras erradas e efeitos colaterais de entradas inválidas.
+
+
+
+2) Ambos garantem que o fluxo de entrada seja limpo após a operação. -\/\texorpdfstring{$>$}{>} Protege contra\+: entradas inválidas (texto onde se esperava número e datas invalidas), e preserva estado previsível do programa (valores default). Ex\+: Na opção 2 (criar tarefa), a data agendada so aceita datas após o dia e horario em que o programa esta sendo utilizado.
+
+
+
+3) Garante que a pasta exista antes de tentar salvar arquivos, evitando erros de I/O. -\/\texorpdfstring{$>$}{>} Protege contra\+: falhas de escrita/abertura de arquivo por diretório inexistente.
+\end{DoxyItemize}
+
+
+
+4) Tenta criar cada tarefa carregada, mas ignora tarefas que causam exceção (não deixa um erro em uma tarefa abortar todo o carregamento). -\/\texorpdfstring{$>$}{>} Protege contra\+: arquivo corrompido ou tarefa inválida quebrando a inicialização do programa.
+
+
+
+5) Chama a função validar antes de inserir a tarefa no gerenciador. Se a tarefa for inválida, avisa o usuário e não persiste a tarefa. -\/\texorpdfstring{$>$}{>} Protege contra\+: criação de tarefas com dados inconsistentes (datas inválidas, prioridades fora do intervalo, etc).
+
+
+
+6) Checa a validade do ID lido e confirma que a tarefa existe antes de tentar editar/excluir/mover. -\/\texorpdfstring{$>$}{>} Protege contra\+: operações sobre IDs inválidos ou inexistentes que causariam exceções/estado inconsistente.
+
+
+
+7) Evita exclusões acidentais solicitando confirmação explícita. -\/\texorpdfstring{$>$}{>} Protege contra\+: perda de dados por clique/tecla errada.
+
+
+
+8) Captura exceções que possam ocorrer durante a edição e informa o usuário ao invés de crashar. -\/\texorpdfstring{$>$}{>} Protege contra\+: exceções inesperadas durante a atualização.
+
+
+
+9) Gera um backup (tarefas.\+csv.\+bak) antes de sobrescrever o arquivo principal, reduzindo risco de perda de dados. No encerramento, tenta salvar e ignora falhas para não impedir o fechamento do app. ~\newline
+ -\/\texorpdfstring{$>$}{>} Protege contra\+: corrupção/erro durante escrita do arquivo e perda total de dados.
+
+
+\begin{DoxyItemize}
+\item DOXYGEN\+: O Doxygen foi utilizado para gerar a documentação automática do código-\/fonte do projeto, permitindo visualizar de forma organizada todas as classes, métodos e relacionamentos do sistema. Ele é uma ferramenta que analisa os arquivos do projeto e gera automaticamente uma documentação completa, em formato HTML, a partir dos comentários inseridos no código. Essa documentação facilita a compreensão da estrutura e funcionamento do sistema, tanto para os desenvolvedores do grupo quanto para futuras manutenções.
+
+-\/\texorpdfstring{$>$}{>} Como o Doxygen foi gerado\+:O Doxygen foi instalado na máquina local. O arquivo de configuração Doxyfile foi criado e ajustado para incluir as pastas include e src como entrada e docs como pasta de saída. Com o terminal aberto na pasta principal do projeto, foi executado o comando\+:
+
+doxygen Doxyfile
+
+Após a execução, a documentação foi gerada automaticamente dentro da pasta /docs, na subpasta /html, com o arquivo principal index.\+html.
+
+-\/\texorpdfstring{$>$}{>} Como acessar a documentação online\+: A documentação foi publicada através do Git\+Hub Pages, para permitir acesso direto pelo navegador. Link\+: \href{https://marinamfperes.github.io/TP-PDS-II&mdash;GRUPO-1/}{\texttt{https\+://marinamfperes.\+github.\+io/\+TP-\/\+PDS-\/\+II---\+GRUPO-\/1/}} ~\newline
+
+
+-\/\texorpdfstring{$>$}{>} Como atualizar o Doxygen\+: Sempre que alguma modificação for feita no código , é importante atualizar a documentação gerada pelo Doxygen para manter o site sincronizado com o projeto. Para isso, basta garantir que o arquivo de configuração Doxyfile esteja na pasta principal do repositório e executar o seguinte comando no terminal\+:
+
+doxygen Doxyfile
+
+Esse comando vai gerar novamente a pasta docs/html, que contém todos os arquivos da documentação atualizada. Depois disso, é só subir essas alterações para o Git\+Hub com\+:
+
+git add Doxyfile docs
+
+git commit -\/m "{}\+Atualiza documentação Doxygen"{}
+
+git push
+
+O Git\+Hub Pages é configurado para publicar automaticamente o conteúdo da pasta docs, então o site do projeto é atualizado poucos minutos após o envio.
+\item VÍ\+DEO DA COMPILAÇÃO E DA EXECUÇÃO\+: (\href{https://youtu.be/Az-n_MC-tcI}{\texttt{https\+://youtu.\+be/\+Az-\/n\+\_\+\+MC-\/tcI}})
+\item SOBRE A EQUIPE\+: Nosso projeto foi extremamente dividido, objetivando que todos tivessem contribuído, ao menos um pouco, com cada etapa de desenvolvimento do código. A baixo estão as principais atividades que cada membro do grupo executou\+:
+\begin{DoxyItemize}
+\item Daniel Sales\+: Notificador.\+h, Relogio.\+h, Repositorio\+Tarefas.\+h, Filtro\+Combinado.\+cpp, Filtro\+Prioridade.\+cpp, Filtro\+Tag.\+cpp, vídeo de compilação e execução, adições no README;
+\item Luísa Gouthier\+: modelagem inicial (CRC), Data\+Util.\+h, Filtro\+Prioridade.\+h, Filtro\+Combinado.\+h, Gerenciador\+Tarefas.\+h/\+Gerenciador\+Tarefas.cpp, Notificador.\+cpp, Tarefa.\+h/\+Tarefa.cpp, main.\+cpp, correção de erros (compatilibilidade entre todos os arquivos .h e .cpp);
+\item Marina Fonseca\+: escopo inicial do projeto, requisitos (User Stories), Data\+Util.\+cpp, Filtro\+Tag.\+cpp, Coluna.\+h/\+Coluna.cpp, Estrategia\+Filtro.\+h/\+Estrategia\+Filtro.cpp, Quadro.\+h/\+Quadro.cpp, adições no README;
+\item Miguel Del Corsi\+: Usuario.\+h, Relogio.\+cpp, Repositorio\+Tarefas.\+cpp, Usuario.\+h/\+Usuario.cpp, adições no README, Doxygen;
+\end{DoxyItemize}
+\item CICLO DE DESENVOLVIMENTO E LINHA DO TEMPO DAS SPRINTS\+: 
+\item PLANEJADO x EXECUTADO\+:
+\begin{DoxyItemize}
+\item Implementar as funcionalidades de cadastro, edição e exclusão de tarefas; ✔️
+\item Permitir a classificação, filtragem e priorização das tarefas com critérios como horário e data de realização e de vencimento (prazo), importância, categorias personalizadas; ✔️
+\item Incluir quadro Kanban para visualização das tarefas com colunas como "{}\+A Fazer"{}, "{}\+Fazendo"{} e "{}\+Feito"{}; ️✖️✔️ -\/\texorpdfstring{$>$}{>} As categorias de "{}\+A Fazer"{}, "{}\+Fazendo"{} e "{}\+Feito"{} foram feitas, mas a visualização no Kanban não foi feita, tendo em vista que não adotamos interface gráfica.
+\item Destacar as tarefas que não foram concluídas no prazo ou estão próximas do vencimento; ️️✔️
+\item Exibir um contador de tarefas com a quantidade de tarefas pendentes; ✔️
+\item Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil. ✖️ -\/\texorpdfstring{$>$}{>} Percebemos que a montagem de interface gráfica, a partir do programa Qt, seria muito complexa e despendiria muito tempo. Ajustar o Github, bem como Vs\+Code, e alinhar tudo seria mais do que conseguiríamos fazer.
+\end{DoxyItemize}
+\item EVIDÊ\+NCIAS NO GITHUB\+: Não utilizamos alguns dos recursos, como as Tags, Milestones, etc. (obs.\+: constam cinco autores, mas dois são da mesma autora, Luisa Gouthier).  
+\item AGRADECIMENTOS\+: Gostaríamos de expressar nossos agradecimentos a todas as ferramentas, plataformas e pessoas que contribuíram, direta ou indiretamente, para o desenvolvimento deste trabalho.
+\begin{DoxyItemize}
+\item Agradecemos ao professor Thiago Noronha, pela orientação, disponibilidade e pelos ensinamentos transmitidos ao longo da disciplina, que foram fundamentais para a construção e consolidação dos conhecimentos aplicados neste projeto;
+\item Agradecemos também ao Git\+Hub, por oferecer uma plataforma robusta de versionamento, colaboração e hospedagem de código, essencial para o gerenciamento do projeto e para a publicação da documentação gerada;
+\item Ao Visual Studio Code (VS Code), pela praticidade, integração com Git e suporte a múltiplas linguagens, que facilitaram significativamente o processo de desenvolvimento e depuração do código;
+\item Ao Doxygen, pela geração automatizada da documentação do código-\/fonte, garantindo organização, rastreabilidade e clareza na estrutura do projeto;
+\item Aos colegas de equipe, pela dedicação, comprometimento e colaboração em todas as etapas do desenvolvimento, desde o planejamento até a entrega final. 
+\end{DoxyItemize}
+\end{DoxyItemize}
