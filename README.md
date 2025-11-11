@@ -29,7 +29,7 @@ INFORMAÇÕES ESSENCIAIS
 
 - ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests. 
     - BUILD: arquivos gerados durante a compilação, como o executável final main.exe;
-    - DOCS: documentos do projeto, como README.md, além dos arquivos gerados pelo Doxygen;
+    - DOCS: documentos do projeto, como os Cartões CRC e os User Stories, além dos arquivos gerados pelo Doxygen;
     - INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
     - SRC: onde está localizado o código principal, alocando as implementações das funções declaradas em "include", como Coluna.cpp;
     - TESTS: arquivos de teste que comprovam a funcionalidade do código.
