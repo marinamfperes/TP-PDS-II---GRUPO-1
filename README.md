@@ -68,7 +68,7 @@ INFORMAÇÕES ESSENCIAIS
     - Contagem de tarefas pendentes.
 
 
-- INSTRUÇÕES DE USO: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir a data do dia. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa). Ao finalizar as mudanças, é essencial digitar 8 para salvar as alterações feitas.
+- INSTRUÇÕES DE USO: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir as horas de antecedência para receber as notificações. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa). Ao finalizar as mudanças, é essencial digitar 8 para salvar as alterações feitas.
 
     EXEMPLOS DE ENTRADA E SAÍDA:
 <img width="996" height="768" alt="image" src="https://github.com/user-attachments/assets/bbd1a916-a9b2-4277-b27f-9609ea93f5bb" />
