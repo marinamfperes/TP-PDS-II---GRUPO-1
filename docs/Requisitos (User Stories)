@@ -1,5 +1,7 @@
 MAPEAMENTO DOS REQUISITOS FUNCIONAIS:
 
+-> Observação: os requisitos foram definidos no início do projeto, portanto, modificações foram feitas, como a não adoção da interface gráfica. Essas alterações podem ter interferido na execução plena dos requisitos e dos User Stories.
+
 RF01 - Usuário:
 Manter metadados do “dono” local (nome), sem autenticação, na plataforma que permitirá registro das atividades;
 
