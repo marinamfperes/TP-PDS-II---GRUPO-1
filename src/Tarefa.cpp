@@ -1,11 +1,30 @@
 #include "Tarefa.h"
-#include <stdexcept>   //para lançar exceções em validações
-#include <algorithm>   //para algoritmos de busca/remoção -> std::find
+#include <stdexcept> //para lançar exceções em validações
+#include <algorithm> //para algoritmos de busca/remoção -> std::find
+#include <fstream> 
 
-//gerador simples de IDs únicos
+//gerador simples de ids únicos
 //"static" garante um contador único para todas as Tarefas
 //cada nova Tarefa recebe id = GERADOR_ID_TAREFA++
 static int GERADOR_ID_TAREFA = 1;
+
+//função para carregar o id do arquivo
+void carregarIdGerador() {
+    std::ifstream arquivo("ultimo_id.txt");  //arquivo onde o último id será salvo
+    if (arquivo.is_open()) {
+        arquivo >> GERADOR_ID_TAREFA;  //lê o último id salvo
+    }
+    arquivo.close();
+}
+
+//função para salvar o id no arquivo
+void salvarIdGerador() {
+    std::ofstream arquivo("ultimo_id.txt");  //arquivo onde o último id será salvo
+    if (arquivo.is_open()) {
+        arquivo << GERADOR_ID_TAREFA;  //salva o valor atual do id
+    }
+    arquivo.close();
+}
 
 //construtor que inicializa todos os campos
 Tarefa::Tarefa(std::string titulo,
@@ -21,15 +40,6 @@ Tarefa::Tarefa(std::string titulo,
       prioridade_(prioridade),
       status_("A Fazer") //status inicial padrão do quadro Kanban
 {}
-
-void Tarefa::setIdParaCarga(int novoId) {
-    id = novoId;
-}
-
-void Tarefa::ajustarProximoId(int proximoVal) {
-    //evita “voltar” contador — só aumenta
-    if (proximoVal > proximoId_) proximoId_ = proximoVal;
-}
 
 //getters (acessam dados internos sem permitir modificação)
 int Tarefa::getId() const { return id; }
@@ -56,7 +66,8 @@ void Tarefa::atualizarStatus(const std::string& novoStatus) {
     }
 }
 
-//TAGS
+
+//tags
 
 //adiciona uma tag à lista, evitando duplicadas
 void Tarefa::addTag(const std::string& tag) {
@@ -77,7 +88,8 @@ bool Tarefa::removeTag(const std::string& tag) {
     return true;
 }
 
-//ESTADO TEMPORAL
+
+//estado temporal
 
 ////verifica se a tarefa está vencida
 //etorna true se a tarefa tem vencimento definido e se o vencimento já passou (vencimento < agora)
@@ -95,7 +107,8 @@ bool Tarefa::estaProximaDoVencimento(std::time_t agora, int janelaHoras) const {
     return (vencimento_ >= agora) && (vencimento_ <= limite);
 }
 
-//VALIDAÇÕES
+
+//validações
 
 //valida o campo obrigatório (título)
 bool Tarefa::validarCampos() const {

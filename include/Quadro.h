@@ -14,7 +14,7 @@ class Quadro {
       bool removerTarefaPorId(int id); //para exclusão sincronizada com Kanban
 
   private:
-     std::vector<Coluna> colunas;
+     std::vector<Coluna> colunas_;
 };
 
 #endif

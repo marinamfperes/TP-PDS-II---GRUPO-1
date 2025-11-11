@@ -18,8 +18,8 @@ class Coluna {
     bool extrairTarefaPorId(int id, Tarefa& outTarefa);
 
   private:
-    std::string status;
-    std::vector<Tarefa> tarefas;
+    std::string status_;
+    std::vector<Tarefa> tarefas_;
 };
 
 #endif

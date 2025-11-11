@@ -9,14 +9,12 @@ class Tarefa {
 public:
     Tarefa(std::string titulo, std::string descricao, std::time_t agendada, std::time_t vencimento, int prioridade);
 
+    static void carregarIdGerador();  
+    static void salvarIdGerador();
+
     //métodos de acesso
     int getId() const; //acessa o id único que diferencia as tarefas
 
-    //usado só durante a leitura do repositório (carga de arquivo)
-    void setIdParaCarga(int novoId);
-
-    //chamado pelo repositório após carregar tudo para evitar colisão de ids
-    static void ajustarProximoId(int proximoVal);
 
     const std::string&  getTitulo() const; //acessa o título
     const std::string&  getDescricao() const; //acessa a descrição
