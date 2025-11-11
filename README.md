@@ -89,7 +89,7 @@ INFORMAÇÕES ESSENCIAIS
   - Desenvolver uma interface intuitiva, de acordo com o perfil do público estudantil. ✖️ -> Percebemos que a montagem de interface gráfica, a partir do programa Qt, seria muito complexa e despendiria muito tempo. Ajustar o Github, bem como VsCode, e alinhar tudo seria mais do que conseguiríamos fazer.
 
 
-- EVIDÊNCIAS NO GITHUB: (obs.: constam cinco autores, mas dois são da mesma autora, Luisa Gouthier)
+- EVIDÊNCIAS NO GITHUB: Não utilizamos alguns dos recursos, como as Tags, Milestones, etc. (obs.: constam cinco autores, mas dois são da mesma autora, Luisa Gouthier). 
   <img width="1347" height="763" alt="image" src="https://github.com/user-attachments/assets/d2e8ef8a-f10e-4da8-84d5-40d7983c7a4a" />
   <img width="1836" height="389" alt="image" src="https://github.com/user-attachments/assets/21b02849-4655-44c7-b89f-fde3383bd8cf" />
 
