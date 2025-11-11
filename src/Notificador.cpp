@@ -44,7 +44,6 @@ static std::string formataDataHora(std::time_t ts) {
     return std::to_string(static_cast<long long>(ts));
 }
 
-
 //retorna tarefas vencidas
 std::vector<Tarefa> Notificador::getTarefasVencidas() const {
     const std::time_t agora = relogio_->agora(); //usa o relógio para obter o tempo atual
@@ -61,14 +60,8 @@ std::vector<Tarefa> Notificador::getTarefasVencidas() const {
         }
     }
 
-    //IMPLEMENTAR ISSO
-    /*for (auto& tarefa : vencidas) {
-        .ordenarTarefas();
-    }
-    */
     return vencidas;
 }
-
 
 //filtra tarefas próximas do vencimento segundo a janela configurada
 std::vector<Tarefa> Notificador::getTarefasProximasDoVencimento() const {
@@ -87,12 +80,6 @@ std::vector<Tarefa> Notificador::getTarefasProximasDoVencimento() const {
         }
     }
 
-    //IMPLEMENTAR ISSO
-    /*
-     for (auto& tarefa : proximas) {
-        tarefa.ordenarTarefas();
-    }
-    */
     return proximas;
 }
 

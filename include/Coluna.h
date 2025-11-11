@@ -2,22 +2,23 @@
 #define COLUNA_H
 
 #include "Tarefa.h"
+#include "Notificador.h"
 #include <vector>
 #include <string>
-#include <iostream>
 
 class Coluna {
-  public: 
-    Coluna(const std::string& status);
-    void adicionarTarefa(const Tarefa& tarefa);
-    void removerTarefa(int id);
-    void ordenarTarefas();
-    int contarTarefas() const;
-    void exibirTarefas() const;
-    std::string getStatus() const;
-    bool extrairTarefaPorId(int id, Tarefa& outTarefa);
+public:
+    explicit Coluna(std::string status);
 
-  private:
+    void adicionarTarefa(const Tarefa& tarefa);
+    void ordenarTarefas();
+
+    void exibirTarefas() const;
+
+    const std::string& getStatus() const;
+    const std::vector<Tarefa>& getTarefas() const;
+
+private:
     std::string status_;
     std::vector<Tarefa> tarefas_;
 };
