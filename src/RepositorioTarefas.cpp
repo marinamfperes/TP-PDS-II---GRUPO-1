@@ -3,7 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <ctime>
-#include <filesystem>
+#include <cstdio> //para std::remove, std::rename
 #include <stdexcept>
 
 int RepositorioTarefas::proximoId_ = 1;  // Inicializando com o valor 1
@@ -116,11 +116,21 @@ std::vector<Tarefa> RepositorioTarefas::carregarTarefas() const {
 
 
 void RepositorioTarefas::arquivoBackup() const {
-    try {
-        if (!std::filesystem::exists(arquivo_)) return; // Se o arquivo não existe, não faz nada
-        const std::string bak = arquivo_ + ".bak";  // Nome do arquivo de backup
-        std::filesystem::copy_file(arquivo_, bak, std::filesystem::copy_options::overwrite_existing);
-    } catch (...) {
-        std::cerr << "Erro ao criar backup do arquivo.\n";
+    std::ifstream src(arquivo_, std::ios::binary);
+    if (!src.is_open()) {
+        return;  //se o arquivo não existe, não faz nada
     }
+
+    std::string bak = arquivo_ + ".bak";
+
+    std::ofstream dest(bak, std::ios::binary); 
+    if (!dest.is_open()) {
+        std::cerr << "Erro ao criar backup do arquivo.\n";
+        return;
+    }
+
+    dest << src.rdbuf();  //copia todo o conteúdo
+
+    src.close();
+    dest.close();
 }

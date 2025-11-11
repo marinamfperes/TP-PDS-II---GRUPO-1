@@ -40,6 +40,7 @@ void Tarefa::setDescricao(const std::string& novo) { descricao_ = novo; }
 void Tarefa::setAgendada(std::time_t ts) { agendada_ = ts; }
 void Tarefa::setVencimento(std::time_t ts) { vencimento_ = ts; }
 void Tarefa::setPrioridade(int p) { prioridade_ = p; }
+void Tarefa::setTags(const std::vector<std::string>& tags) { tags_ = tags; }
 
 //troca o status textual da tarefa no Kanban
 // aceita só "A Fazer", "Fazendo" ou "Feito"
@@ -70,7 +71,6 @@ bool Tarefa::removeTag(const std::string& tag) {
     tags_.erase(it);
     return true;
 }
-
 
 //estado temporal
 

@@ -6,7 +6,6 @@
 #include <ctime>
 #include <sstream>
 #include <fstream>
-#include <filesystem>
 
 
 #include "Relogio.h"
@@ -66,11 +65,11 @@ int main() {
     const std::string path = "dados/tarefas.csv";
 
 
-    //garante diretório
-    try {
-        std::filesystem::path p{path};
-        if (p.has_parent_path()) std::filesystem::create_directories(p.parent_path());
-    } catch (...) {}
+    #ifdef _WIN32
+        system("mkdir dados 2>nul");
+    #else
+        system("mkdir -p dados");
+    #endif
 
 
     RepositorioTarefas repo(path);
@@ -123,8 +122,19 @@ int main() {
             const std::string sven = perguntarLinha("");
             std::time_t ve = converteDataHora(sven);
 
+            //pergunta ao usuário por tags
+            std::string tagInput = perguntarLinha("Digite tags separadas por vírgula (deixe em branco para nenhum): ");
+            std::vector<std::string> tags;
+            if (!tagInput.empty()) {
+                std::stringstream ss(tagInput);
+                std::string tag;
+                while (std::getline(ss, tag, ',')) {
+                    tags.push_back(tag);
+                }
+            }
 
             Tarefa t(titulo, desc, ag, ve, prio);
+            t.setTags(tags);
             std::string erro;
             if (!t.validar(rel.agora(), &erro)) {
                 std::cout << "Erro: " << erro << "\n";

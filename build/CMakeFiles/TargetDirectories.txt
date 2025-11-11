@@ -1,5 +1,0 @@
-C:/TP/TP-PDS-II---GRUPO-1/build/CMakeFiles/GerenciadorTarefas.dir
-C:/TP/TP-PDS-II---GRUPO-1/build/CMakeFiles/edit_cache.dir
-C:/TP/TP-PDS-II---GRUPO-1/build/CMakeFiles/rebuild_cache.dir
-C:/TP/TP-PDS-II---GRUPO-1/build/CMakeFiles/GerenciadorTarefas_autogen_timestamp_deps.dir
-C:/TP/TP-PDS-II---GRUPO-1/build/CMakeFiles/GerenciadorTarefas_autogen.dir

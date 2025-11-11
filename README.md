@@ -63,7 +63,7 @@ INFORMAÇÕES ESSENCIAIS
  
     - Luísa Gouthier: modelagem inicial (CRC), FiltroPrioridade.h, FiltroCombinado.h, GerenciadorTarefas.h/GerenciadorTarefas.cpp, Notificador.cpp, Tarefa.h/Tarefa.cpp, main.cpp, correção de erros (compatilibilidade entre todos os arquivos .h e .cpp);
  
-    - Marina Fonseca: escopo inicial do projeto, requisitos (User Stories), FiltroaTag.cpp, Coluna.h/Coluna.cpp, EstrategiaFiltro.h/EstrategiaFiltro.cpp, Quadro.h/Quadro.cpp, adições no README;
+    - Marina Fonseca: escopo inicial do projeto, requisitos (User Stories), FiltroaTag.cpp, Coluna.h/Coluna.cpp, EstrategiaFiltro.h/EstrategiaFiltro.cpp, Quadro.h/Quadro.cpp, correção de erros (compatilibilidade entre todos os arquivos .h e .cpp), adições no README;
       
     - Miguel Del Corsi: Usuario.h, Relogio.cpp, RepositorioTarefas.cpp, Usuario.h/Usuario.cpp,  adições no README, Doxygen;
  

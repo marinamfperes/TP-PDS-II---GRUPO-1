@@ -39,6 +39,9 @@ public:
     bool validarDatas(std::time_t agora) const; //verifica se data e horário são válidos
     bool validar(std::time_t agora, std::string* erro = nullptr) const; //unifica as duas validações
 
+    //tags
+    void setTags(const std::vector<std::string>& tags);
+    
 private:
     int id;
     static int proximoId_; //gerador incremental de ids

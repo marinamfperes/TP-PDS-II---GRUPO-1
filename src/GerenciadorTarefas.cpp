@@ -41,9 +41,13 @@ void GerenciadorTarefas::editarTarefa(int id, Tarefa tarefaAtualizada) {
     it->setVencimento(tarefaAtualizada.getVencimento());
     it->setPrioridade(tarefaAtualizada.getPrioridade());
 
-    for (const auto& tag : tarefaAtualizada.getTags()) {
-        it->addTag(tag);  //adiciona cada nova tag sem limpar as antigas
+    if (!tarefaAtualizada.getTags().empty()) {
+        it->clearTags(); 
+        for (const auto& tag : tarefaAtualizada.getTags()) {
+            it->addTag(tag);
+        }
     }
+
     it->atualizarStatus(tarefaAtualizada.getStatus());
 
 }
