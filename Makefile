@@ -17,6 +17,9 @@ build/%.o: src/%.cpp
 $(TARGET): $(OBJ)
 	$(CXX) $(OBJ) -o $(TARGET)
 
+run: $(TARGET)
+	./$(TARGET)
+	
 clean:
 	rmdir /S /Q build 2>nul || true
 	del $(TARGET) 2>nul || true
