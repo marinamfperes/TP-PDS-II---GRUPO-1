@@ -26,33 +26,23 @@ INFORMAÇÕES ESSENCIAIS
 
 -> Obs.: Existem divergências entre o escopo inicial (que não fora editado para fins de correção) e a entrega final do projeto, isso fica mais claro ao longo dos tópicos subsequentes.
   
-- COMPILAÇÃO E EXECUÇÃO:
+- COMPILAÇÃO E EXECUÇÃO: Este projeto utiliza um Makefile para facilitar o processo de compilação. É necessário ter:
+  - g++ (compilador C++). 
 
-Este projeto utiliza um Makefile para facilitar o processo de compilação. É necessário ter:
-g++ (compilador C++)
-make
+  - COMO COMPILAR?
+  Dentro da pasta raiz do projeto, no terminal, execute:
+    1) make -> Esse comando irá:
+       Criar a pasta build/;
+       Compilar todos os arquivos .cpp contidos em src/;
+       Gerar o executável GerenciadorTarefas.exe.
+       
+  - COMO EXECUTAR?
+  Após a compilação, execute:
+    1) make run -> Esse comando executa automaticamente o programa compilado.
 
-COMO COMPILAR?
-
-Dentro da pasta raiz do projeto, no terminal, execute:
-make
-Esse comando irá:
-Criar a pasta build/
-Compilar todos os arquivos .cpp contidos em src/
-Gerar o executável GerenciadorTarefas.exe
-COMO EXECUTAR?
-
-Após a compilação, execute:
-make run
-
-Esse comando executa automaticamente o programa compilado.
-
-LIMPANDO ARQUIVOS GERADOS:
-
-Para remover arquivos compilados e o executável:
-make clean
-
-Isso é útil caso queira recompilar tudo do zero.
+  - COMO LIMPAR OS ARQUIVOS GERADOS?
+  Para remover arquivos compilados e o executável (isso é útil caso queira recompilar tudo do zero):
+    1) make clean
 
 
 - ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests.
