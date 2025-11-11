@@ -29,14 +29,16 @@ INFORMAÇÕES ESSENCIAIS
 - COMPILAÇÃO E EXECUÇÃO:
 
 
-- ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests. 
+- ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests.
+    - VSCODE: configurações do .json para compilação e execução do projeto;
     - BUILD: arquivos gerados durante a compilação, como o executável final main.exe;
     - DOCS: documentos do projeto, como os Cartões CRC e os User Stories, além dos arquivos gerados pelo Doxygen;
     - INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
     - SRC: onde está localizado o código principal, alocando as implementações das funções declaradas em "include", como Coluna.cpp;
     - TESTS: arquivos de teste que comprovam a funcionalidade do código.
 
-<img width="447" height="253" alt="image" src="https://github.com/user-attachments/assets/49e2e83b-2620-4f0a-aeeb-d539cfc74bbf" />
+<img width="345" height="365" alt="image" src="https://github.com/user-attachments/assets/a9726a5e-e525-4d0c-8b5f-89a46dbdeb93" />
+
 
 
 - FUNCIONALIDADES ENTREGUES: Nosso projeto possui, como objetivo principal, melhorar a experiência dos estudantes na Universidade, sendo assim, projetamos um quadro Kanban para organização. Com esse intuito, as principais funcionalidades entregues foram:
@@ -61,9 +63,9 @@ INFORMAÇÕES ESSENCIAIS
 - SOBRE A EQUIPE: Nosso projeto foi extremamente dividido, objetivando que todos tivessem contribuído, ao menos um pouco, com cada etapa de desenvolvimento do código. A baixo estão as principais atividades que cada membro do grupo executou:
     - Daniel Sales: Notificador.h, Relogio.h, RepositorioTarefas.h, FiltroCombinado.cpp, FiltroPrioridade.cpp, FiltroTag.cpp,  adições no README;
  
-    - Luísa Gouthier: modelagem inicial (CRC), FiltroPrioridade.h, FiltroCombinado.h, GerenciadorTarefas.h/GerenciadorTarefas.cpp, Notificador.cpp, Tarefa.h/Tarefa.cpp, main.cpp, correção de erros (compatilibilidade entre todos os arquivos .h e .cpp);
+    - Luísa Gouthier: modelagem inicial (CRC), DataUtil.h, FiltroPrioridade.h, FiltroCombinado.h, GerenciadorTarefas.h/GerenciadorTarefas.cpp, Notificador.cpp, Tarefa.h/Tarefa.cpp, main.cpp, correção de erros (compatilibilidade entre todos os arquivos .h e .cpp);
  
-    - Marina Fonseca: escopo inicial do projeto, requisitos (User Stories), FiltroaTag.cpp, Coluna.h/Coluna.cpp, EstrategiaFiltro.h/EstrategiaFiltro.cpp, Quadro.h/Quadro.cpp, adições no README;
+    - Marina Fonseca: escopo inicial do projeto, requisitos (User Stories), DataUtil.cpp, FiltroTag.cpp, Coluna.h/Coluna.cpp, EstrategiaFiltro.h/EstrategiaFiltro.cpp, Quadro.h/Quadro.cpp, adições no README;
       
     - Miguel Del Corsi: Usuario.h, Relogio.cpp, RepositorioTarefas.cpp, Usuario.h/Usuario.cpp,  adições no README, Doxygen;
  
