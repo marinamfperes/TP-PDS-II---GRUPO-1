@@ -1,12 +1,48 @@
-#include <QApplication> //gerencia o ciclo de vida da aplicação (inicialização, eventos, encerramento)
+#include <iostream>
+#include <iomanip>
+#include <limits>
+#include <string>
+#include <vector>
+#include <ctime>
+#include <sstream>
+#include <fstream>
+#include <filesystem>
 
-//argc e argv são parâmetros usados para capturar argumentos de linha de comando e são repassados ao QApplication, que pode utilizá-los internamente.
+#include "Relogio.h"
+#include "RepositorioTarefas.h"
+#include "GerenciadorTarefas.h"
+#include "Notificador.h"
+#include "Tarefa.h"
+#include "Usuario.h"
 
-int main(int argc, char *argv[]) {
-    //instancia o objeto QApplication, que é obrigatório em qualquer programa Qt, pois gerencia toda a parte de interface gráfica, controle de eventos, interação com o sistema operacional, e o loop de execução da aplicação.
-    QApplication app(argc, argv);
+//Funções auxiliares
+
+static void limpaInput() { //limpa o cin e descarta o restante da linha de entrada, para permitir que o programa continue funcionando
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
+static std::string perguntarLinha(const std::string& prompt) { //exibe um prompt para o usuário e captura uma linha de texto como entrada (facilita leitura)
+    std::cout << prompt;
+    std::string s;
+    std::getline(std::cin, s);
+    if (!std::cin) { limpaInput(); }
+    return s;
+}
+
+static int perguntarInt(const std::string& prompt, int def = 0) { //igual ao anterior, mas captura um número inteiro como entrada
+    std::cout << prompt;
+    int v;
+    std::cin >> v;
+    if (!std::cin) { limpaInput(); return def; }
+    limpaInput();
+    return v;
+}
+
+int main() {
 
 
-    //o método exec() bloqueia o código até o encerramento da aplicação, garantindo que tudo continue funcionando enquanto a janela estiver aberta.
-    return app.exec();
+return 0;
+
+
 }
