@@ -3,7 +3,10 @@
 
 #include "Tarefa.h"
 #include "Relogio.h"
+#include "EstrategiaFiltro.h"
+#include "FiltroCombinado.h"
 #include <vector>
+#include <memory>
 #include <string>
 
 class GerenciadorTarefas {
@@ -26,7 +29,10 @@ public:
     //acessa todas as tarefas
     const std::vector<Tarefa>& getTodasTarefas() const;
 
-private:
+    //função para aplicar filtros
+    void aplicarFiltros(const std::vector<std::shared_ptr<EstrategiaFiltro>>& filtros);
+
+    private:
     std::vector<Tarefa> tarefas_;
     Relogio* relogio_;
 };

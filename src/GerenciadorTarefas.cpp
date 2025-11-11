@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <stdexcept>
 #include <ctime>
+#include <iostream>
 
 //construtor
 //recebe ponteiros para Notificador e Relogio (podem ser nullptr)
@@ -89,4 +90,19 @@ bool GerenciadorTarefas::obterTarefaPorId(int id, Tarefa& out) const {
 
 const std::vector<Tarefa>& GerenciadorTarefas::getTodasTarefas() const {
     return tarefas_;  //retorna referência para vetor de tarefas
+}
+
+//para exibir tarefas de acordo com filtro escolhido pelo usuário
+void GerenciadorTarefas::aplicarFiltros(const std::vector<std::shared_ptr<EstrategiaFiltro>>& filtros) {
+    FiltroCombinado filtroCombinado;
+    for (const auto& filtro : filtros) {
+        filtroCombinado.adicionarFiltro(filtro);
+    }
+    
+    std::vector<Tarefa> tarefasFiltradas = filtroCombinado.aplicar(tarefas_);
+    
+    //exibe as tarefas filtradas
+    for (const auto& t : tarefasFiltradas) {
+        std::cout << t.getTitulo() << " | Prioridade: " << t.getPrioridade() << " | Status: " << t.getStatus() << "\n";
+    }
 }
