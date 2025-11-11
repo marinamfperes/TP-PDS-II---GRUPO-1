@@ -1,0 +1,38 @@
+\doxysection{Gerenciador\+Tarefas Class Reference}
+\hypertarget{class_gerenciador_tarefas}{}\label{class_gerenciador_tarefas}\index{GerenciadorTarefas@{GerenciadorTarefas}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73}\label{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73} 
+{\bfseries Gerenciador\+Tarefas} (\mbox{\hyperlink{class_relogio}{Relogio}} \texorpdfstring{$\ast$}{*}relogio)
+\item 
+\Hypertarget{class_gerenciador_tarefas_a38f8b560c407a94882577b1d74e5f345}\label{class_gerenciador_tarefas_a38f8b560c407a94882577b1d74e5f345} 
+void {\bfseries criar\+Tarefa} (\mbox{\hyperlink{class_tarefa}{Tarefa}} tarefa)
+\item 
+\Hypertarget{class_gerenciador_tarefas_ac56638bcdee63a8d9f19349aaad7551a}\label{class_gerenciador_tarefas_ac56638bcdee63a8d9f19349aaad7551a} 
+void {\bfseries editar\+Tarefa} (int id, \mbox{\hyperlink{class_tarefa}{Tarefa}} tarefa\+Atualizada)
+\item 
+\Hypertarget{class_gerenciador_tarefas_a32af13922b775c3d347d46590c51f206}\label{class_gerenciador_tarefas_a32af13922b775c3d347d46590c51f206} 
+void {\bfseries excluir\+Tarefa} (int id)
+\item 
+\Hypertarget{class_gerenciador_tarefas_ab41a8062a9f00352b21942cdfd274586}\label{class_gerenciador_tarefas_ab41a8062a9f00352b21942cdfd274586} 
+void {\bfseries mover\+Tarefa} (int id, const std\+::string \&novo\+Status)
+\item 
+\Hypertarget{class_gerenciador_tarefas_aeef41c34cdf2a7ed7ddc4cf36017c749}\label{class_gerenciador_tarefas_aeef41c34cdf2a7ed7ddc4cf36017c749} 
+bool {\bfseries obter\+Tarefa\+Por\+Id} (int id, \mbox{\hyperlink{class_tarefa}{Tarefa}} \&out) const
+\item 
+\Hypertarget{class_gerenciador_tarefas_ac4c4f30d665a73188bb0e1da9c9f2e16}\label{class_gerenciador_tarefas_ac4c4f30d665a73188bb0e1da9c9f2e16} 
+int {\bfseries contar\+Tarefas\+Pendentes} () const
+\item 
+\Hypertarget{class_gerenciador_tarefas_a3e48f5cf9a82fa490d27c15ac432b0a9}\label{class_gerenciador_tarefas_a3e48f5cf9a82fa490d27c15ac432b0a9} 
+const std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \& {\bfseries get\+Todas\+Tarefas} () const
+\item 
+\Hypertarget{class_gerenciador_tarefas_a8b1652de9dcf639be61f2b4ffa68e38c}\label{class_gerenciador_tarefas_a8b1652de9dcf639be61f2b4ffa68e38c} 
+void {\bfseries aplicar\+Filtros} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}} $>$ $>$ \&filtros)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Gerenciador\+Tarefas.\+h\item 
+src/Gerenciador\+Tarefas.\+cpp\end{DoxyCompactItemize}

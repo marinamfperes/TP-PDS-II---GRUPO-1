@@ -25,13 +25,25 @@
 var NAVTREE =
 [
   [ "My Project", "index.html", [
-    [ "TP PDS II - GRUPO 1", "md__r_e_a_d_m_e.html", null ]
+    [ "TP PDS II - GRUPO 1", "md__r_e_a_d_m_e.html", null ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ]
+      ] ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"_coluna_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

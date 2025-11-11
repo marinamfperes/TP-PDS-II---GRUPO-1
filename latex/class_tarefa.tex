@@ -1,0 +1,83 @@
+\doxysection{Tarefa Class Reference}
+\hypertarget{class_tarefa}{}\label{class_tarefa}\index{Tarefa@{Tarefa}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_tarefa_a66a4e2f8e69b2d368b5946f0ded22fd8}\label{class_tarefa_a66a4e2f8e69b2d368b5946f0ded22fd8} 
+{\bfseries Tarefa} (std\+::string titulo, std\+::string descricao, std\+::time\+\_\+t agendada, std\+::time\+\_\+t vencimento, int prioridade)
+\item 
+\Hypertarget{class_tarefa_ad5d08f27ceaabbaaac6850f70c4b4788}\label{class_tarefa_ad5d08f27ceaabbaaac6850f70c4b4788} 
+int {\bfseries get\+Id} () const
+\item 
+\Hypertarget{class_tarefa_a725e101a644fa5901a385bc983ab3e54}\label{class_tarefa_a725e101a644fa5901a385bc983ab3e54} 
+const std\+::string \& {\bfseries get\+Titulo} () const
+\item 
+\Hypertarget{class_tarefa_a253d063c718729dce24786539cb458ac}\label{class_tarefa_a253d063c718729dce24786539cb458ac} 
+const std\+::string \& {\bfseries get\+Descricao} () const
+\item 
+\Hypertarget{class_tarefa_ad082712fd4848c69f446986ad12b0046}\label{class_tarefa_ad082712fd4848c69f446986ad12b0046} 
+std\+::time\+\_\+t {\bfseries get\+Agendada} () const
+\item 
+\Hypertarget{class_tarefa_ab420507b0aa0a3b8ce9fd140fcd12e5a}\label{class_tarefa_ab420507b0aa0a3b8ce9fd140fcd12e5a} 
+std\+::time\+\_\+t {\bfseries get\+Vencimento} () const
+\item 
+\Hypertarget{class_tarefa_a0170a767c5bfacbbabf23474160827d8}\label{class_tarefa_a0170a767c5bfacbbabf23474160827d8} 
+int {\bfseries get\+Prioridade} () const
+\item 
+\Hypertarget{class_tarefa_a53b41297627fb17acb1c666ef9f7964c}\label{class_tarefa_a53b41297627fb17acb1c666ef9f7964c} 
+const std\+::string \& {\bfseries get\+Status} () const
+\item 
+\Hypertarget{class_tarefa_a14b283abd4908827c90fa3ae7f1796bf}\label{class_tarefa_a14b283abd4908827c90fa3ae7f1796bf} 
+const std\+::vector$<$ std\+::string $>$ \& {\bfseries get\+Tags} () const
+\item 
+\Hypertarget{class_tarefa_a10b69da2465a6d5ca051132d7ada93ba}\label{class_tarefa_a10b69da2465a6d5ca051132d7ada93ba} 
+void {\bfseries set\+Titulo} (const std\+::string \&novo)
+\item 
+\Hypertarget{class_tarefa_af1e8311665a2bc66ad20631122b430f1}\label{class_tarefa_af1e8311665a2bc66ad20631122b430f1} 
+void {\bfseries set\+Descricao} (const std\+::string \&novo)
+\item 
+\Hypertarget{class_tarefa_aa4e3a5a088031ca05517c62f1e4a5038}\label{class_tarefa_aa4e3a5a088031ca05517c62f1e4a5038} 
+void {\bfseries set\+Agendada} (std\+::time\+\_\+t ts)
+\item 
+\Hypertarget{class_tarefa_a2fa5cb88fce3fcae8c1588c12742c045}\label{class_tarefa_a2fa5cb88fce3fcae8c1588c12742c045} 
+void {\bfseries set\+Vencimento} (std\+::time\+\_\+t ts)
+\item 
+\Hypertarget{class_tarefa_ab063c2349c20692e1aa021b829720847}\label{class_tarefa_ab063c2349c20692e1aa021b829720847} 
+void {\bfseries set\+Prioridade} (int p)
+\item 
+\Hypertarget{class_tarefa_aa2a502023fd4b82bc18f6cd15e61ae78}\label{class_tarefa_aa2a502023fd4b82bc18f6cd15e61ae78} 
+void {\bfseries atualizar\+Status} (const std\+::string \&novo\+Status)
+\item 
+\Hypertarget{class_tarefa_afda1b2c14bf75d7baa5ecf9515571398}\label{class_tarefa_afda1b2c14bf75d7baa5ecf9515571398} 
+bool {\bfseries esta\+Vencida} (std\+::time\+\_\+t agora) const
+\item 
+\Hypertarget{class_tarefa_a53347a4970e2840abb9d25a4285c3a6a}\label{class_tarefa_a53347a4970e2840abb9d25a4285c3a6a} 
+bool {\bfseries esta\+Proxima\+Do\+Vencimento} (std\+::time\+\_\+t agora, int janela\+Horas) const
+\item 
+\Hypertarget{class_tarefa_aed3071c6158cec71fdf19e033bb9d20b}\label{class_tarefa_aed3071c6158cec71fdf19e033bb9d20b} 
+void {\bfseries add\+Tag} (const std\+::string \&tag)
+\item 
+\Hypertarget{class_tarefa_acdd5bbc541269e86330d9dc95f21aba2}\label{class_tarefa_acdd5bbc541269e86330d9dc95f21aba2} 
+void {\bfseries clear\+Tags} ()
+\item 
+\Hypertarget{class_tarefa_aa7a863e296ecf250a16a0cdfa020170e}\label{class_tarefa_aa7a863e296ecf250a16a0cdfa020170e} 
+bool {\bfseries remove\+Tag} (const std\+::string \&tag)
+\item 
+\Hypertarget{class_tarefa_a07dd0a28bb806ca87fbe9aa9710eed55}\label{class_tarefa_a07dd0a28bb806ca87fbe9aa9710eed55} 
+bool {\bfseries validar\+Campos} () const
+\item 
+\Hypertarget{class_tarefa_a700ac8cf031e07783b98e49921504718}\label{class_tarefa_a700ac8cf031e07783b98e49921504718} 
+bool {\bfseries validar\+Datas} (std\+::time\+\_\+t agora) const
+\item 
+\Hypertarget{class_tarefa_a331ba7cc8fbde599cc88ffb891a23b74}\label{class_tarefa_a331ba7cc8fbde599cc88ffb891a23b74} 
+bool {\bfseries validar} (std\+::time\+\_\+t agora, std\+::string \texorpdfstring{$\ast$}{*}erro=nullptr) const
+\item 
+\Hypertarget{class_tarefa_a3ecffc7ea87d0ddb9f932adec5e15fa7}\label{class_tarefa_a3ecffc7ea87d0ddb9f932adec5e15fa7} 
+void {\bfseries set\+Tags} (const std\+::vector$<$ std\+::string $>$ \&tags)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Tarefa.\+h\item 
+src/Tarefa.\+cpp\end{DoxyCompactItemize}

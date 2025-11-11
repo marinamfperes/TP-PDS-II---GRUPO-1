@@ -1,0 +1,63 @@
+\doxysection{Tarefa.\+h}
+\hypertarget{_tarefa_8h_source}{}\label{_tarefa_8h_source}\index{include/Tarefa.h@{include/Tarefa.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TAREFA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TAREFA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <ctime>}\ \textcolor{comment}{//para\ manipular\ data\ e\ hora}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Tarefa\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ Tarefa(std::string\ titulo,\ std::string\ descricao,\ std::time\_t\ agendada,\ std::time\_t\ vencimento,\ \textcolor{keywordtype}{int}\ prioridade);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//métodos\ de\ acesso}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ o\ id\ único\ que\ diferencia\ as\ tarefas}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \ getTitulo()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ o\ título}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \ getDescricao()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ a\ descrição}}
+\DoxyCodeLine{00018\ \ \ \ \ std::time\_t\ getAgendada()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ a\ data\ de\ realização\ agendada}}
+\DoxyCodeLine{00019\ \ \ \ \ std::time\_t\ getVencimento()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ a\ data\ de\ vencimento}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ getPrioridade()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ o\ nível\ de\ prioridade}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \ getStatus()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ o\ status\ no\ Kanban}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ getTags()\ \textcolor{keyword}{const};\ \textcolor{comment}{//acessa\ as\ tags\ (categorias)}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//setters}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setTitulo(\textcolor{keyword}{const}\ std::string\&\ novo);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setDescricao(\textcolor{keyword}{const}\ std::string\&\ novo);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setAgendada(std::time\_t\ ts);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setVencimento(std::time\_t\ ts);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ setPrioridade(\textcolor{keywordtype}{int}\ p);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//métodos\ de\ modificação}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ atualizarStatus(\textcolor{keyword}{const}\ std::string\&\ novoStatus);\ \textcolor{comment}{//troca\ o\ status\ no\ Kanban}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ estaVencida(std::time\_t\ agora)\ \textcolor{keyword}{const};\ \textcolor{comment}{//verifica\ se\ está\ vencida\ (overdue)}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ estaProximaDoVencimento(std::time\_t\ agora,\ \textcolor{keywordtype}{int}\ janelaHoras)\ \textcolor{keyword}{const};\ \textcolor{comment}{//verifica\ se\ está\ próxima\ do\ vencimento}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ addTag(\textcolor{keyword}{const}\ std::string\&\ tag);\ \textcolor{comment}{//adiciona\ tag}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ clearTags();\ \textcolor{comment}{//apaga\ tags}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ removeTag(\textcolor{keyword}{const}\ std::string\&\ tag);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ validarCampos()\ \textcolor{keyword}{const};\ \textcolor{comment}{//verifica\ se\ título\ está\ preenchido}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ validarDatas(std::time\_t\ agora)\ \textcolor{keyword}{const};\ \textcolor{comment}{//verifica\ se\ data\ e\ horário\ são\ válidos}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ validar(std::time\_t\ agora,\ std::string*\ erro\ =\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{const};\ \textcolor{comment}{//unifica\ as\ duas\ validações}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//tags}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ setTags(\textcolor{keyword}{const}\ std::vector<std::string>\&\ tags);}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ proximoId\_;\ \textcolor{comment}{//gerador\ incremental\ de\ ids}}
+\DoxyCodeLine{00048\ \ \ \ \ std::string\ titulo\_;}
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ descricao\_;}
+\DoxyCodeLine{00050\ \ \ \ \ std::time\_t\ agendada\_;\ \textcolor{comment}{//time\_t\ pega\ o\ tempo\ atual\ do\ sistema}}
+\DoxyCodeLine{00051\ \ \ \ \ std::time\_t\ vencimento\_;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ prioridade\_;}
+\DoxyCodeLine{00053\ \ \ \ \ std::string\ status\_;\ \textcolor{comment}{//"{}A\ Fazer"{},\ "{}Fazendo"{}\ ou\ "{}Feito"{}}}
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<std::string>\ tags\_;\ \textcolor{comment}{//lista\ de\ tags\ associadas\ à\ tarefa}}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

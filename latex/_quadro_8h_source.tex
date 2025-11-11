@@ -1,0 +1,28 @@
+\doxysection{Quadro.\+h}
+\hypertarget{_quadro_8h_source}{}\label{_quadro_8h_source}\index{include/Quadro.h@{include/Quadro.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ QUADRO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ QUADRO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Coluna.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Quadro\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ Quadro();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Constrói\ um\ quadro\ a\ partir\ do\ vetor\ de\ tarefas\ atual}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ Quadro\ construirDe(\textcolor{keyword}{const}\ std::vector<Tarefa>\&\ tarefas);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ exibirQuadro()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_coluna}{Coluna}}\ aFazer\_;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_coluna}{Coluna}}\ fazendo\_;}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_coluna}{Coluna}}\ feito\_;}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

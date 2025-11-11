@@ -1,0 +1,46 @@
+\doxysection{Gerenciador\+Tarefas.\+h}
+\hypertarget{_gerenciador_tarefas_8h_source}{}\label{_gerenciador_tarefas_8h_source}\index{include/GerenciadorTarefas.h@{include/GerenciadorTarefas.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GERENCIADORTAREFAS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GERENCIADORTAREFAS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Tarefa.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Relogio.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}EstrategiaFiltro.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}FiltroCombinado.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }GerenciadorTarefas\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ GerenciadorTarefas(\mbox{\hyperlink{class_relogio}{Relogio}}*\ relogio);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//OPERAÇÕES\ COM\ TAREFAS}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ criarTarefa(\mbox{\hyperlink{class_tarefa}{Tarefa}}\ tarefa);\ \textcolor{comment}{//\ cria\ uma\ nova\ tarefa\ (valida\ campos\ e\ datas)}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ editarTarefa(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_tarefa}{Tarefa}}\ tarefaAtualizada);\ \textcolor{comment}{//\ edita\ campos\ da\ tarefa\ existente}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ excluirTarefa(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});\ \textcolor{comment}{//\ exclui\ a\ tarefa}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ moverTarefa(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ novoStatus);\textcolor{comment}{//move\ a\ tarefa\ entre\ colunas\ via\ status}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ obterTarefaPorId(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_tarefa}{Tarefa}}\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//contagem\ de\ tarefas\ pendentes}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ contarTarefasPendentes()\ \textcolor{keyword}{const};\ \textcolor{comment}{//conta\ quantas\ tarefas\ estão\ em\ pendência}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//acessa\ todas\ as\ tarefas}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Tarefa>\&\ getTodasTarefas()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//função\ para\ aplicar\ filtros}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ aplicarFiltros(\textcolor{keyword}{const}\ std::vector<std::shared\_ptr<EstrategiaFiltro>>\&\ filtros);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Tarefa>\ tarefas\_;}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_relogio}{Relogio}}*\ relogio\_;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
