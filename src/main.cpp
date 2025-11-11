@@ -212,7 +212,7 @@ int main() {
             std::cout << "\n--- Filtrar tarefas ---\n";
     
             // Pergunta ao usuário o que ele quer filtrar
-            std::cout << "Escolha um ou mais criterios de filtro:\n";
+            std::cout << "Escolha um criterio de filtro:\n";
             std::cout << "1) Filtrar por tag\n";
             std::cout << "2) Filtrar por prioridade\n";
             int filtroEscolhido1 = perguntarInt("Escolha o primeiro criterio: ", 0);
@@ -229,7 +229,7 @@ int main() {
             }
 
              //pergunta ao usuário se ele quer adicionar um segundo filtro
-            std::cout << "Deseja adicionar um segundo filtro? (1) Sim (2) Não: ";
+            std::cout << "Deseja adicionar um segundo filtro? (1) Sim (2) Nao: ";
             int adicionarFiltro = perguntarInt("", 0);
             if (adicionarFiltro == 1) {
                 std::cout << "Escolha o segundo criterio de filtro:\n";
