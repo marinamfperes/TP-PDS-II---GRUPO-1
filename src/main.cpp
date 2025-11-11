@@ -115,7 +115,7 @@ int main() {
             const std::string titulo = perguntarLinha("Titulo: ");
             const std::string desc   = perguntarLinha("Descricao: ");
             int prio = perguntarInt("Prioridade (1=Baixa,2=Media,3=Alta,4=Critica) [2]: ", 2);
-            std::cout << "Agendada (dd/MM/yyyy HH:mm) [vazio=sem]: ";
+            std::cout << "Agendada (dd/MM/yyyy HH:mm) [se a data prevista e a atual, especifique um horario para a realizacao] [vazio=sem]: ";
             const std::string sag = perguntarLinha("");
             std::time_t ag = converteDataHora(sag);
             std::cout << "Vencimento (dd/MM/yyyy HH:mm) [vazio=sem]: ";
