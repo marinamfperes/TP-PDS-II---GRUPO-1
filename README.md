@@ -68,7 +68,7 @@ INFORMAÇÕES ESSENCIAIS
     - Contagem de tarefas pendentes.
 
 
-- INSTRUÇÕES DE USO: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir as horas de antecedência para receber as notificações. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa). Ao finalizar as mudanças, é essencial digitar 8 para salvar as alterações feitas.
+- INSTRUÇÕES DE USO: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir as horas de antecedência para receber as notificações. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa). Ao finalizar as mudanças, é essencial digitar 8 para salvar as alterações feitas. 
 
     EXEMPLOS DE ENTRADA E SAÍDA:
 <img width="996" height="768" alt="image" src="https://github.com/user-attachments/assets/bbd1a916-a9b2-4277-b27f-9609ea93f5bb" />
@@ -83,14 +83,14 @@ INFORMAÇÕES ESSENCIAIS
   <img width="1577" height="149" alt="image" src="https://github.com/user-attachments/assets/be607a71-a158-4ebb-83b3-2bae98bb9658" />
 
   
-  1) Restaura o estado do std::cin se ocorrer um erro de leitura (por exemplo, o usuário digitou texto quando se esperava um número) e descarta tudo que restou na linha de entrada, evitando que dados inválidos “vazem” para a próxima leitura.
+  1) Restaura o estado do std::cin se ocorrer um erro de leitura (por exemplo, o usuário digitou texto quando se esperava um número. ) e descarta tudo que restou na linha de entrada, evitando que dados inválidos “vazem” para a próxima leitura.
      -> Protege contra: loops infinitos, leituras erradas e efeitos colaterais de entradas inválidas.
 
  <img width="1598" height="523" alt="image" src="https://github.com/user-attachments/assets/9ffe5729-e031-4ebc-90c3-88d065949b8f" />
 
  
   2) Ambos garantem que o fluxo de entrada seja limpo após a operação.
-     -> Protege contra: entradas inválidas (texto onde se esperava número), e preserva estado previsível do programa (valores default).
+     -> Protege contra: entradas inválidas (texto onde se esperava número), e preserva estado previsível do programa (valores default). Ex: Na opção 2 (criar tarefa), a data agendada so aceita datas após o dia e horario em que o programa esta sendo realizado.
 
   <img width="396" height="173" alt="image" src="https://github.com/user-attachments/assets/dd421121-dec4-4f20-8eb3-6d3ac395c7b5" />
 
