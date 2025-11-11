@@ -1,5 +1,9 @@
 \doxysection{Filtro\+Combinado Class Reference}
 \hypertarget{class_filtro_combinado}{}\label{class_filtro_combinado}\index{FiltroCombinado@{FiltroCombinado}}
+
+
+{\ttfamily \#include $<$Filtro\+Combinado.\+h$>$}
+
 Inheritance diagram for Filtro\+Combinado\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,16 +13,26 @@ Inheritance diagram for Filtro\+Combinado\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_filtro_combinado_a55bd6246b9cb306530ef05d7eed9add3}\label{class_filtro_combinado_a55bd6246b9cb306530ef05d7eed9add3} 
-void {\bfseries adicionar\+Filtro} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}} $>$ filtro)
+void \mbox{\hyperlink{class_filtro_combinado_a55bd6246b9cb306530ef05d7eed9add3}{adicionar\+Filtro}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}} $>$ filtro)
 \item 
 std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \mbox{\hyperlink{class_filtro_combinado_a322347100626ebe0e18af15b7af0d1cd}{aplicar}} (const std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ \&tarefas) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_estrategia_filtro_aa8e85dc9437d108449e386dfa6244fe9}{\texorpdfstring{$\sim$}{\string~}\+Estrategia\+Filtro}} ()
 \end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{class_filtro_combinado_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_filtro_combinado_a55bd6246b9cb306530ef05d7eed9add3}\index{FiltroCombinado@{FiltroCombinado}!adicionarFiltro@{adicionarFiltro}}
+\index{adicionarFiltro@{adicionarFiltro}!FiltroCombinado@{FiltroCombinado}}
+\doxysubsubsection{\texorpdfstring{adicionarFiltro()}{adicionarFiltro()}}
+{\footnotesize\ttfamily \label{class_filtro_combinado_a55bd6246b9cb306530ef05d7eed9add3} 
+void Filtro\+Combinado\+::adicionar\+Filtro (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}} $>$}]{filtro}{}\end{DoxyParamCaption})}
+
 \Hypertarget{class_filtro_combinado_a322347100626ebe0e18af15b7af0d1cd}\index{FiltroCombinado@{FiltroCombinado}!aplicar@{aplicar}}
 \index{aplicar@{aplicar}!FiltroCombinado@{FiltroCombinado}}
 \doxysubsubsection{\texorpdfstring{aplicar()}{aplicar()}}
@@ -27,11 +41,11 @@ std\+::vector$<$ \mbox{\hyperlink{class_tarefa}{Tarefa}} $>$ Filtro\+Combinado\+
 
 
 
-Implements \mbox{\hyperlink{class_estrategia_filtro}{Estrategia\+Filtro}}.
+Implements \mbox{\hyperlink{class_estrategia_filtro_ab12df57c18d4b4cfd5c3a1cdc1e03fcd}{Estrategia\+Filtro}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Filtro\+Combinado.\+h\item 
-src/Filtro\+Combinado.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{_filtro_combinado_8h}{Filtro\+Combinado.\+h}}\item 
+src/\mbox{\hyperlink{_filtro_combinado_8cpp}{Filtro\+Combinado.\+cpp}}\end{DoxyCompactItemize}

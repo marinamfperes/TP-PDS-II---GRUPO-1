@@ -1,40 +1,40 @@
 \doxysection{Gerenciador\+Tarefas.\+h}
 \hypertarget{_gerenciador_tarefas_8h_source}{}\label{_gerenciador_tarefas_8h_source}\index{include/GerenciadorTarefas.h@{include/GerenciadorTarefas.h}}
-
+\mbox{\hyperlink{_gerenciador_tarefas_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GERENCIADORTAREFAS\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GERENCIADORTAREFAS\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Tarefa.h"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Relogio.h"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}EstrategiaFiltro.h"{}}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}FiltroCombinado.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tarefa_8h}{Tarefa.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_relogio_8h}{Relogio.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_estrategia_filtro_8h}{EstrategiaFiltro.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_filtro_combinado_8h}{FiltroCombinado.h}}"{}}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }GerenciadorTarefas\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73}{GerenciadorTarefas}}\ \{}
 \DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ GerenciadorTarefas(\mbox{\hyperlink{class_relogio}{Relogio}}*\ relogio);}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_gerenciador_tarefas_a8b1eb8e3891d216550970994a875bf73}{GerenciadorTarefas}}(\mbox{\hyperlink{class_relogio}{Relogio}}*\ relogio);}
 \DoxyCodeLine{00015\ }
 \DoxyCodeLine{00016\ }
 \DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//OPERAÇÕES\ COM\ TAREFAS}}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ criarTarefa(\mbox{\hyperlink{class_tarefa}{Tarefa}}\ tarefa);\ \textcolor{comment}{//\ cria\ uma\ nova\ tarefa\ (valida\ campos\ e\ datas)}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ editarTarefa(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_tarefa}{Tarefa}}\ tarefaAtualizada);\ \textcolor{comment}{//\ edita\ campos\ da\ tarefa\ existente}}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ excluirTarefa(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});\ \textcolor{comment}{//\ exclui\ a\ tarefa}}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ moverTarefa(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ novoStatus);\textcolor{comment}{//move\ a\ tarefa\ entre\ colunas\ via\ status}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerenciador_tarefas_a38f8b560c407a94882577b1d74e5f345}{criarTarefa}}(\mbox{\hyperlink{class_tarefa}{Tarefa}}\ tarefa);\ \textcolor{comment}{//\ cria\ uma\ nova\ tarefa\ (valida\ campos\ e\ datas)}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerenciador_tarefas_ac56638bcdee63a8d9f19349aaad7551a}{editarTarefa}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_tarefa}{Tarefa}}\ tarefaAtualizada);\ \textcolor{comment}{//\ edita\ campos\ da\ tarefa\ existente}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerenciador_tarefas_a32af13922b775c3d347d46590c51f206}{excluirTarefa}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});\ \textcolor{comment}{//\ exclui\ a\ tarefa}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerenciador_tarefas_ab41a8062a9f00352b21942cdfd274586}{moverTarefa}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ novoStatus);\textcolor{comment}{//move\ a\ tarefa\ entre\ colunas\ via\ status}}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ obterTarefaPorId(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_tarefa}{Tarefa}}\&\ out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_gerenciador_tarefas_aeef41c34cdf2a7ed7ddc4cf36017c749}{obterTarefaPorId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_tarefa}{Tarefa}}\&\ out)\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00025\ }
 \DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//contagem\ de\ tarefas\ pendentes}}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ contarTarefasPendentes()\ \textcolor{keyword}{const};\ \textcolor{comment}{//conta\ quantas\ tarefas\ estão\ em\ pendência}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_gerenciador_tarefas_ac4c4f30d665a73188bb0e1da9c9f2e16}{contarTarefasPendentes}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//conta\ quantas\ tarefas\ estão\ em\ pendência}}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//acessa\ todas\ as\ tarefas}}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Tarefa>\&\ getTodasTarefas()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Tarefa>\&\ \mbox{\hyperlink{class_gerenciador_tarefas_a3e48f5cf9a82fa490d27c15ac432b0a9}{getTodasTarefas}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//função\ para\ aplicar\ filtros}}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ aplicarFiltros(\textcolor{keyword}{const}\ std::vector<std::shared\_ptr<EstrategiaFiltro>>\&\ filtros);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gerenciador_tarefas_a8b1652de9dcf639be61f2b4ffa68e38c}{aplicarFiltros}}(\textcolor{keyword}{const}\ std::vector<std::shared\_ptr<EstrategiaFiltro>>\&\ filtros);}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00036\ \ \ \ \ std::vector<Tarefa>\ tarefas\_;}

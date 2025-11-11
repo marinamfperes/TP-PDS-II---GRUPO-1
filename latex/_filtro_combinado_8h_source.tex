@@ -1,11 +1,11 @@
 \doxysection{Filtro\+Combinado.\+h}
 \hypertarget{_filtro_combinado_8h_source}{}\label{_filtro_combinado_8h_source}\index{include/FiltroCombinado.h@{include/FiltroCombinado.h}}
-
+\mbox{\hyperlink{_filtro_combinado_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FILTRO\_COMBINADO\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FILTRO\_COMBINADO\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EstrategiaFiltro.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_estrategia_filtro_8h}{EstrategiaFiltro.h}}"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
 \DoxyCodeLine{00007\ }
@@ -14,8 +14,8 @@
 \DoxyCodeLine{00010\ \ \ \ \ std::vector<std::shared\_ptr<EstrategiaFiltro>>\ filtros\_;}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ adicionarFiltro(std::shared\_ptr<EstrategiaFiltro>\ filtro);}
-\DoxyCodeLine{00014\ \ \ \ \ std::vector<Tarefa>\ aplicar(\textcolor{keyword}{const}\ std::vector<Tarefa>\&\ tarefas)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filtro_combinado_a55bd6246b9cb306530ef05d7eed9add3}{adicionarFiltro}}(std::shared\_ptr<EstrategiaFiltro>\ filtro);}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<Tarefa>\ \mbox{\hyperlink{class_filtro_combinado_a322347100626ebe0e18af15b7af0d1cd}{aplicar}}(\textcolor{keyword}{const}\ std::vector<Tarefa>\&\ tarefas)\ \textcolor{keyword}{const\ override};}
 \DoxyCodeLine{00015\ \};}
 \DoxyCodeLine{00016\ }
 \DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
