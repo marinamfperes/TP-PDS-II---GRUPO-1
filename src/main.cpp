@@ -123,7 +123,7 @@ int main() {
             std::time_t ve = converteDataHora(sven);
 
             //pergunta ao usuário por tags
-            std::string tagInput = perguntarLinha("Digite tags separadas por vírgula (deixe em branco para nenhum): ");
+            std::string tagInput = perguntarLinha("Digite tags separadas por virgula (deixe em branco para nenhum): ");
             std::vector<std::string> tags;
             if (!tagInput.empty()) {
                 std::stringstream ss(tagInput);
@@ -212,7 +212,7 @@ int main() {
             std::cout << "\n--- Filtrar tarefas ---\n";
     
             //pergunta ao usuário o que ele quer filtrar
-            std::cout << "Escolha um critério de filtro:\n";
+            std::cout << "Escolha um criterio de filtro:\n";
             std::cout << "1) Filtrar por tag\n";
             std::cout << "2) Filtrar por prioridade\n";
             int filtroEscolhido = perguntarInt("Escolha: ", 0);
@@ -226,7 +226,7 @@ int main() {
                 int prioridade = perguntarInt("Digite a prioridade para filtrar (1-4): ");
                 filtros.push_back(std::make_shared<FiltroPrioridade>(prioridade));  // Filtro por prioridade
             } else {
-                std::cout << "Opção de filtro inválida.\n";
+                std::cout << "Opcao de filtro invalida.\n";
                 continue;
             }
             

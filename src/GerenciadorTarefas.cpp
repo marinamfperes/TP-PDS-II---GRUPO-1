@@ -106,7 +106,13 @@ void GerenciadorTarefas::aplicarFiltros(const std::vector<std::shared_ptr<Estrat
     std::vector<Tarefa> tarefasFiltradas = filtroCombinado.aplicar(tarefas_);
     
     //exibe as tarefas filtradas
-    for (const auto& t : tarefasFiltradas) {
-        std::cout << t.getTitulo() << " | Prioridade: " << t.getPrioridade() << " | Status: " << t.getStatus() << "\n";
+    if (tarefasFiltradas.empty()) {
+        std::cout << "Nenhuma tarefa encontrada com os filtros aplicados.\n";
+    } else {
+        std::cout << "\n===== Tarefas Filtradas =====\n";
+        for (const auto& t : tarefasFiltradas) {
+            std::cout << "ID: " << t.getId() << " | Titulo: " << t.getTitulo() << " | Prioridade: " << t.getPrioridade()
+                      << " | Status: " << t.getStatus() << "\n";
+        }
     }
 }
