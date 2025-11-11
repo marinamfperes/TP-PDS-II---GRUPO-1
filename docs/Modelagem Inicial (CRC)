@@ -13,7 +13,8 @@ A classe Tarefa é responsável por representar as tarefas individuais no sistem
   
   -> Colaboradores:
     - Quadro: Para armazenar a tarefa em uma coluna específica de acordo com seu status.
-    - GerenciadorTarefas: Para orquestrar a criação, edição e movimentação da tarefa, além de validar dados e aplicar regras de negócio.
+    - GerenciadorTarefas: Para orquestrar a criação, edição e movimentação da tarefa, além de validar dados e aplicar regras de negócio;
+    - DataUtil: Para registro da data de criação, prazo e conclusão.
 
 
 Classe GerenciadorTarefas:
@@ -70,7 +71,8 @@ O Notificador é responsável por monitorar o estado das tarefas e sinalizar qua
 
   -> Colaboradores:
     - GerenciadorTarefas: Para obter as tarefas.
-    - Tarefa: Para verificar se a tarefa está vencida ou próxima do vencimento.
+    - Tarefa: Para verificar se a tarefa está vencida ou próxima do vencimento;
+    - DataUtil: Usa a hora para agendamento dos alertas.
 
 
 Classe Relógio:
@@ -81,7 +83,8 @@ Fornece uma forma de acessar a hora atual de maneira centralizada e testável.
     - Permitir a configuração do tempo para testes.
 
   -> Colaboradores:
-    - GerenciadorTarefas: Para acessar a hora atual durante validações de vencimento.
+    - GerenciadorTarefas: Para acessar a hora atual durante validações de vencimento;
+    - DataUtil: interação para exibição do horário atual.
 
 
 Classe RepositorioTarefas:
@@ -93,7 +96,8 @@ O RepositorioTarefas persiste as tarefas em arquivos, garantindo que as tarefas 
   
   -> Colaboradores:
     - GerenciadorTarefas: Para criar, editar e excluir tarefas;
-    - Tarefa: Para persistir os dados das tarefas.
+    - Tarefa: Para persistir os dados das tarefas;
+    - DataUtil: Salvar e carregar as datas.
 
 
 Classe Usuario:
@@ -155,3 +159,14 @@ Combina múltiplos filtros plicando-os sequencialmente a uma coleção de tarefa
   -> Colaboradores:
     - EstrategiaFiltro: herança/interface base;
     - GerenciadorTarefas: fornece a coleção inicial de tarefas.
+
+Classe DataUtil:
+Funções utilitárias para para conversão e formatação do tempo
+
+  -> Responsabilidades:
+    - Converter data e hora no formato de string para o tipo de tempo do sistema;
+    - Formatar valor de tempo para string legível;
+    - Centralização das funções auxiliares de data e hora.
+
+  -> Colaboradores:
+    - Não possui classes colaboradoras.
