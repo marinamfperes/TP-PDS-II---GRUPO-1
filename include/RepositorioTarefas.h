@@ -11,10 +11,15 @@ class RepositorioTarefas {
 private:
     // repositorio sabera em qual arquivo deve salvar
     std::string arquivo_;
+    static int proximoId_; // variável para armazenar o próximo ID
 
 
 public:
 
+    // Métodos para salvar e carregar o próximo ID
+    static void salvarProximoId(int proximoId);
+    static int carregarProximoId();
+    static int obterEIncrementarProximoId();
 
     // Construtor para definir o arquivo de persistência
     RepositorioTarefas(const std::string& nomeArquivo);

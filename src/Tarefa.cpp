@@ -1,4 +1,5 @@
 #include "Tarefa.h"
+#include "RepositorioTarefas.h"
 #include <stdexcept> //para lançar exceções em validações
 #include <algorithm> //para algoritmos de busca/remoção -> std::find
 #include <fstream> 
@@ -14,7 +15,7 @@ Tarefa::Tarefa(std::string titulo,
                std::time_t agendada,
                std::time_t vencimento,
                int prioridade)
-    : id(GERADOR_ID_TAREFA++), //gera id único e incrementa o contator
+    : id(RepositorioTarefas::obterEIncrementarProximoId()), //gera id único e incrementa o contator
       titulo_(std::move(titulo)),
       descricao_(std::move(descricao)),
       agendada_(agendada),

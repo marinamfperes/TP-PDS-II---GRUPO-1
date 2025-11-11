@@ -109,6 +109,8 @@ CMakeFiles/GerenciadorTarefas.dir/src/Tarefa.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_timeval.h \
  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/TP/TP-PDS-II---GRUPO-1/include/RepositorioTarefas.h \
+ C:/TP/TP-PDS-II---GRUPO-1/include/Tarefa.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \

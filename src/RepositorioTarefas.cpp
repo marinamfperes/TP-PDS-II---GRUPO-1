@@ -6,9 +6,40 @@
 #include <filesystem>
 #include <stdexcept>
 
+int RepositorioTarefas::proximoId_ = 1;  // Inicializando com o valor 1
+
+// Carrega o próximo ID a partir do arquivo
+void RepositorioTarefas::salvarProximoId(int proximoId) {
+    std::ofstream idArquivo("proximo_id.txt");
+    if (!idArquivo.is_open()) {
+        throw std::runtime_error("Erro ao abrir o arquivo para salvar o próximo ID.");
+    }
+    idArquivo << proximoId;
+    idArquivo.close();
+}
+
+// Carrega o próximo ID do arquivo
+int RepositorioTarefas::carregarProximoId() {
+    std::ifstream idArquivo("proximo_id.txt");
+    if (idArquivo.is_open()) {
+        idArquivo >> proximoId_;
+        idArquivo.close();
+    }
+    return proximoId_;
+}
 
 RepositorioTarefas::RepositorioTarefas(const std::string& nomeArquivo)
-    : arquivo_(nomeArquivo) {}
+    : arquivo_(nomeArquivo) {
+        // Carrega o próximo ID ao inicializar o repositório
+    proximoId_ = carregarProximoId();
+    }
+
+//Método para acessar e incrementar o próximo ID
+int RepositorioTarefas::obterEIncrementarProximoId() {
+    int idAtual = proximoId_++;
+    salvarProximoId(proximoId_);  // Salva o próximo ID após incrementar
+    return idAtual;
+}
 
 
 // Salva todas as tarefas em um arquivo de texto simples
@@ -31,6 +62,8 @@ void RepositorioTarefas::salvarTarefa(const std::vector<Tarefa>& tarefas) const 
 
 
     out.close();
+    // Salva o próximo ID após salvar as tarefas
+    salvarProximoId(proximoId_);
 }
 
 
@@ -69,6 +102,11 @@ std::vector<Tarefa> RepositorioTarefas::carregarTarefas() const {
         Tarefa t(titulo, descricao, agendada, vencimento, prioridade);
         t.atualizarStatus(status);
         tarefas.push_back(t);
+
+        // Atualiza o próximo ID
+        if (t.getId() >= proximoId_) {
+            proximoId_ = t.getId() + 1;
+        }
     }
 
 
