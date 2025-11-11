@@ -69,89 +69,89 @@ INFORMAÇÕES ESSENCIAIS
 
 - INSTRUÇÕES DE USO: Para utilizar o programa, é necessário, primeiramente, se registrar e incluir a data do dia. Depois, um menu é exibido a fim de que o usuário escolha a funcionalidade que ele deseja seguir (ex. se ele deseja cadastrar uma tarefa, digita o número referente a essa funcionalidade e depois preenche as informações de acordo com o que é solicitado pelo programa).
 
-EXEMPLOS DE ENTRADA E SAÍDA:
+    EXEMPLOS DE ENTRADA E SAÍDA:
 
-1) Inicialização
-Saída:
-Digite seu nome:
+    1) Inicialização
+    Saída:
+    Digite seu nome:
 
-Entrada (usuário digita):
-Luísa
+    Entrada (usuário digita):
+    Luísa
 
-Saída:
-Horas de antecedencia para notificacoes? [padrao=24]:
+    Saída:
+    Horas de antecedencia para notificacoes? [padrao=24]:
 
-Entrada:
-12
-
-
-2) Criando uma Tarefa
-Saída:
-===== GERENCIADOR DE TAREFAS (CLI) =====
-1) Listar quadro Kanban
-2) Criar tarefa
-3) ...
-Escolha:
-
-Entrada:
-2
-
-Saída:
---- Criar tarefa ---
-Titulo:
-
-Entrada:
-Entregar relatório
-
-Saída:
-Descricao:
-
-Entrada:
-Relatório da aula de física
-
-Saída:
-Prioridade (1=Baixa,2=Media,3=Alta,4=Critica) [2]:
-
-Entrada:
-3
-
-Saída:
-Agendada (dd/MM/yyyy HH:mm) [vazio=sem]:
-
-Entrada:
-12/11/2025 14:00
-
-Saída:
-Vencimento (dd/MM/yyyy HH:mm) [vazio=sem]:
-
-Entrada:
-13/11/2025 18:00
-
-Saída:
-Digite tags separadas por vírgula (deixe em branco para nenhum):
-
-Entrada:
-faculdade,importante
-
-Saída final:
-Criada com ID 1 em 'A Fazer'.
+    Entrada:
+    12
 
 
-3) Listando o Quadro Kanban
-Entrada (usuário escolhe no menu):
-1
+    2) Criando uma Tarefa
+    Saída:
+    ===== GERENCIADOR DE TAREFAS (CLI) =====
+    1) Listar quadro Kanban
+    2) Criar tarefa
+    3) ...
+    Escolha:
 
-Saída:
-=== A Fazer (1) ===
-ID:1 | Titulo:Entregar relatório | Pri:3 | Venc:13/11/2025 18:00 | Tags: faculdade importante
+    Entrada:
+    2
 
-=== Fazendo (0) ===
+    Saída:
+    --- Criar tarefa ---
+    Titulo:
 
-=== Feito (0) ===
+    Entrada:
+    Entregar relatório
 
-Pendencias: 1
+    Saída:
+    Descricao:
 
--------------------------------------------------
+    Entrada:
+    Relatório da aula de física
+
+    Saída:
+    Prioridade (1=Baixa,2=Media,3=Alta,4=Critica) [2]:
+
+    Entrada:
+    3
+
+    Saída:
+    Agendada (dd/MM/yyyy HH:mm) [vazio=sem]:
+
+    Entrada:
+    12/11/2025 14:00
+
+    Saída:
+    Vencimento (dd/MM/yyyy HH:mm) [vazio=sem]:
+
+    Entrada:
+    13/11/2025 18:00
+
+    Saída:
+    Digite tags separadas por vírgula (deixe em branco para nenhum):
+
+    Entrada:
+    faculdade,importante
+
+    Saída final:
+    Criada com ID 1 em 'A Fazer'.
+
+
+    3) Listando o Quadro Kanban
+    Entrada (usuário escolhe no menu):
+    1
+
+    Saída:
+    === A Fazer (1) ===
+    ID:1 | Titulo:Entregar relatório | Pri:3 | Venc:13/11/2025 18:00 | Tags: faculdade importante
+
+    === Fazendo (0) ===
+
+    === Feito (0) ===
+
+    Pendencias: 1
+
+
 - TRATAMENTO DE EXCEÇÕES E PROGRAMAÇÃO DEFENSIVA:
 
 
