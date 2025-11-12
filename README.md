@@ -47,15 +47,17 @@ INFORMAÇÕES ESSENCIAIS
     1) make clean
 
 
-- ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em cinco pastas principais: build, docs, include, src, tests.
+- ARQUITETURA DO PROJETO: Como pode ser visualizado na imagem abaixo, nosso trabalho fora seccionado em sete pastas principais: vscode, build, dados, docs, include, src, tests.
     - VSCODE: configurações do .json para compilação e execução do projeto;
     - BUILD: arquivos gerados durante a compilação (.o), como o executável final main.o;
     - DADOS: armazena os arquivos de persistência do sistema de tarefas, como tarefas.csv;
     - DOCS: documentos do projeto, como os Cartões CRC e os User Stories, além dos arquivos gerados pelo Doxygen;
     - INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
-    - SRC: onde está localizado o código principal, main.cpp, além de alocar as implementações das funções declaradas em "include", como Coluna.cpp.
+    - SRC: onde está localizado o código principal, main.cpp, além de alocar as implementações das funções declaradas em "include", como Coluna.cpp;
+    - TESTS: arquivos que comprovam a execução correta do código.
 
-<img width="332" height="358" alt="image" src="https://github.com/user-attachments/assets/7c0e1478-1d75-416d-aa71-599ecafaa9cb" />
+<img width="399" height="427" alt="Captura de tela 2025-11-11 172337" src="https://github.com/user-attachments/assets/000e4a01-4d90-40a8-9f1b-5e303fbfc537" />
+
 
 
 
