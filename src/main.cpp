@@ -49,6 +49,23 @@ static int perguntarInt(const std::string& prompt, int def = 0) { //igual ao ant
     return v;
 }
 
+static std::string perguntarDataValida(const std::string& prompt) {
+    std::string data_str;
+    while (true) {
+        // Reusa sua função 'perguntarLinha'
+        data_str = perguntarLinha(prompt);
+        
+        // Usa a função de validação
+        if (validaDataHora(data_str)) {
+            break; // A data é válida (ou vazia), sai do loop
+        } else {
+            // Fica no loop e pede de novo
+            std::cout << "  [Erro] Data ou formato invalido. (Ex: 31/02 ou 10/13 é invalido).\n";
+            std::cout << "  Por favor, digite novamente (ou deixe em branco):\n";
+        }
+    }
+    return data_str;
+}
 
 int main() {
 
@@ -115,11 +132,9 @@ int main() {
             const std::string titulo = perguntarLinha("Titulo: ");
             const std::string desc   = perguntarLinha("Descricao: ");
             int prio = perguntarInt("Prioridade (1=Baixa,2=Media,3=Alta,4=Critica) [2]: ", 2);
-            std::cout << "Agendada (dd/MM/yyyy HH:mm) [se a data prevista e a atual, especifique um horario para a realizacao] [vazio=sem]: ";
-            const std::string sag = perguntarLinha("");
+            const std::string sag = perguntarDataValida("Agendada (dd/MM/yyyy HH:mm) [vazio=sem]: ");
+            const std::string sven = perguntarDataValida("Vencimento (dd/MM/yyyy HH:mm) [vazio=sem]: ");
             std::time_t ag = converteDataHora(sag);
-            std::cout << "Vencimento (dd/MM/yyyy HH:mm) [vazio=sem]: ";
-            const std::string sven = perguntarLinha("");
             std::time_t ve = converteDataHora(sven);
 
             //pergunta ao usuário por tags
