@@ -13,6 +13,8 @@
 #include <string>
 #include <ctime>
 
+bool validaDataHora(const std::string& s);
+
 /**
  * @brief Converte uma string no formato "dd/MM/yyyy HH:mm" para um valor `time_t`.
  * @param s String representando data e hora.
