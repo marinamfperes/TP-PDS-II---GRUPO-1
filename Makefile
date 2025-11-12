@@ -19,7 +19,7 @@ $(TARGET): $(OBJ)
 
 run: $(TARGET)
 	./$(TARGET)
-	
+
 clean:
 	rmdir /S /Q build 2>nul || true
 	del $(TARGET) 2>nul || true
