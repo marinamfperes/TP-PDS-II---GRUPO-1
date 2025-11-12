@@ -53,10 +53,10 @@ INFORMAÇÕES ESSENCIAIS
     - DADOS: armazena os arquivos de persistência do sistema de tarefas, como tarefas.csv;
     - DOCS: documentos do projeto, como os Cartões CRC e os User Stories, além dos arquivos gerados pelo Doxygen;
     - INCLUDE: arquivos de cabeçalho (.h), onde estão as declarações de classes e structs, como Coluna.h;
-    - SRC: onde está localizado o código principal, main.cpp, além de alocar as implementações das funções declaradas em "include", como Coluna.cpp;
-    - TESTS: arquivos de teste que comprovam a funcionalidade do código.
+    - SRC: onde está localizado o código principal, main.cpp, além de alocar as implementações das funções declaradas em "include", como Coluna.cpp.
 
-<img width="399" height="427" alt="image" src="https://github.com/user-attachments/assets/ddfb2dc2-e75a-447a-8f99-634c5729bd43" />
+<img width="332" height="358" alt="image" src="https://github.com/user-attachments/assets/7c0e1478-1d75-416d-aa71-599ecafaa9cb" />
+
 
 
 
