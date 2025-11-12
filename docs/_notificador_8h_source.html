@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gerenciador de Tarefas: include/Notificador.h Source File</title>
+<title>My Project: include/Notificador.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gerenciador de Tarefas
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -95,41 +95,51 @@ $(function(){initNavTree('_notificador_8h_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define NOTIFICADOR_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_tarefa_8h.html">Tarefa.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// sem isso ele abriria o gerenciador, e o arquivo do gerenciador pediria para abrir esse, criando um loop</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a>; <span class="comment">// impede uma redundancia ao executar funcoes do gerenciador.h e do notificacao.h</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_notificador.html">   10</a></span><span class="keyword">class </span><a class="code hl_function" href="class_notificador.html#aded058963a5d28d3008e27e0eaf74601">Notificador</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a>&amp; gerenciador_; <span class="comment">// guarda um atalho para o gerenciador original</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">long</span> segundosAntecedencia_; <span class="comment">// guarda em segundos o tempo de antecedencia (24h = 86400 seg)</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Verificar tarefas vencidas ou próximas do vencimento</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> verificarTarefas(std::vector&lt;Tarefa&gt;&amp; tarefas, std::time_t agora);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="class_notificador.html#aded058963a5d28d3008e27e0eaf74601">Notificador</a>(<a class="code hl_class" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a>&amp; mgr); <span class="comment">// constroi o notificador (usa o GerenciadorTarefas, colaborador)</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_usuario_8h.html">Usuario.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_gerenciador_tarefas_8h.html">GerenciadorTarefas.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_data_util_8h.html">DataUtil.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// sem isso ele abriria o gerenciador, e o arquivo do gerenciador pediria para abrir esse, criando um loop</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a>; <span class="comment">// impede uma redundancia ao executar funcoes do gerenciador.h e do notificacao.h</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_notificador.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_notificador.html#a2ba61f521abd3a2cc68b2fa41e175e6a">Notificador</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a>&amp; gerenciador_; <span class="comment">// guarda um atalho para o gerenciador original</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_usuario.html">Usuario</a>&amp; usuario_; <span class="comment">// guarda um atalho para  usuario, para acessar a preferencia de notificacao</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">long</span> segundosAntecedencia_; <span class="comment">// guarda em segundos o tempo de antecedencia (24h = 86400 seg)</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_relogio.html">Relogio</a>* relogio_; <span class="comment">//guarda um atalho para relogio, para pegar o tempo atual</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_notificador.html#a2ba61f521abd3a2cc68b2fa41e175e6a">Notificador</a>(<a class="code hl_class" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a>&amp; mgr, <span class="keyword">const</span> <a class="code hl_class" href="class_usuario.html">Usuario</a>&amp; usuario,  <a class="code hl_class" href="class_relogio.html">Relogio</a>* relogio); <span class="comment">// constroi o notificador (usa o GerenciadorTarefas, colaborador)</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_notificador.html#a7b6ef7470bf8a05bddbc673c1d360df4">setAntecedenciaNotificacao</a>(<span class="keywordtype">long</span> segundos); <span class="comment">// define periodo considerado prox do vencimento</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_notificador.html#a7b6ef7470bf8a05bddbc673c1d360df4">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_notificador.html#a7b6ef7470bf8a05bddbc673c1d360df4">setAntecedenciaNotificacao</a>(<span class="keywordtype">long</span> segundos); <span class="comment">// define periodo considerado prox do vencimento</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// identifica quais venceram e sinaliza</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::vector&lt;Tarefa&gt; <a class="code hl_function" href="class_notificador.html#ad9a2df9be777928fd332325672ff439e">getTarefasVencidas</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::vector&lt;Tarefa&gt; <a class="code hl_function" href="class_notificador.html#aa9eb07a239ae8e5bb8f983e04b7a2fa7">getTarefasVencidas</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// retorna a lista de quais nao venceram mass estao dentro da funcao de antecedencia(periodo prox de vencer) </span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::vector&lt;Tarefa&gt; <a class="code hl_function" href="class_notificador.html#abd5ae8176f9199ba5bb3abc3ec5ce9cf">getTarefasProximasDoVencimento</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// retorna a lista de quais nao venceram mas estao dentro da funcao de antecedencia(periodo prox de vencer) </span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::vector&lt;Tarefa&gt; <a class="code hl_function" href="class_notificador.html#a152a0ad883163278f2f563dbf9e0fc0a">getTarefasProximasDoVencimento</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// exibe os avisos na tela</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_notificador.html#ad41feebd8b95ce006203c875e9942e89">exibirAvisos</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_data_util_8h_html"><div class="ttname"><a href="_data_util_8h.html">DataUtil.h</a></div><div class="ttdoc">Funções auxiliares para conversão e formatação de datas e horários.</div></div>
+<div class="ttc" id="a_gerenciador_tarefas_8h_html"><div class="ttname"><a href="_gerenciador_tarefas_8h.html">GerenciadorTarefas.h</a></div></div>
 <div class="ttc" id="a_tarefa_8h_html"><div class="ttname"><a href="_tarefa_8h.html">Tarefa.h</a></div></div>
-<div class="ttc" id="aclass_gerenciador_tarefas_html"><div class="ttname"><a href="class_gerenciador_tarefas.html">GerenciadorTarefas</a></div><div class="ttdef"><b>Definition</b> GerenciadorTarefas.h:13</div></div>
-<div class="ttc" id="aclass_notificador_html_a7b6ef7470bf8a05bddbc673c1d360df4"><div class="ttname"><a href="class_notificador.html#a7b6ef7470bf8a05bddbc673c1d360df4">Notificador::setAntecedenciaNotificacao</a></div><div class="ttdeci">void setAntecedenciaNotificacao(long segundos)</div><div class="ttdef"><b>Definition</b> Notificador.cpp:31</div></div>
-<div class="ttc" id="aclass_notificador_html_abd5ae8176f9199ba5bb3abc3ec5ce9cf"><div class="ttname"><a href="class_notificador.html#abd5ae8176f9199ba5bb3abc3ec5ce9cf">Notificador::getTarefasProximasDoVencimento</a></div><div class="ttdeci">std::vector&lt; Tarefa &gt; getTarefasProximasDoVencimento()</div><div class="ttdef"><b>Definition</b> Notificador.cpp:65</div></div>
-<div class="ttc" id="aclass_notificador_html_ad9a2df9be777928fd332325672ff439e"><div class="ttname"><a href="class_notificador.html#ad9a2df9be777928fd332325672ff439e">Notificador::getTarefasVencidas</a></div><div class="ttdeci">std::vector&lt; Tarefa &gt; getTarefasVencidas()</div><div class="ttdef"><b>Definition</b> Notificador.cpp:41</div></div>
-<div class="ttc" id="aclass_notificador_html_aded058963a5d28d3008e27e0eaf74601"><div class="ttname"><a href="class_notificador.html#aded058963a5d28d3008e27e0eaf74601">Notificador::Notificador</a></div><div class="ttdeci">Notificador(GerenciadorTarefas &amp;mgr)</div><div class="ttdef"><b>Definition</b> Notificador.cpp:24</div></div>
+<div class="ttc" id="a_usuario_8h_html"><div class="ttname"><a href="_usuario_8h.html">Usuario.h</a></div></div>
+<div class="ttc" id="aclass_gerenciador_tarefas_html"><div class="ttname"><a href="class_gerenciador_tarefas.html">GerenciadorTarefas</a></div><div class="ttdef"><b>Definition</b> GerenciadorTarefas.h:12</div></div>
+<div class="ttc" id="aclass_notificador_html_a152a0ad883163278f2f563dbf9e0fc0a"><div class="ttname"><a href="class_notificador.html#a152a0ad883163278f2f563dbf9e0fc0a">Notificador::getTarefasProximasDoVencimento</a></div><div class="ttdeci">std::vector&lt; Tarefa &gt; getTarefasProximasDoVencimento() const</div><div class="ttdef"><b>Definition</b> Notificador.cpp:33</div></div>
+<div class="ttc" id="aclass_notificador_html_a2ba61f521abd3a2cc68b2fa41e175e6a"><div class="ttname"><a href="class_notificador.html#a2ba61f521abd3a2cc68b2fa41e175e6a">Notificador::Notificador</a></div><div class="ttdeci">Notificador(GerenciadorTarefas &amp;mgr, const Usuario &amp;usuario, Relogio *relogio)</div><div class="ttdef"><b>Definition</b> Notificador.cpp:9</div></div>
+<div class="ttc" id="aclass_notificador_html_a7b6ef7470bf8a05bddbc673c1d360df4"><div class="ttname"><a href="class_notificador.html#a7b6ef7470bf8a05bddbc673c1d360df4">Notificador::setAntecedenciaNotificacao</a></div><div class="ttdeci">void setAntecedenciaNotificacao(long segundos)</div></div>
+<div class="ttc" id="aclass_notificador_html_aa9eb07a239ae8e5bb8f983e04b7a2fa7"><div class="ttname"><a href="class_notificador.html#aa9eb07a239ae8e5bb8f983e04b7a2fa7">Notificador::getTarefasVencidas</a></div><div class="ttdeci">std::vector&lt; Tarefa &gt; getTarefasVencidas() const</div><div class="ttdef"><b>Definition</b> Notificador.cpp:14</div></div>
+<div class="ttc" id="aclass_notificador_html_ad41feebd8b95ce006203c875e9942e89"><div class="ttname"><a href="class_notificador.html#ad41feebd8b95ce006203c875e9942e89">Notificador::exibirAvisos</a></div><div class="ttdeci">void exibirAvisos() const</div><div class="ttdef"><b>Definition</b> Notificador.cpp:53</div></div>
+<div class="ttc" id="aclass_relogio_html"><div class="ttname"><a href="class_relogio.html">Relogio</a></div><div class="ttdef"><b>Definition</b> Relogio.h:6</div></div>
+<div class="ttc" id="aclass_usuario_html"><div class="ttname"><a href="class_usuario.html">Usuario</a></div><div class="ttdef"><b>Definition</b> Usuario.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

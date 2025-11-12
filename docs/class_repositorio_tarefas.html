@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gerenciador de Tarefas: RepositorioTarefas Class Reference</title>
+<title>My Project: RepositorioTarefas Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gerenciador de Tarefas
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -99,6 +99,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20755e9c9868a122525799e7079b1457" id="r_a20755e9c9868a122525799e7079b1457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20755e9c9868a122525799e7079b1457">RepositorioTarefas</a> (const std::string &amp;nomeArquivo)</td></tr>
 <tr class="memitem:a8ce52adfdc5d449a1d1dc6be1d634e9d" id="r_a8ce52adfdc5d449a1d1dc6be1d634e9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ce52adfdc5d449a1d1dc6be1d634e9d">salvarTarefa</a> (const std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt; &amp;tarefas) const</td></tr>
 <tr class="memitem:a6d021888133f778493bcd7d83af4e780" id="r_a6d021888133f778493bcd7d83af4e780"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d021888133f778493bcd7d83af4e780">carregarTarefas</a> () const</td></tr>
+<tr class="memitem:ac7a0ce423b6e1020a14b9714fb5a1471" id="r_ac7a0ce423b6e1020a14b9714fb5a1471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7a0ce423b6e1020a14b9714fb5a1471">arquivoBackup</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a9354398d3b613fbb44c1521f392c4cdb" id="r_a9354398d3b613fbb44c1521f392c4cdb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9354398d3b613fbb44c1521f392c4cdb">salvarProximoId</a> (int proximoId)</td></tr>
+<tr class="memitem:a346091ede218839df88cb729dc0cc1fe" id="r_a346091ede218839df88cb729dc0cc1fe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a346091ede218839df88cb729dc0cc1fe">carregarProximoId</a> ()</td></tr>
+<tr class="memitem:a2d767fbfc82afb86d9c600cbf41ea1e8" id="r_a2d767fbfc82afb86d9c600cbf41ea1e8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d767fbfc82afb86d9c600cbf41ea1e8">obterEIncrementarProximoId</a> ()</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a20755e9c9868a122525799e7079b1457" name="a20755e9c9868a122525799e7079b1457"></a>
@@ -119,6 +126,48 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac7a0ce423b6e1020a14b9714fb5a1471" name="ac7a0ce423b6e1020a14b9714fb5a1471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7a0ce423b6e1020a14b9714fb5a1471">&#9670;&#160;</a></span>arquivoBackup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RepositorioTarefas::arquivoBackup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a346091ede218839df88cb729dc0cc1fe" name="a346091ede218839df88cb729dc0cc1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346091ede218839df88cb729dc0cc1fe">&#9670;&#160;</a></span>carregarProximoId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RepositorioTarefas::carregarProximoId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6d021888133f778493bcd7d83af4e780" name="a6d021888133f778493bcd7d83af4e780"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d021888133f778493bcd7d83af4e780">&#9670;&#160;</a></span>carregarTarefas()</h2>
 
@@ -132,6 +181,56 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d767fbfc82afb86d9c600cbf41ea1e8" name="a2d767fbfc82afb86d9c600cbf41ea1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d767fbfc82afb86d9c600cbf41ea1e8">&#9670;&#160;</a></span>obterEIncrementarProximoId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RepositorioTarefas::obterEIncrementarProximoId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9354398d3b613fbb44c1521f392c4cdb" name="a9354398d3b613fbb44c1521f392c4cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9354398d3b613fbb44c1521f392c4cdb">&#9670;&#160;</a></span>salvarProximoId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RepositorioTarefas::salvarProximoId </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>proximoId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gerenciador de Tarefas: Tarefa Class Reference</title>
+<title>My Project: Tarefa Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gerenciador de Tarefas
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -98,7 +98,6 @@ $(function(){initNavTree('class_tarefa.html','','class_tarefa-members'); });
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a66a4e2f8e69b2d368b5946f0ded22fd8" id="r_a66a4e2f8e69b2d368b5946f0ded22fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a4e2f8e69b2d368b5946f0ded22fd8">Tarefa</a> (std::string titulo, std::string descricao, std::time_t agendada, std::time_t vencimento, int prioridade)</td></tr>
 <tr class="memitem:ad5d08f27ceaabbaaac6850f70c4b4788" id="r_ad5d08f27ceaabbaaac6850f70c4b4788"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5d08f27ceaabbaaac6850f70c4b4788">getId</a> () const</td></tr>
-<tr class="memitem:a64f756a374e8bb227eb96c510ec4ff5f" id="r_a64f756a374e8bb227eb96c510ec4ff5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64f756a374e8bb227eb96c510ec4ff5f">setIdParaCarga</a> (int novoId)</td></tr>
 <tr class="memitem:a725e101a644fa5901a385bc983ab3e54" id="r_a725e101a644fa5901a385bc983ab3e54"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a725e101a644fa5901a385bc983ab3e54">getTitulo</a> () const</td></tr>
 <tr class="memitem:a253d063c718729dce24786539cb458ac" id="r_a253d063c718729dce24786539cb458ac"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a253d063c718729dce24786539cb458ac">getDescricao</a> () const</td></tr>
 <tr class="memitem:ad082712fd4848c69f446986ad12b0046" id="r_ad082712fd4848c69f446986ad12b0046"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad082712fd4848c69f446986ad12b0046">getAgendada</a> () const</td></tr>
@@ -120,10 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a07dd0a28bb806ca87fbe9aa9710eed55" id="r_a07dd0a28bb806ca87fbe9aa9710eed55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07dd0a28bb806ca87fbe9aa9710eed55">validarCampos</a> () const</td></tr>
 <tr class="memitem:a700ac8cf031e07783b98e49921504718" id="r_a700ac8cf031e07783b98e49921504718"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a700ac8cf031e07783b98e49921504718">validarDatas</a> (std::time_t agora) const</td></tr>
 <tr class="memitem:a331ba7cc8fbde599cc88ffb891a23b74" id="r_a331ba7cc8fbde599cc88ffb891a23b74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a331ba7cc8fbde599cc88ffb891a23b74">validar</a> (std::time_t agora, std::string *erro=nullptr) const</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afda919298af7eb313e6917696b7893ce" id="r_afda919298af7eb313e6917696b7893ce"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afda919298af7eb313e6917696b7893ce">ajustarProximoId</a> (int proximoVal)</td></tr>
+<tr class="memitem:a3ecffc7ea87d0ddb9f932adec5e15fa7" id="r_a3ecffc7ea87d0ddb9f932adec5e15fa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ecffc7ea87d0ddb9f932adec5e15fa7">setTags</a> (const std::vector&lt; std::string &gt; &amp;tags)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a66a4e2f8e69b2d368b5946f0ded22fd8" name="a66a4e2f8e69b2d368b5946f0ded22fd8"></a>
@@ -176,31 +172,6 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afda919298af7eb313e6917696b7893ce" name="afda919298af7eb313e6917696b7893ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afda919298af7eb313e6917696b7893ce">&#9670;&#160;</a></span>ajustarProximoId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Tarefa::ajustarProximoId </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>proximoVal</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -464,23 +435,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a64f756a374e8bb227eb96c510ec4ff5f" name="a64f756a374e8bb227eb96c510ec4ff5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64f756a374e8bb227eb96c510ec4ff5f">&#9670;&#160;</a></span>setIdParaCarga()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Tarefa::setIdParaCarga </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>novoId</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab063c2349c20692e1aa021b829720847" name="ab063c2349c20692e1aa021b829720847"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab063c2349c20692e1aa021b829720847">&#9670;&#160;</a></span>setPrioridade()</h2>
 
@@ -491,6 +445,23 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">void Tarefa::setPrioridade </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ecffc7ea87d0ddb9f932adec5e15fa7" name="a3ecffc7ea87d0ddb9f932adec5e15fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecffc7ea87d0ddb9f932adec5e15fa7">&#9670;&#160;</a></span>setTags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tarefa::setTags </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tags</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

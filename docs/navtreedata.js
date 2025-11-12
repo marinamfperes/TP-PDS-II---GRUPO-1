@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Gerenciador de Tarefas", "index.html", [
+  [ "My Project", "index.html", [
     [ "TP PDS II - GRUPO 1", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -39,7 +39,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]

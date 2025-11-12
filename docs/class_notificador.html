@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gerenciador de Tarefas: Notificador Class Reference</title>
+<title>My Project: Notificador Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gerenciador de Tarefas
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -96,14 +96,15 @@ $(function(){initNavTree('class_notificador.html','','class_notificador-members'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aded058963a5d28d3008e27e0eaf74601" id="r_aded058963a5d28d3008e27e0eaf74601"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aded058963a5d28d3008e27e0eaf74601">Notificador</a> (<a class="el" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a> &amp;mgr)</td></tr>
+<tr class="memitem:a2ba61f521abd3a2cc68b2fa41e175e6a" id="r_a2ba61f521abd3a2cc68b2fa41e175e6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ba61f521abd3a2cc68b2fa41e175e6a">Notificador</a> (<a class="el" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a> &amp;mgr, const <a class="el" href="class_usuario.html">Usuario</a> &amp;usuario, <a class="el" href="class_relogio.html">Relogio</a> *relogio)</td></tr>
 <tr class="memitem:a7b6ef7470bf8a05bddbc673c1d360df4" id="r_a7b6ef7470bf8a05bddbc673c1d360df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b6ef7470bf8a05bddbc673c1d360df4">setAntecedenciaNotificacao</a> (long segundos)</td></tr>
-<tr class="memitem:ad9a2df9be777928fd332325672ff439e" id="r_ad9a2df9be777928fd332325672ff439e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9a2df9be777928fd332325672ff439e">getTarefasVencidas</a> ()</td></tr>
-<tr class="memitem:abd5ae8176f9199ba5bb3abc3ec5ce9cf" id="r_abd5ae8176f9199ba5bb3abc3ec5ce9cf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd5ae8176f9199ba5bb3abc3ec5ce9cf">getTarefasProximasDoVencimento</a> ()</td></tr>
+<tr class="memitem:aa9eb07a239ae8e5bb8f983e04b7a2fa7" id="r_aa9eb07a239ae8e5bb8f983e04b7a2fa7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9eb07a239ae8e5bb8f983e04b7a2fa7">getTarefasVencidas</a> () const</td></tr>
+<tr class="memitem:a152a0ad883163278f2f563dbf9e0fc0a" id="r_a152a0ad883163278f2f563dbf9e0fc0a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a152a0ad883163278f2f563dbf9e0fc0a">getTarefasProximasDoVencimento</a> () const</td></tr>
+<tr class="memitem:ad41feebd8b95ce006203c875e9942e89" id="r_ad41feebd8b95ce006203c875e9942e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad41feebd8b95ce006203c875e9942e89">exibirAvisos</a> () const</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aded058963a5d28d3008e27e0eaf74601" name="aded058963a5d28d3008e27e0eaf74601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aded058963a5d28d3008e27e0eaf74601">&#9670;&#160;</a></span>Notificador()</h2>
+<a id="a2ba61f521abd3a2cc68b2fa41e175e6a" name="a2ba61f521abd3a2cc68b2fa41e175e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba61f521abd3a2cc68b2fa41e175e6a">&#9670;&#160;</a></span>Notificador()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,8 +112,17 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Notificador::Notificador </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mgr</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_gerenciador_tarefas.html">GerenciadorTarefas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mgr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="class_usuario.html">Usuario</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>usuario</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_relogio.html">Relogio</a> *</td>          <td class="paramname"><span class="paramname"><em>relogio</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -120,8 +130,25 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="abd5ae8176f9199ba5bb3abc3ec5ce9cf" name="abd5ae8176f9199ba5bb3abc3ec5ce9cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd5ae8176f9199ba5bb3abc3ec5ce9cf">&#9670;&#160;</a></span>getTarefasProximasDoVencimento()</h2>
+<a id="ad41feebd8b95ce006203c875e9942e89" name="ad41feebd8b95ce006203c875e9942e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41feebd8b95ce006203c875e9942e89">&#9670;&#160;</a></span>exibirAvisos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Notificador::exibirAvisos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a152a0ad883163278f2f563dbf9e0fc0a" name="a152a0ad883163278f2f563dbf9e0fc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152a0ad883163278f2f563dbf9e0fc0a">&#9670;&#160;</a></span>getTarefasProximasDoVencimento()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,15 +157,15 @@ Public Member Functions</h2></td></tr>
           <td class="memname">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt; Notificador::getTarefasProximasDoVencimento </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad9a2df9be777928fd332325672ff439e" name="ad9a2df9be777928fd332325672ff439e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9a2df9be777928fd332325672ff439e">&#9670;&#160;</a></span>getTarefasVencidas()</h2>
+<a id="aa9eb07a239ae8e5bb8f983e04b7a2fa7" name="aa9eb07a239ae8e5bb8f983e04b7a2fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9eb07a239ae8e5bb8f983e04b7a2fa7">&#9670;&#160;</a></span>getTarefasVencidas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +174,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">std::vector&lt; <a class="el" href="class_tarefa.html">Tarefa</a> &gt; Notificador::getTarefasVencidas </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,7 +1,8 @@
 var class_notificador =
 [
-    [ "Notificador", "class_notificador.html#aded058963a5d28d3008e27e0eaf74601", null ],
-    [ "getTarefasProximasDoVencimento", "class_notificador.html#abd5ae8176f9199ba5bb3abc3ec5ce9cf", null ],
-    [ "getTarefasVencidas", "class_notificador.html#ad9a2df9be777928fd332325672ff439e", null ],
+    [ "Notificador", "class_notificador.html#a2ba61f521abd3a2cc68b2fa41e175e6a", null ],
+    [ "exibirAvisos", "class_notificador.html#ad41feebd8b95ce006203c875e9942e89", null ],
+    [ "getTarefasProximasDoVencimento", "class_notificador.html#a152a0ad883163278f2f563dbf9e0fc0a", null ],
+    [ "getTarefasVencidas", "class_notificador.html#aa9eb07a239ae8e5bb8f983e04b7a2fa7", null ],
     [ "setAntecedenciaNotificacao", "class_notificador.html#a7b6ef7470bf8a05bddbc673c1d360df4", null ]
 ];
