@@ -195,7 +195,8 @@ Sempre que alguma modificação for feita no código , é importante atualizar a
 
 
 - EVIDÊNCIAS NO GITHUB: Não utilizamos alguns dos recursos, como as Tags, Milestones, etc. (obs.: constam cinco autores, mas dois são da mesma autora, Luisa Gouthier). 
-  <img width="1347" height="763" alt="image" src="https://github.com/user-attachments/assets/d2e8ef8a-f10e-4da8-84d5-40d7983c7a4a" />
+  <img width="1364" height="771" alt="image" src="https://github.com/user-attachments/assets/1275bd3d-10ab-436a-8df5-7c5a26edf3ba" />
+
   <img width="1836" height="389" alt="image" src="https://github.com/user-attachments/assets/21b02849-4655-44c7-b89f-fde3383bd8cf" />
 
 
