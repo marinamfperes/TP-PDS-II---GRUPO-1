@@ -11,7 +11,52 @@
 #include <iomanip>
 
 //Helpers de data e tempo
+bool validaDataHora(const std::string& s) {
+    if (s.empty()) {
+        return true;
+    }
 
+    std::tm tm_original{};
+    std::tm tm_para_mktime{};
+    std::istringstream iss(s);
+
+    char sep1, sep2, sep_hora;
+
+    iss >> tm_original.tm_mday >> sep1 >> tm_original.tm_mon >> sep2 >> tm_original.tm_year;
+    
+    if (iss.fail() || sep1 != '/' || sep2 != '/') {
+        return false;
+    }
+
+    if (iss >> tm_original.tm_hour >> sep_hora >> tm_original.tm_min) {
+        if (sep_hora != ':') {
+             return false;
+        }
+    } else {
+        tm_original.tm_hour = 0;
+        tm_original.tm_min = 0;
+    }
+    
+    char lixo;
+    if (iss >> lixo) {
+        return false;
+    }
+    
+    tm_para_mktime = tm_original;
+    tm_para_mktime.tm_mon -= 1;
+    tm_para_mktime.tm_year -= 1900;
+    tm_para_mktime.tm_sec = 0;
+    tm_para_mktime.tm_isdst = -1;
+    std::time_t t = std::mktime(&tm_para_mktime);
+    if (t == -1 ||
+        (tm_para_mktime.tm_mday) != tm_original.tm_mday ||
+        (tm_para_mktime.tm_mon + 1) != tm_original.tm_mon ||
+        (tm_para_mktime.tm_year + 1900) != tm_original.tm_year)
+    {
+        return false;
+    }
+    return true;
+}
 //converte string "dd/MM/yyyy (data) HH:mm (hora e minutos)" para tipo time_t (0 se vazio) -> pega o texto que indica a data e horário e transforma em um tipo que o programa entende
 //time_t é número de segundos desde 01/01/1970
 std::time_t converteDataHora(const std::string& s) {
